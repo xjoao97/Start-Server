@@ -22,7 +22,7 @@ namespace Oblivion.HabboHotel.Items.Wired.Boxes
 
         public Item Item { get; set; }
 
-        public WiredBoxType Type => WiredBoxType.EffectFreezeUser;
+        public WiredBoxType Type => WiredBoxType.EffectGiveUserFreeze;
 
         public ConcurrentDictionary<int, Item> SetItems { get; set; }
 

@@ -23,7 +23,7 @@ namespace Oblivion.HabboHotel.Items.Wired.Boxes.Effects
         public Room Instance { get; set; }
         public Item Item { get; set; }
 
-        public WiredBoxType Type => WiredBoxType.EffectGiveCoin;
+        public WiredBoxType Type => WiredBoxType.EffectGiveUserCredits;
 
         public ConcurrentDictionary<int, Item> SetItems { get; set; }
         public string StringData { get; set; }

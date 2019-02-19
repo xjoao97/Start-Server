@@ -38,7 +38,7 @@ namespace Oblivion.Communication.Packets.Outgoing.Rooms.Furni.Wired
 
                 WriteString(Box.StringData != null ? Box.StringData.Split(';')[1] : "");
             }
-            else if (Box.Type == WiredBoxType.EffectGiveReward || Box.Type == WiredBoxType.EffectGiveCoin)
+            else if (Box.Type == WiredBoxType.EffectGiveReward || Box.Type == WiredBoxType.EffectGiveUserCredits)
             {
                 if (string.IsNullOrEmpty(Box.StringData))
                     Box.StringData = "1,,;1,,;1,,;1,,;1,,-0-0";

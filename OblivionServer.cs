@@ -68,6 +68,11 @@ namespace Oblivion
         public static DateTime ServerStarted;
         internal static Timer Timer;
 
+        internal static object UnixTimeStampToDateTime(double timestamp)
+        {
+            throw new NotImplementedException();
+        }
+
         private static readonly List<char> Allowedchars = new List<char>(new[]
         {
             'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
@@ -253,6 +258,21 @@ namespace Oblivion
             var ts = DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0);
             return ts.TotalSeconds;
         }
+
+        internal static int GetIUnixTimestamp()
+        {
+            var ts = (DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0));
+            var unixTime = ts.TotalSeconds;
+            return Convert.ToInt32(unixTime);
+        }
+
+        private static readonly DateTime Jan1st1970 = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+
+        public static long CurrentTimeMillis()
+        {
+            return (long)(DateTime.UtcNow - Jan1st1970).TotalMilliseconds;
+        }
+
 
         public static long Now()
         {

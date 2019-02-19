@@ -23,3 +23,11 @@ C:\Users\joaopedro\Downloads\Oblivion 1.0.2\bin\Debug\Oblivion Emulator.exe.conf
 C:\Users\joaopedro\Downloads\Oblivion 1.0.2\bin\Debug\Oblivion Emulator.exe
 C:\Users\joaopedro\Downloads\Oblivion 1.0.2\bin\Debug\Oblivion Emulator.pdb
 C:\Users\joaopedro\Downloads\Oblivion 1.0.2\obj\x86\Debug\Oblivion Emulator.csproj.CopyComplete
+C:\Users\joaopedro\Downloads\Start Server\obj\x86\Debug\Oblivion Emulator.csprojAssemblyReference.cache
+C:\Users\joaopedro\Downloads\Start Server\obj\x86\Debug\Oblivion Emulator.csproj.CoreCompileInputs.cache
+C:\Users\joaopedro\Downloads\Start Server\obj\x86\Debug\Oblivion Emulator.exe
+C:\Users\joaopedro\Downloads\Start Server\obj\x86\Debug\Oblivion Emulator.pdb
+C:\Users\joaopedro\Downloads\Start Server\bin\Debug\Oblivion Emulator.exe.config
+C:\Users\joaopedro\Downloads\Start Server\bin\Debug\Oblivion Emulator.exe
+C:\Users\joaopedro\Downloads\Start Server\bin\Debug\Oblivion Emulator.pdb
+C:\Users\joaopedro\Downloads\Start Server\obj\x86\Debug\Oblivion Emulator.csproj.CopyComplete

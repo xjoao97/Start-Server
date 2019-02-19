@@ -1,12 +1,18 @@
-﻿namespace Oblivion.HabboHotel.Items.Wired
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Oblivion.HabboHotel.Items.Wired
 {
     public enum WiredBoxType
     {
         None,
         TriggerRoomEnter,
         TriggerUserSays,
-        TriggerScoreAchieved,
         TriggerRepeat,
+        TriggerLongRepeat,
         TriggerStateChanges,
         TriggerWalkOnFurni,
         TriggerWalkOffFurni,
@@ -14,10 +20,15 @@
         TriggerGameEnds,
         TriggerUserFurniCollision,
         TriggerUserSaysCommand,
-        TriggerLongRepeat,
-        EffectAddScore,
+        TriggerAtGivenTime,
+        TriggerBotReachUser,
+        TriggerBotReachFurni,
+
         EffectShowMessage,
+        EffectShowMessageNux,
+        EffectShowMessageCustom,
         EffectTeleportToFurni,
+        EffectToggleNegativeFurniState,
         EffectToggleFurniState,
         EffectKickUser,
         EffectMatchPosition,
@@ -26,14 +37,18 @@
         EffectMoveFurniFromNearestUser,
         EffectMuteTriggerer,
         EffectGiveReward,
-        EffectGiveCoin,
         EffectExecuteWiredStacks,
-        EffectEnableUserEffect,
-        EffectFreezeUser,
-        EffectUserFastWalk,
+        EffectAddScore,
+        EffectAddScore2,
+        EffectAddRewardPoints,
+        EffectApplyClothes,
+        EffectMoveUser,
+        EffectTimerReset,
+        EffectMoveToDir,
+        EffectProgressUserAchievement,
+        EffectSendYouTubeVideo,
         EffectFixRoom,
-        EffectEnableUserHandItem,
-        EffectEnableUserDance,
+
         EffectTeleportBotToFurniBox,
         EffectBotChangesClothesBox,
         EffectBotMovesToFurniBox,
@@ -47,6 +62,15 @@
         EffectSetRollerSpeed,
         EffectRegenerateMaps,
         EffectGiveUserBadge,
+        EffectEnableUserHandItem,
+        EffectEnableUserEffect,
+        EffectEnableUserDance,
+        EffectUserFastWalk,
+        EffectGiveUserFreeze,
+        EffectGiveUserDiamonds,
+        EffectGiveUserDuckets,
+        EffectGiveUserCredits,
+        TriggerScoreAchieved,
 
         ConditionFurniHasUsers,
         ConditionFurniHasFurni,
@@ -67,10 +91,29 @@
         ConditionFurniTypeDoesntMatch,
         ConditionFurniHasNoFurni,
         ConditionActorHasHandItemBox,
+        ConditionActorHasNotHandItemBox,
         ConditionActorIsInTeamBox,
+        ConditionActorIsNotInTeamBox,
+        ConditionWearingClothes,
+        ConditionNotWearingClothes,
+        ConditionDateRangeActive,
+        ConditionLessSecs,
+        ConditionMoreSecs,
+        SendCustomMessageBox,
+        TotalUsersCoincidence,
 
         AddonRandomEffect,
 
-        HighscoreClassicAlltime
+        // CUSTOM WIREDS
+        EffectLowerFurni,
+        EffectRaiseFurni,
+        EffectRoomForward,
+        ConditionActorHasDiamonds,
+        ConditionActorHasNotDiamonds,
+        ConditionActorHasDuckets,
+        ConditionActorHasNotDuckets,
+        ConditionActorHasRank,
+        ConditionActorHasNotRank,
+        ConditionActorHasNotCredits,
     }
 }

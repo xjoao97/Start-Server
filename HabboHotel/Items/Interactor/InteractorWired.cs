@@ -39,7 +39,7 @@ namespace Oblivion.HabboHotel.Items.Interactor
 
             if (Item.GetBaseItem().WiredType == WiredBoxType.AddonRandomEffect ||
                 Item.GetBaseItem().WiredType == WiredBoxType.EffectFixRoom ||
-                Item.GetBaseItem().WiredType == WiredBoxType.EffectFreezeUser ||
+                Item.GetBaseItem().WiredType == WiredBoxType.EffectGiveUserFreeze ||
                 Item.GetBaseItem().WiredType == WiredBoxType.EffectUserFastWalk)
                 return;
             switch (Item.GetBaseItem().InteractionType)

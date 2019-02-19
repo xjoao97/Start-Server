@@ -45,6 +45,21 @@ namespace Oblivion.Communication.Packets.Outgoing.Rooms.Notifications
             WriteString(isBubble ? "BUBBLE" : "POP_UP");
         }
 
+        public static ServerPacket SendBubble(string image, string message, string linkUrl = "")
+        {
+            var bubbleNotification = new ServerPacket(ServerPacketHeader.RoomNotificationMessageComposer);
+            bubbleNotification.WriteString(image);
+            bubbleNotification.WriteInteger(string.IsNullOrEmpty(linkUrl) ? 2 : 3);
+            bubbleNotification.WriteString("display");
+            bubbleNotification.WriteString("BUBBLE");
+            bubbleNotification.WriteString("message");
+            bubbleNotification.WriteString(message);
+            if (string.IsNullOrEmpty(linkUrl)) return bubbleNotification;
+            bubbleNotification.WriteString("linkUrl");
+            bubbleNotification.WriteString(linkUrl);
+            return bubbleNotification;
+        }
+
         public RoomNotificationComposer(string Title, string Message, string Image, string HotelName = "",
             string HotelURL = "")
             : base(ServerPacketHeader.RoomNotificationMessageComposer)

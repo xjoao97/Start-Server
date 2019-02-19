@@ -9,6 +9,8 @@ using Oblivion.HabboHotel.Items.Wired.Boxes;
 using Oblivion.HabboHotel.Items.Wired.Boxes.Conditions;
 using Oblivion.HabboHotel.Items.Wired.Boxes.Effects;
 using Oblivion.HabboHotel.Items.Wired.Boxes.Triggers;
+using System.Data;
+using System.Collections.Concurrent;
 
 #endregion
 
@@ -29,7 +31,7 @@ namespace Oblivion.HabboHotel.Rooms.Instance
         {
             if (_wiredItems == null)
                 return;
-            
+
             foreach (var Item in _wiredItems)
             {
                 var SelectedItem = _room.GetRoomItemHandler().GetItem(Item.Item.Id);
@@ -135,8 +137,10 @@ namespace Oblivion.HabboHotel.Rooms.Instance
                     return new StateChangesBox(_room, Item);
                 case WiredBoxType.TriggerUserSays:
                     return new UserSaysBox(_room, Item);
-                case WiredBoxType.TriggerScoreAchieved:
-                    return new ScoreAchievedBox(_room, Item);
+                case WiredBoxType.TriggerBotReachUser:
+                    return new BotReachUserBox(_room, Item);
+                case WiredBoxType.TriggerBotReachFurni:
+                    return new BotReachFurniBox(_room, Item);
                 case WiredBoxType.TriggerWalkOffFurni:
                     return new UserWalksOffBox(_room, Item);
                 case WiredBoxType.TriggerWalkOnFurni:
@@ -150,10 +154,16 @@ namespace Oblivion.HabboHotel.Rooms.Instance
                 case WiredBoxType.TriggerUserSaysCommand:
                     return new UserSaysCommandBox(_room, Item);
 
+
                 case WiredBoxType.EffectShowMessage:
                     return new ShowMessageBox(_room, Item);
+;
+
+
                 case WiredBoxType.EffectTeleportToFurni:
                     return new TeleportUserBox(_room, Item);
+                case WiredBoxType.EffectToggleNegativeFurniState:
+                    return new ToggleNegativeFurniBox(_room, Item);
                 case WiredBoxType.EffectToggleFurniState:
                     return new ToggleFurniBox(_room, Item);
                 case WiredBoxType.EffectMoveAndRotate:
@@ -165,12 +175,11 @@ namespace Oblivion.HabboHotel.Rooms.Instance
 
                 case WiredBoxType.EffectGiveReward:
                     return new GiveRewardBox(_room, Item);
+                case WiredBoxType.EffectTimerReset:
+                    return new EffectTimerResetBox(_room, Item);
 
-                case WiredBoxType.EffectGiveCoin:
-                    return new GiveCoinsBox(_room, Item);
-
-                case WiredBoxType.EffectAddScore:
-                    return new AddScoreBox(_room, Item);
+                case WiredBoxType.TriggerAtGivenTime:
+                    return new AtGivenTimeBox(_room, Item);
 
                 case WiredBoxType.EffectMatchPosition:
                     return new MatchPositionBox(_room, Item);
@@ -178,13 +187,21 @@ namespace Oblivion.HabboHotel.Rooms.Instance
                     return new AddActorToTeamBox(_room, Item);
                 case WiredBoxType.EffectRemoveActorFromTeam:
                     return new RemoveActorFromTeamBox(_room, Item);
+
                 /*
                 
-               
+                case WiredBoxType.EffectMoveFurniToNearestUser:
+                    return new MoveFurniToNearestUserBox(_room, Item);
                 case WiredBoxType.EffectMoveFurniFromNearestUser:
                     return new MoveFurniFromNearestUserBox(_room, Item);
 
                    */
+
+
+                case WiredBoxType.EffectAddScore:
+                    return new AddScoreBox(_room, Item);
+
+
                 case WiredBoxType.ConditionFurniHasUsers:
                     return new FurniHasUsersBox(_room, Item);
                 case WiredBoxType.ConditionTriggererOnFurni:
@@ -221,13 +238,23 @@ namespace Oblivion.HabboHotel.Rooms.Instance
                     return new ActorHasHandItemBox(_room, Item);
                 case WiredBoxType.ConditionActorIsInTeamBox:
                     return new ActorIsInTeamBox(_room, Item);
-
+                case WiredBoxType.ConditionActorIsNotInTeamBox:
+                    return new ActorIsNotInTeamBox(_room, Item);
+                case WiredBoxType.ConditionActorHasNotHandItemBox:
+                    return new ActorHasNotHandItemBox(_room, Item);
+                case WiredBoxType.ConditionDateRangeActive:
+                    return new DateRangeIsActiveBox(_room, Item);
                 /*
-            case WiredBoxType.ConditionFurniTypeMatches:
-                return new FurniTypeMatchesBox(_room, Item);
-            case WiredBoxType.ConditionFurniTypeDoesntMatch:
-                return new FurniTypeDoesntMatchBox(_room, Item);
-*/
+                case WiredBoxType.ConditionMatchStateAndPosition:
+                    return new FurniMatchStateAndPositionBox(_room, Item);
+
+                case WiredBoxType.ConditionFurniTypeMatches:
+                    return new FurniTypeMatchesBox(_room, Item);
+                case WiredBoxType.ConditionFurniTypeDoesntMatch:
+                    return new FurniTypeDoesntMatchBox(_room, Item);
+                case WiredBoxType.ConditionFurniHasNoFurni:
+                    return new FurniHasNoFurniBox(_room, Item);*/
+
                 case WiredBoxType.AddonRandomEffect:
                     return new AddonRandomEffectBox(_room, Item);
                 case WiredBoxType.EffectMoveFurniToNearestUser:
@@ -237,25 +264,24 @@ namespace Oblivion.HabboHotel.Rooms.Instance
 
                 case WiredBoxType.EffectTeleportBotToFurniBox:
                     return new TeleportBotToFurniBox(_room, Item);
-                case WiredBoxType.EffectEnableUserEffect:
-                    return new EnableUserEffectBox(_room, Item);
-                case WiredBoxType.EffectEnableUserHandItem:
-                    return new EnableUserHanditemBox(_room, Item);
-                case WiredBoxType.EffectEnableUserDance:
-                    return new EnableUserDanceBox(_room, Item);
-                case WiredBoxType.EffectFreezeUser:
-                    return new FreezeUserBox(_room, Item);
-                case WiredBoxType.EffectUserFastWalk:
-                    return new UserFastWalkBox(_room, Item);
-                case WiredBoxType.EffectFixRoom:
-                    return new FixRoomBox(_room, Item);
+
+                case WiredBoxType.TotalUsersCoincidence:
+                    return new TotalUsersCoincidenceBox(_room, Item);
+
                 case WiredBoxType.EffectBotChangesClothesBox:
                     return new BotChangesClothesBox(_room, Item);
                 case WiredBoxType.EffectBotMovesToFurniBox:
                     return new BotMovesToFurniBox(_room, Item);
                 case WiredBoxType.EffectBotCommunicatesToAllBox:
                     return new BotCommunicatesToAllBox(_room, Item);
+                case WiredBoxType.EffectBotCommunicatesToUserBox:
+                    return new BotCommunicateToUserBox(_room, Item);
 
+                // Wireds Ropa
+                case WiredBoxType.ConditionWearingClothes:
+                    return new WearingClothesBox(_room, Item);
+                case WiredBoxType.ConditionNotWearingClothes:
+                    return new NotWearingClothesBox(_room, Item);
                 case WiredBoxType.EffectBotGivesHanditemBox:
                     return new BotGivesHandItemBox(_room, Item);
                 case WiredBoxType.EffectBotFollowsUserBox:
@@ -266,6 +292,44 @@ namespace Oblivion.HabboHotel.Rooms.Instance
                     return new RegenerateMapsBox(_room, Item);
                 case WiredBoxType.EffectGiveUserBadge:
                     return new GiveUserBadgeBox(_room, Item);
+                case WiredBoxType.EffectEnableUserHandItem:
+                    return new EnableUserHanditemBox(_room, Item);
+                case WiredBoxType.EffectEnableUserEffect:
+                    return new EnableUserEffectBox(_room, Item);
+                case WiredBoxType.EffectEnableUserDance:
+                    return new EnableUserDanceBox(_room, Item);
+                case WiredBoxType.EffectGiveUserFreeze:
+                    return new FreezeUserBox(_room, Item);
+                case WiredBoxType.EffectUserFastWalk:
+                    return new UserFastWalkBox(_room, Item);
+                case WiredBoxType.TriggerScoreAchieved:
+                    return new ScoreAchievedBox(_room, Item);
+
+
+                case WiredBoxType.EffectLowerFurni:
+                    return new LowerFurniBox(_room, Item);
+                case WiredBoxType.ConditionActorHasDiamonds:
+                    return new ActorHasDiamondsBox(_room, Item);
+                case WiredBoxType.ConditionActorHasNotDiamonds:
+                    return new ActorHasNotDiamondsBox(_room, Item);
+                case WiredBoxType.ConditionActorHasDuckets:
+                    return new ActorHasDucketsBox(_room, Item);
+                case WiredBoxType.ConditionActorHasNotDuckets:
+                    return new ActorHasNotDucketsBox(_room, Item);
+                case WiredBoxType.ConditionActorHasNotCredits:
+                    return new ActorHasNotCreditsBox(_room, Item);
+                case WiredBoxType.ConditionActorHasRank:
+                    return new ActorHasRankBox(_room, Item);
+                case WiredBoxType.ConditionActorHasNotRank:
+                    return new ActorHasNotRankBox(_room, Item);
+                case WiredBoxType.EffectGiveUserDiamonds:
+                    return new GiveUserDiamondsBox(_room, Item);
+                case WiredBoxType.EffectGiveUserDuckets:
+                    return new GiveUserDucketsBox(_room, Item);
+                case WiredBoxType.EffectGiveUserCredits:
+                    return new GiveCoinsBox(_room, Item);
+                    /*case WiredBoxType.EffectSendYouTubeVideo:
+                        return new SendYoutubeVideoBox(_room, Item);*/
             }
             return null;
         }
@@ -399,12 +463,12 @@ namespace Oblivion.HabboHotel.Rooms.Instance
                 return false;
 
             foreach (var User in from Point in Item.GetSides()
-                where Instance.GetGameMap().SquareHasUsers(Point.X, Point.Y)
-                select Instance.GetGameMap().GetRoomUsers(Point)
+                                 where Instance.GetGameMap().SquareHasUsers(Point.X, Point.Y)
+                                 select Instance.GetGameMap().GetRoomUsers(Point)
                 into Users
-                where Users != null && Users.Count > 0
-                from User in Users.ToList().Where(User => User != null)
-                select User)
+                                 where Users != null && Users.Count > 0
+                                 from User in Users.ToList().Where(User => User != null)
+                                 select User)
                 Item.UserFurniCollision(User);
 
 
@@ -435,9 +499,9 @@ namespace Oblivion.HabboHotel.Rooms.Instance
                 Cycle = item;
 
             foreach (var I in from I in Item.SetItems.Values
-                let SelectedItem = _room.GetRoomItemHandler().GetItem(Convert.ToInt32(I.Id))
-                where SelectedItem != null
-                select I)
+                              let SelectedItem = _room.GetRoomItemHandler().GetItem(Convert.ToInt32(I.Id))
+                              where SelectedItem != null
+                              select I)
                 if (Item.Type == WiredBoxType.EffectMatchPosition ||
                     Item.Type == WiredBoxType.ConditionMatchStateAndPosition ||
                     Item.Type == WiredBoxType.ConditionDontMatchStateAndPosition)
@@ -467,7 +531,7 @@ namespace Oblivion.HabboHotel.Rooms.Instance
 
         public bool TryRemove(IWiredItem Item) => _wiredItems.Remove(Item);
 
-//        public bool TryGet(int id, out IWiredItem Item) => _wiredItems[];
+        //        public bool TryGet(int id, out IWiredItem Item) => _wiredItems[];
         public IWiredItem GetWired(int item)
             => _wiredItems.FirstOrDefault(current => current != null && item == current.Item.Id);
 

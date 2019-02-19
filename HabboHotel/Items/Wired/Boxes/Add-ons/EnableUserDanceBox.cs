@@ -25,6 +25,8 @@ namespace Oblivion.HabboHotel.Items.Wired.Boxes
         public Item Item { get; set; }
 
         public WiredBoxType Type => WiredBoxType.EffectEnableUserDance;
+       
+  
 
         public ConcurrentDictionary<int, Item> SetItems { get; set; }
 
