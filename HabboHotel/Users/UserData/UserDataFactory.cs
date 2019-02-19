@@ -110,7 +110,7 @@ namespace Oblivion.HabboHotel.Users.UserDataManagement
                 userInfo = dbClient.getRow();
                 if (userInfo == null)
                 {
-                    dbClient.RunQuery("INSERT INTO `user_info` (`user_id`) VALUES ('" + UserId + "')");
+                    dbClient.runFastQuery("INSERT INTO `user_info` (`user_id`) VALUES ('" + UserId + "')");
 
                     dbClient.SetQuery("SELECT * FROM `user_info` WHERE `user_id` = '" + UserId + "' LIMIT 1");
                     userInfo = dbClient.getRow();
@@ -120,7 +120,7 @@ namespace Oblivion.HabboHotel.Users.UserDataManagement
                 dbClient.SetQuery("SELECT command_name FROM user_blockcmd WHERE user_id = '" + UserId + "'");
                 dBlockedCommands = dbClient.getTable();
 
-                dbClient.RunQuery("UPDATE `users` SET `online` = '1', `auth_ticket` = '' WHERE `id` = '" + UserId + "'");
+                dbClient.runFastQuery("UPDATE `users` SET `online` = '1', `auth_ticket` = '' WHERE `id` = '" + UserId + "'");
                 //                dbClient.RunQuery("DELETE FROM `user_auth_ticket` WHERE `user_id` = '" + UserId + "'");
             }
 
@@ -246,7 +246,7 @@ namespace Oblivion.HabboHotel.Users.UserDataManagement
                 UserInfo = dbClient.getRow();
                 if (UserInfo == null)
                 {
-                    dbClient.RunQuery("INSERT INTO `user_info` (`user_id`) VALUES ('" + UserId + "')");
+                    dbClient.runFastQuery("INSERT INTO `user_info` (`user_id`) VALUES ('" + UserId + "')");
 
                     dbClient.SetQuery("SELECT * FROM `user_info` WHERE `user_id` = '" + UserId + "' LIMIT 1");
                     UserInfo = dbClient.getRow();

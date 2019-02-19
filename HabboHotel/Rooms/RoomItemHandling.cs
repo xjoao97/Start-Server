@@ -175,7 +175,7 @@ namespace Oblivion.HabboHotel.Rooms
                     {
                         using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                         {
-                            dbClient.RunQuery("UPDATE `items` SET `room_id` = '0' WHERE `id` = '" + item.Id +
+                            dbClient.runFastQuery("UPDATE `items` SET `room_id` = '0' WHERE `id` = '" + item.Id +
                                               "' LIMIT 1");
                         }
 
@@ -509,7 +509,7 @@ namespace Oblivion.HabboHotel.Rooms
                                 dbClient.RunQuery();
                             }
 
-                            dbClient.RunQuery("UPDATE `items` SET `x` = '" + item.GetX + "', `y` = '" + item.GetY +
+                            dbClient.runFastQuery("UPDATE `items` SET `x` = '" + item.GetX + "', `y` = '" + item.GetY +
                                               "', `z` = '" + item.GetZ + "', `rot` = '" + item.Rotation +
                                               "' WHERE `id` = '" + item.Id + "' LIMIT 1");
                         }
@@ -522,7 +522,7 @@ namespace Oblivion.HabboHotel.Rooms
 
                         if (Usedwiredscorebord)
                         {
-                            dbClient.RunQuery("DELETE FROM `wired_scorebord` WHERE roomid = " + _room.RoomId);
+                            dbClient.runFastQuery("DELETE FROM `wired_scorebord` WHERE roomid = " + _room.RoomId);
 
                             KeyValuePair<int, string> data;
                             foreach (
@@ -765,7 +765,7 @@ namespace Oblivion.HabboHotel.Rooms
 
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.RunQuery("UPDATE `items` SET `room_id` = '" + _room.RoomId + "', `x` = '" + item.GetX +
+                dbClient.runFastQuery("UPDATE `items` SET `room_id` = '" + _room.RoomId + "', `x` = '" + item.GetX +
                                   "', `y` = '" + item.GetY + "', `z` = '" + item.GetZ + "', `rot` = '" + item.Rotation +
                                   "' WHERE `id` = '" + item.Id + "' LIMIT 1");
             }
@@ -909,7 +909,7 @@ namespace Oblivion.HabboHotel.Rooms
 
             using (var queryReactor = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                queryReactor.RunQuery($"UPDATE items SET room_id='0' WHERE room_id='{_room.RoomId}'");
+                queryReactor.runFastQuery($"UPDATE items SET room_id='0' WHERE room_id='{_room.RoomId}'");
             }
             _room.GetGameMap().GenerateMaps();
             _room.GetRoomUserManager().SerializeStatusUpdates();
@@ -943,7 +943,7 @@ namespace Oblivion.HabboHotel.Rooms
                     if (client == null)
                         using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                         {
-                            dbClient.RunQuery("UPDATE items SET room_id = '0' WHERE id = " + item.Id);
+                            dbClient.runFastQuery("UPDATE items SET room_id = '0' WHERE id = " + item.Id);
                         }
                     else
                         client.GetHabbo().GetInventoryComponent().AddItem(item);

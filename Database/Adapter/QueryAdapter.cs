@@ -143,6 +143,16 @@ namespace Oblivion.Database.Adapter
             }
         }
 
+        public void runFastQuery(string query)
+        {
+            if (!dbEnabled)
+                return;
+            DateTime now = DateTime.Now;
+            SetQuery(query);
+            RunQuery();
+            TimeSpan span = (TimeSpan)(DateTime.Now - now);
+        }
+
         public void SetQuery(string query)
         {
             command.Parameters.Clear();

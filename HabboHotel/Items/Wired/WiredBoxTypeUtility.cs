@@ -209,6 +209,8 @@ namespace Oblivion.HabboHotel.Items.Wired
                     return WiredBoxType.EffectFixRoom;
                 case 105:
                     return WiredBoxType.TriggerScoreAchieved;
+                case 106:
+                    return WiredBoxType.HighscoreClassicAlltime;
             }
         }
 

@@ -44,7 +44,7 @@ namespace Oblivion.HabboHotel.Support
                     dbClient.AddParameter("message", Message);
                     TicketId = Convert.ToInt32(dbClient.InsertQuery());
 
-                    dbClient.RunQuery("UPDATE `user_info` SET `cfhs` = `cfhs` + '1' WHERE `user_id` = '" +
+                    dbClient.runFastQuery("UPDATE `user_info` SET `cfhs` = `cfhs` + '1' WHERE `user_id` = '" +
                                       Session.GetHabbo().Id + "' LIMIT 1");
                 }
 
@@ -69,7 +69,7 @@ namespace Oblivion.HabboHotel.Support
                 dbClient.AddParameter("name", Data.Name);
                 TicketId = Convert.ToInt32(dbClient.InsertQuery());
 
-                dbClient.RunQuery("UPDATE user_info SET cfhs = cfhs + 1 WHERE user_id = '" + Session.GetHabbo().Id +
+                dbClient.runFastQuery("UPDATE user_info SET cfhs = cfhs + 1 WHERE user_id = '" + Session.GetHabbo().Id +
                                   "' LIMIT 1");
             }
 
@@ -133,7 +133,7 @@ namespace Oblivion.HabboHotel.Support
 
                     using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                     {
-                        dbClient.RunQuery(
+                        dbClient.runFastQuery(
                             "UPDATE `user_info` SET `cfhs_abusive` = `cfhs_abusive` + 1 WHERE `user_id` = '" +
                             Ticket.SenderId + "' LIMIT 1");
                     }
@@ -153,7 +153,7 @@ namespace Oblivion.HabboHotel.Support
 
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.RunQuery(
+                dbClient.runFastQuery(
                     "UPDATE `user_stats` SET `tickets_answered` = `tickets_answered` + '1' WHERE `id` = '" +
                     Session.GetHabbo().Id + "' LIMIT 1");
             }

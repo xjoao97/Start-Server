@@ -23,23 +23,24 @@ namespace Oblivion.HabboHotel.Rooms.Chat.Commands.User
             var roomCount = OblivionServer.GetGame().GetRoomManager().Count;
 
             session.SendMessage(new RoomNotificationComposer("Informações do servidor",
-                "<font color=\"#0489B1\" size=\"18\">[¶] Oblivion Emulator:</font>\n\n" +
+                "<font color=\"#0489B1\" size=\"18\">[¶] Start Server:</font>\n\n" +
                 "<b>Agradecimientos a:</b>\n" +
                 "\t- Nillus\n" +
                 "\t- Sledmore\n" +
                 "\t- Meth0d\n" +
                 "\t- Martinmine\n" +
                 "\t- Claudinho Sant0ro\n" +
-                "<b>Oblivion Developers:</b>\n" +
+                "<b>Start Server Developers:</b>\n" +
                 "\t- Droppy\n" +
                 "\t- Dark\n" +
                 "\t- OldFl4sh\n" +
+                "\t- Xjoao\n" +
                 "<b>Informação Atual</b>:\n" +
                 "\t- Usuários Online: " + onlineUsers + "\n" +
                 "\t- Recorde de Usuários: " + Game.SessionUserRecord + "\n" +
                 "\t- Salas Carregadas: " + roomCount + "\n" +
                 "\t- Tempo: " + uptime.Days + " dia(s), " + uptime.Hours + " hora(s) e " + uptime.Minutes +
-                " minuto(s).\n\n", "Oblivion", ""));
+                " minuto(s).\n\n", "", ""));
         }
     }
 }

@@ -35,8 +35,8 @@ namespace Oblivion
 {
     public static class OblivionServer
     {
-        public const string PrettyVersion = "Oblivion";
-        public const string PrettyBuild = "1.0.2.0";
+        public const string PrettyVersion = "Start";
+        public const string PrettyBuild = "2.2.2";
         private static readonly ILog Log = LogManager.GetLogger("Oblivion.Server");
 
         private static ConfigurationData _configuration;
@@ -162,10 +162,10 @@ namespace Oblivion
                 //Reset our statistics first.
                 using (var dbClient = GetDatabaseManager().GetQueryReactor())
                 {
-                    dbClient.RunQuery("TRUNCATE `catalog_marketplace_data`");
-                    dbClient.RunQuery("UPDATE `rooms` SET `users_now` = '0' WHERE `users_now` > '0';");
-                    dbClient.RunQuery("UPDATE `users` SET `online` = '0' WHERE `online` = '1'");
-                    dbClient.RunQuery(
+                    dbClient.runFastQuery("TRUNCATE `catalog_marketplace_data`");
+                    dbClient.runFastQuery("UPDATE `rooms` SET `users_now` = '0' WHERE `users_now` > '0';");
+                    dbClient.runFastQuery("UPDATE `users` SET `online` = '0' WHERE `online` = '1'");
+                    dbClient.runFastQuery(
                         "UPDATE `server_status` SET `users_online` = '0', `loaded_rooms` = '0', `status` = '1'");
                 }
 
@@ -392,12 +392,12 @@ namespace Oblivion
 
             using (var dbClient = _manager.GetQueryReactor())
             {
-                dbClient.RunQuery("UPDATE `server_status` SET `users_online` = '0', `loaded_rooms` = '0'");
-                dbClient.RunQuery("TRUNCATE `catalog_marketplace_data`");
+                dbClient.runFastQuery("UPDATE `server_status` SET `users_online` = '0', `loaded_rooms` = '0'");
+                dbClient.runFastQuery("TRUNCATE `catalog_marketplace_data`");
 //                dbClient.RunQuery("TRUNCATE `user_auth_ticket`");
-                dbClient.RunQuery("TRUNCATE `user_auth_food`");
-                dbClient.RunQuery("UPDATE `users` SET online = '0', auth_ticket = ''");
-                dbClient.RunQuery("UPDATE `rooms` SET `users_now` = '0' WHERE `users_now` > '0'");
+                dbClient.runFastQuery("TRUNCATE `user_auth_food`");
+                dbClient.runFastQuery("UPDATE `users` SET online = '0', auth_ticket = ''");
+                dbClient.runFastQuery("UPDATE `rooms` SET `users_now` = '0' WHERE `users_now` > '0'");
             }
 
             Log.Info("Oblivion Emulator, desligado com sucesso.");

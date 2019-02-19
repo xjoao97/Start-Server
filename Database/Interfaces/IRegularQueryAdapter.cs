@@ -14,6 +14,7 @@ namespace Oblivion.Database.Interfaces
         DataRow getRow();
         string getString();
         DataTable getTable();
+        void runFastQuery(string query);
         void RunQuery(string query);
         void SetQuery(string query);
     }

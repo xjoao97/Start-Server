@@ -91,7 +91,7 @@ namespace Oblivion.HabboHotel.Users.Inventory
         {
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.RunQuery("DELETE FROM items WHERE room_id='0' AND user_id = " + _userId); //Do join 
+                dbClient.runFastQuery("DELETE FROM items WHERE room_id='0' AND user_id = " + _userId); //Do join 
             }
 
             _floorItems.Clear();
@@ -146,7 +146,7 @@ namespace Oblivion.HabboHotel.Users.Inventory
                     if (FromRoom)
                         using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                         {
-                            dbClient.RunQuery("UPDATE `items` SET `room_id` = '0', `user_id` = '" + _userId +
+                            dbClient.runFastQuery("UPDATE `items` SET `room_id` = '0', `user_id` = '" + _userId +
                                               "' WHERE `id` = '" + Id + "' LIMIT 1");
                         }
                     else
@@ -162,7 +162,7 @@ namespace Oblivion.HabboHotel.Users.Inventory
                             SendNewItems(Id);
 
                             if (Group > 0)
-                                dbClient.RunQuery("INSERT INTO `items_groups` VALUES (" + Id + ", " + Group + ")");
+                                dbClient.runFastQuery("INSERT INTO `items_groups` VALUES (" + Id + ", " + Group + ")");
 
                             if (!string.IsNullOrEmpty(ExtraData))
                             {

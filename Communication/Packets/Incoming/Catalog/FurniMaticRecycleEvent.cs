@@ -19,7 +19,7 @@ namespace Oblivion.Communication.Packets.Incoming.Catalog
                 var itemId = Packet.PopInt();
                 using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                 {
-                    dbClient.RunQuery("DELETE FROM `items` WHERE `id` = '" + itemId + "' AND `user_id` = '" +
+                    dbClient.runFastQuery("DELETE FROM `items` WHERE `id` = '" + itemId + "' AND `user_id` = '" +
                                       Session.GetHabbo().Id + "' LIMIT 1");
                 }
                 Session.GetHabbo().GetInventoryComponent().RemoveItem(itemId);
