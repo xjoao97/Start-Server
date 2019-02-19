@@ -1,0 +1,1636 @@
+Date/Time: 2017-01-08 07:28:03,315
+Thread: 1
+Falha ao tentar se conectar ao MySQL.
+
+Date/Time: 2017-01-08 15:59:04,298
+Thread: 1
+reload comando desconhecido. Digite helppara ver todos os comandos.
+
+Date/Time: 2017-01-08 19:21:12,290
+Thread: 1
+Error in command [clear]: MySql.Data.MySqlClient.MySqlException (0x80004005): Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.TimeoutException: Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. ---> System.IO.IOException: Unable to read data from the transport connection: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. ---> System.Net.Sockets.SocketException: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+   at System.Net.Sockets.Socket.Receive(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 size)
+   at MySql.Data.Common.MyNetworkStream.Read(Byte[] buffer, Int32 offset, Int32 count)
+   --- End of inner exception stack trace ---
+   at MySql.Data.Common.MyNetworkStream.Read(Byte[] buffer, Int32 offset, Int32 count)
+   at MySql.Data.MySqlClient.TimedStream.Read(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.BufferedStream.Read(Byte[] array, Int32 offset, Int32 count)
+   at MySql.Data.MySqlClient.MySqlStream.ReadFully(Stream stream, Byte[] buffer, Int32 offset, Int32 count)
+   at MySql.Data.MySqlClient.MySqlStream.LoadPacket()
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.ExceptionInterceptor.Throw(Exception exception)
+   at MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlConnection.HandleTimeoutOrThreadAbort(Exception ex)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at Oblivion.Database.Adapter.QueryAdapter.RunQuery(String query) in C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\Database\Adapter\QueryAdapter.cs:line 134
+   at Oblivion.Core.ConsoleCommandHandler.InvokeCommand(String inputData) in C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\Core\ConsoleCommandHandler.cs:line 85
+
+Date/Time: 2017-01-10 22:11:25,162
+Thread: 1
+Error in command [clear]: MySql.Data.MySqlClient.MySqlException (0x80004005): Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.TimeoutException: Timeout in IO operation
+   at MySql.Data.MySqlClient.TimedStream.StopTimer()
+   at MySql.Data.MySqlClient.TimedStream.Read(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.BufferedStream.Read(Byte[] array, Int32 offset, Int32 count)
+   at MySql.Data.MySqlClient.MySqlStream.ReadFully(Stream stream, Byte[] buffer, Int32 offset, Int32 count)
+   at MySql.Data.MySqlClient.MySqlStream.LoadPacket()
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.ExceptionInterceptor.Throw(Exception exception)
+   at MySql.Data.MySqlClient.MySqlConnection.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlConnection.HandleTimeoutOrThreadAbort(Exception ex)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at Oblivion.Database.Adapter.QueryAdapter.RunQuery(String query) in C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\Database\Adapter\QueryAdapter.cs:line 134
+   at Oblivion.Core.ConsoleCommandHandler.InvokeCommand(String inputData) in C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\Core\ConsoleCommandHandler.cs:line 85
+
+Date/Time: 2017-01-12 01:07:44,535
+Thread: 1
+shtudown comando desconhecido. Digite helppara ver todos os comandos.
+
+Date/Time: 2017-01-12 01:07:46,249
+Thread: 1
+shutwo comando desconhecido. Digite helppara ver todos os comandos.
+
+Date/Time: 2017-01-14 17:34:34,984
+Thread: 1
+closeclose comando desconhecido. Digite helppara ver todos os comandos.
+
+Date/Time: 2017-01-14 20:25:46,278
+Thread: 1
+update comando desconhecido. Digite helppara ver todos os comandos.
+
+Date/Time: 2017-01-14 20:27:32,230
+Thread: 1
+shutdonw comando desconhecido. Digite helppara ver todos os comandos.
+
+Date/Time: 2017-01-14 20:29:03,315
+Thread: 13
+Packet Error!
+
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Oblivion.Net.GamePacketParser.handlePacketData(Byte[] Data) in C:\Users\Administrator\Desktop\emulator\plusemu\Messages\Net\GamePacketParser.cs:line 80
+Date/Time: 2017-01-15 02:01:53,260
+Thread: 1
+closo comando desconhecido. Digite helppara ver todos os comandos.
+
+Date/Time: 2017-01-15 03:02:08,892
+Thread: 1
+cçose comando desconhecido. Digite helppara ver todos os comandos.
+
+Date/Time: 2017-01-15 06:00:54,816
+Thread: 21
+Couldn't load Catalog Item 1100001373, no furniture record found.
+
+Date/Time: 2017-01-15 06:00:54,817
+Thread: 21
+Couldn't load Catalog Item 1100001374, no furniture record found.
+
+Date/Time: 2017-01-15 06:00:54,818
+Thread: 21
+Couldn't load Catalog Item 1100001375, no furniture record found.
+
+Date/Time: 2017-01-15 06:00:54,818
+Thread: 21
+Couldn't load Catalog Item 1100001376, no furniture record found.
+
+Date/Time: 2017-01-15 06:00:54,818
+Thread: 21
+Couldn't load Catalog Item 1100001377, no furniture record found.
+
+Date/Time: 2017-01-15 06:00:54,818
+Thread: 21
+Couldn't load Catalog Item 1100001378, no furniture record found.
+
+Date/Time: 2017-01-15 06:00:54,819
+Thread: 21
+Couldn't load Catalog Item 1100001379, no furniture record found.
+
+Date/Time: 2017-01-15 06:00:54,819
+Thread: 21
+Couldn't load Catalog Item 1100001380, no furniture record found.
+
+Date/Time: 2017-01-15 06:00:54,819
+Thread: 21
+Couldn't load Catalog Item 1100001381, no furniture record found.
+
+Date/Time: 2017-01-15 06:00:54,819
+Thread: 21
+Couldn't load Catalog Item 1100001382, no furniture record found.
+
+Date/Time: 2017-01-15 09:52:43,686
+Thread: 1
+sshutdown comando desconhecido. Digite helppara ver todos os comandos.
+
+Date/Time: 2017-01-15 17:02:54,410
+Thread: 151
+Packet Error!
+
+System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Oblivion.Utilities.HabboEncoding.DecodeInt16(Byte[] v) in C:\Users\Administrator\Desktop\emulator\plusemu\Utilities\HabboEncoding.cs:line 74
+   at Oblivion.Net.GamePacketParser.handlePacketData(Byte[] Data) in C:\Users\Administrator\Desktop\emulator\plusemu\Messages\Net\GamePacketParser.cs:line 72
+Date/Time: 2017-01-15 18:17:07,316
+Thread: 1
+k comando desconhecido. Digite helppara ver todos os comandos.
+
+Date/Time: 2017-01-16 05:31:08,591
+Thread: 1
+closeclose comando desconhecido. Digite helppara ver todos os comandos.
+
+Date/Time: 2017-01-17 09:12:02,222
+Thread: 1
+sshutdown comando desconhecido. Digite helppara ver todos os comandos.
+
+Date/Time: 2017-01-17 20:53:49,594
+Thread: 1336
+Packet Error!
+
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Oblivion.Net.GamePacketParser.handlePacketData(Byte[] Data) in C:\Users\Administrator\Desktop\emulator\plusemu\Messages\Net\GamePacketParser.cs:line 80
+Date/Time: 2017-01-17 23:27:29,848
+Thread: 1616
+Packet Error!
+
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Oblivion.Net.GamePacketParser.handlePacketData(Byte[] Data) in C:\Users\Administrator\Desktop\emulator\plusemu\Messages\Net\GamePacketParser.cs:line 80
+Date/Time: 2017-01-18 01:19:13,924
+Thread: 1
+usa comando desconhecido. Digite helppara ver todos os comandos.
+
+Date/Time: 2017-01-19 03:50:50,486
+Thread: 1
+clse comando desconhecido. Digite helppara ver todos os comandos.
+
+Date/Time: 2017-01-19 04:55:47,743
+Thread: 1
+cllose comando desconhecido. Digite helppara ver todos os comandos.
+
+Date/Time: 2017-01-19 15:46:10,015
+Thread: 43
+Packet Error!
+
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Oblivion.Net.GamePacketParser.handlePacketData(Byte[] Data) in C:\Users\Administrator\Desktop\emulator\plusemu\Messages\Net\GamePacketParser.cs:line 80
+Date/Time: 2017-01-21 01:48:03,205
+Thread: 1
+shtudown comando desconhecido. Digite helppara ver todos os comandos.
+
+Date/Time: 2017-01-21 04:21:45,621
+Thread: 1
+reload comando desconhecido. Digite helppara ver todos os comandos.
+
+Date/Time: 2017-01-21 04:21:50,368
+Thread: 1
+reload comando desconhecido. Digite helppara ver todos os comandos.
+
+Date/Time: 2017-01-21 06:50:54,775
+Thread: 18
+Couldn't load Catalog Item 1100001383, no furniture record found.
+
+Date/Time: 2017-01-21 06:56:33,710
+Thread: 20
+Couldn't load Catalog Item 1100001383, no furniture record found.
+
+Date/Time: 2017-01-21 06:58:20,001
+Thread: 9
+Couldn't load Catalog Item 1100001383, no furniture record found.
+
+Date/Time: 2017-01-22 04:51:28,279
+Thread: 1
+reload comando desconhecido. Digite helppara ver todos os comandos.
+
+Date/Time: 2017-01-22 05:09:18,887
+Thread: 1
+closeclose comando desconhecido. Digite helppara ver todos os comandos.
+
+Date/Time: 2017-01-22 05:34:56,124
+Thread: 1
+furniture comando desconhecido. Digite helppara ver todos os comandos.
+
+Date/Time: 2017-01-22 05:34:58,422
+Thread: 1
+c comando desconhecido. Digite helppara ver todos os comandos.
+
+Date/Time: 2017-01-22 05:40:46,474
+Thread: 1
+furniture comando desconhecido. Digite helppara ver todos os comandos.
+
+Date/Time: 2017-01-22 05:46:00,742
+Thread: 1
+furniture comando desconhecido. Digite helppara ver todos os comandos.
+
+Date/Time: 2017-01-23 04:24:25,080
+Thread: 1
+closeclose comando desconhecido. Digite helppara ver todos os comandos.
+
+Date/Time: 2017-01-23 15:06:22,885
+Thread: 50
+Packet Error!
+
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Oblivion.Net.GamePacketParser.handlePacketData(Byte[] Data) in C:\Users\Administrator\Desktop\emulator\plusemu\Messages\Net\GamePacketParser.cs:line 80
+Date/Time: 2017-01-24 01:10:11,506
+Thread: 29
+Couldn't load Catalog Item 1100001390, no furniture record found.
+
+Date/Time: 2017-01-24 01:10:11,507
+Thread: 29
+Couldn't load Catalog Item 1100001391, no furniture record found.
+
+Date/Time: 2017-01-24 01:10:11,507
+Thread: 29
+Couldn't load Catalog Item 1100001392, no furniture record found.
+
+Date/Time: 2017-01-24 01:10:11,507
+Thread: 29
+Couldn't load Catalog Item 1100001393, no furniture record found.
+
+Date/Time: 2017-01-24 01:10:11,507
+Thread: 29
+Couldn't load Catalog Item 1100001394, no furniture record found.
+
+Date/Time: 2017-01-25 00:46:41,288
+Thread: 57
+Packet Error!
+
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Oblivion.Net.GamePacketParser.handlePacketData(Byte[] Data) in C:\Users\Administrator\Desktop\emulator\plusemu\Messages\Net\GamePacketParser.cs:line 80
+Date/Time: 2017-01-25 13:10:20,888
+Thread: 9
+Packet Error!
+
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Oblivion.Net.GamePacketParser.handlePacketData(Byte[] Data) in C:\Users\Administrator\Desktop\emulator\plusemu\Messages\Net\GamePacketParser.cs:line 80
+Date/Time: 2017-01-25 14:29:29,509
+Thread: 48
+Packet Error!
+
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Oblivion.Net.GamePacketParser.handlePacketData(Byte[] Data) in C:\Users\Administrator\Desktop\emulator\plusemu\Messages\Net\GamePacketParser.cs:line 80
+Date/Time: 2017-01-28 17:49:13,933
+Thread: 1
+caatalog comando desconhecido. Digite helppara ver todos os comandos.
+
+Date/Time: 2017-01-28 20:34:50,662
+Thread: 78
+Packet Error!
+
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Oblivion.Net.GamePacketParser.handlePacketData(Byte[] Data) in C:\Users\Administrator\Desktop\emulator\plusemu\Messages\Net\GamePacketParser.cs:line 80
+Date/Time: 2017-01-29 14:45:32,477
+Thread: 86
+Couldn't load Catalog Item 88805250, no furniture record found.
+
+Date/Time: 2017-01-29 14:45:32,477
+Thread: 86
+Couldn't load Catalog Item 88805251, no furniture record found.
+
+Date/Time: 2017-01-29 14:45:32,477
+Thread: 86
+Couldn't load Catalog Item 88805252, no furniture record found.
+
+Date/Time: 2017-01-29 14:45:32,477
+Thread: 86
+Couldn't load Catalog Item 88805253, no furniture record found.
+
+Date/Time: 2017-01-29 14:45:32,477
+Thread: 86
+Couldn't load Catalog Item 88805254, no furniture record found.
+
+Date/Time: 2017-01-29 14:45:32,477
+Thread: 86
+Couldn't load Catalog Item 88805255, no furniture record found.
+
+Date/Time: 2017-01-29 14:45:32,492
+Thread: 86
+Couldn't load Catalog Item 88805256, no furniture record found.
+
+Date/Time: 2017-01-29 14:52:31,505
+Thread: 91
+Couldn't load Catalog Item 88805250, no furniture record found.
+
+Date/Time: 2017-01-29 14:52:31,505
+Thread: 91
+Couldn't load Catalog Item 88805251, no furniture record found.
+
+Date/Time: 2017-01-29 14:52:31,505
+Thread: 91
+Couldn't load Catalog Item 88805252, no furniture record found.
+
+Date/Time: 2017-01-29 14:52:31,505
+Thread: 91
+Couldn't load Catalog Item 88805253, no furniture record found.
+
+Date/Time: 2017-01-29 14:52:31,505
+Thread: 91
+Couldn't load Catalog Item 88805254, no furniture record found.
+
+Date/Time: 2017-01-29 14:52:31,505
+Thread: 91
+Couldn't load Catalog Item 88805255, no furniture record found.
+
+Date/Time: 2017-01-29 14:52:31,505
+Thread: 91
+Couldn't load Catalog Item 88805256, no furniture record found.
+
+Date/Time: 2017-01-31 12:00:24,863
+Thread: 40
+Packet Error!
+
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Oblivion.Net.GamePacketParser.handlePacketData(Byte[] Data) in C:\Users\Administrator\Desktop\emulator\plusemu\Messages\Net\GamePacketParser.cs:line 80
+Date/Time: 2017-02-01 03:07:41,515
+Thread: 1
+closeclose comando desconhecido. Digite helppara ver todos os comandos.
+
+Date/Time: 2017-02-01 03:27:19,295
+Thread: 1
+Couldn't load Catalog Item 88805250, no furniture record found.
+
+Date/Time: 2017-02-01 03:27:19,297
+Thread: 1
+Couldn't load Catalog Item 88805251, no furniture record found.
+
+Date/Time: 2017-02-01 03:27:19,298
+Thread: 1
+Couldn't load Catalog Item 88805252, no furniture record found.
+
+Date/Time: 2017-02-01 03:27:19,298
+Thread: 1
+Couldn't load Catalog Item 88805253, no furniture record found.
+
+Date/Time: 2017-02-01 03:27:19,298
+Thread: 1
+Couldn't load Catalog Item 88805254, no furniture record found.
+
+Date/Time: 2017-02-01 03:27:19,298
+Thread: 1
+Couldn't load Catalog Item 88805255, no furniture record found.
+
+Date/Time: 2017-02-01 03:27:19,299
+Thread: 1
+Couldn't load Catalog Item 88805256, no furniture record found.
+
+Date/Time: 2017-02-01 09:30:54,801
+Thread: 1
+Couldn't load Catalog Item 88805250, no furniture record found.
+
+Date/Time: 2017-02-01 09:30:54,803
+Thread: 1
+Couldn't load Catalog Item 88805251, no furniture record found.
+
+Date/Time: 2017-02-01 09:30:54,803
+Thread: 1
+Couldn't load Catalog Item 88805252, no furniture record found.
+
+Date/Time: 2017-02-01 09:30:54,803
+Thread: 1
+Couldn't load Catalog Item 88805253, no furniture record found.
+
+Date/Time: 2017-02-01 09:30:54,803
+Thread: 1
+Couldn't load Catalog Item 88805254, no furniture record found.
+
+Date/Time: 2017-02-01 09:30:54,804
+Thread: 1
+Couldn't load Catalog Item 88805255, no furniture record found.
+
+Date/Time: 2017-02-01 09:30:54,804
+Thread: 1
+Couldn't load Catalog Item 88805256, no furniture record found.
+
+Date/Time: 2017-02-01 15:47:11,310
+Thread: 71
+Couldn't load Catalog Item 88805250, no furniture record found.
+
+Date/Time: 2017-02-01 15:47:11,310
+Thread: 71
+Couldn't load Catalog Item 88805251, no furniture record found.
+
+Date/Time: 2017-02-01 15:47:11,310
+Thread: 71
+Couldn't load Catalog Item 88805252, no furniture record found.
+
+Date/Time: 2017-02-01 15:47:11,310
+Thread: 71
+Couldn't load Catalog Item 88805253, no furniture record found.
+
+Date/Time: 2017-02-01 15:47:11,310
+Thread: 71
+Couldn't load Catalog Item 88805254, no furniture record found.
+
+Date/Time: 2017-02-01 15:47:11,310
+Thread: 71
+Couldn't load Catalog Item 88805255, no furniture record found.
+
+Date/Time: 2017-02-01 15:47:11,310
+Thread: 71
+Couldn't load Catalog Item 88805256, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 88805250, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 88805251, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 88805252, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 88805253, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 88805254, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 88805255, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 88805256, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 98806570, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 98806571, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 98806572, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 98806573, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 98806574, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 98806575, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 98806576, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 98806577, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 98806578, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 98806579, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 98806580, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 98806581, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 98806582, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 98806583, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 98806584, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 98806585, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 98806586, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 98806587, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 98806588, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 98806589, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 98806590, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 98806591, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 98806592, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 98806593, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 98806594, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 98806595, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 98806596, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 98806597, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 98806598, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 98806599, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 98806600, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 98806601, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,767
+Thread: 59
+Couldn't load Catalog Item 98806602, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,782
+Thread: 59
+Couldn't load Catalog Item 98806603, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,782
+Thread: 59
+Couldn't load Catalog Item 98806604, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,782
+Thread: 59
+Couldn't load Catalog Item 98806605, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,782
+Thread: 59
+Couldn't load Catalog Item 98806606, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,782
+Thread: 59
+Couldn't load Catalog Item 98806607, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,782
+Thread: 59
+Couldn't load Catalog Item 98806608, no furniture record found.
+
+Date/Time: 2017-02-02 09:42:38,782
+Thread: 59
+Couldn't load Catalog Item 98806609, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,688
+Thread: 5
+Couldn't load Catalog Item 88805250, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,688
+Thread: 5
+Couldn't load Catalog Item 88805251, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,688
+Thread: 5
+Couldn't load Catalog Item 88805252, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,688
+Thread: 5
+Couldn't load Catalog Item 88805253, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,688
+Thread: 5
+Couldn't load Catalog Item 88805254, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,688
+Thread: 5
+Couldn't load Catalog Item 88805255, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,688
+Thread: 5
+Couldn't load Catalog Item 88805256, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,688
+Thread: 5
+Couldn't load Catalog Item 98806570, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,688
+Thread: 5
+Couldn't load Catalog Item 98806571, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,688
+Thread: 5
+Couldn't load Catalog Item 98806572, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,688
+Thread: 5
+Couldn't load Catalog Item 98806573, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,688
+Thread: 5
+Couldn't load Catalog Item 98806574, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,688
+Thread: 5
+Couldn't load Catalog Item 98806575, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,688
+Thread: 5
+Couldn't load Catalog Item 98806576, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,704
+Thread: 5
+Couldn't load Catalog Item 98806577, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,704
+Thread: 5
+Couldn't load Catalog Item 98806578, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,704
+Thread: 5
+Couldn't load Catalog Item 98806579, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,704
+Thread: 5
+Couldn't load Catalog Item 98806580, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,704
+Thread: 5
+Couldn't load Catalog Item 98806581, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,704
+Thread: 5
+Couldn't load Catalog Item 98806582, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,704
+Thread: 5
+Couldn't load Catalog Item 98806583, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,704
+Thread: 5
+Couldn't load Catalog Item 98806584, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,704
+Thread: 5
+Couldn't load Catalog Item 98806585, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,704
+Thread: 5
+Couldn't load Catalog Item 98806586, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,704
+Thread: 5
+Couldn't load Catalog Item 98806587, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,704
+Thread: 5
+Couldn't load Catalog Item 98806588, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,704
+Thread: 5
+Couldn't load Catalog Item 98806589, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,704
+Thread: 5
+Couldn't load Catalog Item 98806590, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,704
+Thread: 5
+Couldn't load Catalog Item 98806591, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,704
+Thread: 5
+Couldn't load Catalog Item 98806592, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,704
+Thread: 5
+Couldn't load Catalog Item 98806593, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,704
+Thread: 5
+Couldn't load Catalog Item 98806594, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,704
+Thread: 5
+Couldn't load Catalog Item 98806595, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,704
+Thread: 5
+Couldn't load Catalog Item 98806596, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,704
+Thread: 5
+Couldn't load Catalog Item 98806597, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,704
+Thread: 5
+Couldn't load Catalog Item 98806598, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,704
+Thread: 5
+Couldn't load Catalog Item 98806599, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,704
+Thread: 5
+Couldn't load Catalog Item 98806600, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,704
+Thread: 5
+Couldn't load Catalog Item 98806601, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,704
+Thread: 5
+Couldn't load Catalog Item 98806602, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,704
+Thread: 5
+Couldn't load Catalog Item 98806603, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,704
+Thread: 5
+Couldn't load Catalog Item 98806604, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,719
+Thread: 5
+Couldn't load Catalog Item 98806605, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,719
+Thread: 5
+Couldn't load Catalog Item 98806606, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,719
+Thread: 5
+Couldn't load Catalog Item 98806607, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,719
+Thread: 5
+Couldn't load Catalog Item 98806608, no furniture record found.
+
+Date/Time: 2017-02-02 09:43:39,719
+Thread: 5
+Couldn't load Catalog Item 98806609, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,406
+Thread: 16
+Couldn't load Catalog Item 88805250, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,406
+Thread: 16
+Couldn't load Catalog Item 88805251, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,406
+Thread: 16
+Couldn't load Catalog Item 88805252, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,406
+Thread: 16
+Couldn't load Catalog Item 88805253, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,406
+Thread: 16
+Couldn't load Catalog Item 88805254, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,406
+Thread: 16
+Couldn't load Catalog Item 88805255, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,406
+Thread: 16
+Couldn't load Catalog Item 88805256, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,406
+Thread: 16
+Couldn't load Catalog Item 98806570, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,406
+Thread: 16
+Couldn't load Catalog Item 98806571, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,406
+Thread: 16
+Couldn't load Catalog Item 98806572, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,422
+Thread: 16
+Couldn't load Catalog Item 98806573, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,422
+Thread: 16
+Couldn't load Catalog Item 98806574, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,422
+Thread: 16
+Couldn't load Catalog Item 98806575, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,422
+Thread: 16
+Couldn't load Catalog Item 98806576, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,422
+Thread: 16
+Couldn't load Catalog Item 98806577, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,422
+Thread: 16
+Couldn't load Catalog Item 98806578, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,422
+Thread: 16
+Couldn't load Catalog Item 98806579, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,422
+Thread: 16
+Couldn't load Catalog Item 98806580, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,422
+Thread: 16
+Couldn't load Catalog Item 98806581, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,422
+Thread: 16
+Couldn't load Catalog Item 98806582, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,422
+Thread: 16
+Couldn't load Catalog Item 98806583, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,422
+Thread: 16
+Couldn't load Catalog Item 98806584, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,422
+Thread: 16
+Couldn't load Catalog Item 98806585, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,422
+Thread: 16
+Couldn't load Catalog Item 98806586, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,422
+Thread: 16
+Couldn't load Catalog Item 98806587, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,422
+Thread: 16
+Couldn't load Catalog Item 98806588, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,422
+Thread: 16
+Couldn't load Catalog Item 98806589, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,422
+Thread: 16
+Couldn't load Catalog Item 98806590, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,422
+Thread: 16
+Couldn't load Catalog Item 98806591, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,438
+Thread: 16
+Couldn't load Catalog Item 98806592, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,438
+Thread: 16
+Couldn't load Catalog Item 98806593, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,438
+Thread: 16
+Couldn't load Catalog Item 98806594, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,438
+Thread: 16
+Couldn't load Catalog Item 98806595, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,438
+Thread: 16
+Couldn't load Catalog Item 98806596, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,438
+Thread: 16
+Couldn't load Catalog Item 98806597, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,438
+Thread: 16
+Couldn't load Catalog Item 98806598, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,438
+Thread: 16
+Couldn't load Catalog Item 98806599, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,438
+Thread: 16
+Couldn't load Catalog Item 98806600, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,438
+Thread: 16
+Couldn't load Catalog Item 98806601, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,438
+Thread: 16
+Couldn't load Catalog Item 98806602, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,438
+Thread: 16
+Couldn't load Catalog Item 98806603, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,438
+Thread: 16
+Couldn't load Catalog Item 98806604, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,438
+Thread: 16
+Couldn't load Catalog Item 98806605, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,438
+Thread: 16
+Couldn't load Catalog Item 98806606, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,438
+Thread: 16
+Couldn't load Catalog Item 98806607, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,438
+Thread: 16
+Couldn't load Catalog Item 98806608, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:07,453
+Thread: 16
+Couldn't load Catalog Item 98806609, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:59,578
+Thread: 1
+Couldn't load Catalog Item 88805250, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:59,578
+Thread: 1
+Couldn't load Catalog Item 88805251, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:59,578
+Thread: 1
+Couldn't load Catalog Item 88805252, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:59,578
+Thread: 1
+Couldn't load Catalog Item 88805253, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:59,578
+Thread: 1
+Couldn't load Catalog Item 88805254, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:59,578
+Thread: 1
+Couldn't load Catalog Item 88805255, no furniture record found.
+
+Date/Time: 2017-02-02 09:44:59,578
+Thread: 1
+Couldn't load Catalog Item 88805256, no furniture record found.
+
+Date/Time: 2017-02-03 02:19:23,727
+Thread: 78
+Couldn't load Catalog Item 88805250, no furniture record found.
+
+Date/Time: 2017-02-03 02:19:23,727
+Thread: 78
+Couldn't load Catalog Item 88805251, no furniture record found.
+
+Date/Time: 2017-02-03 02:19:23,728
+Thread: 78
+Couldn't load Catalog Item 88805252, no furniture record found.
+
+Date/Time: 2017-02-03 02:19:23,728
+Thread: 78
+Couldn't load Catalog Item 88805253, no furniture record found.
+
+Date/Time: 2017-02-03 02:19:23,728
+Thread: 78
+Couldn't load Catalog Item 88805254, no furniture record found.
+
+Date/Time: 2017-02-03 02:19:23,729
+Thread: 78
+Couldn't load Catalog Item 88805255, no furniture record found.
+
+Date/Time: 2017-02-03 02:19:23,729
+Thread: 78
+Couldn't load Catalog Item 88805256, no furniture record found.
+
+Date/Time: 2017-02-03 10:25:53,058
+Thread: 32
+Packet Error!
+
+System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Oblivion.Utilities.HabboEncoding.DecodeInt16(Byte[] v) in C:\Users\Administrator\Desktop\emulator\plusemu\Utilities\HabboEncoding.cs:line 74
+   at Oblivion.Net.GamePacketParser.handlePacketData(Byte[] Data) in C:\Users\Administrator\Desktop\emulator\plusemu\Messages\Net\GamePacketParser.cs:line 72
+Date/Time: 2017-02-03 17:31:02,959
+Thread: 71
+Couldn't load Catalog Item 88805250, no furniture record found.
+
+Date/Time: 2017-02-03 17:31:02,959
+Thread: 71
+Couldn't load Catalog Item 88805251, no furniture record found.
+
+Date/Time: 2017-02-03 17:31:02,960
+Thread: 71
+Couldn't load Catalog Item 88805252, no furniture record found.
+
+Date/Time: 2017-02-03 17:31:02,960
+Thread: 71
+Couldn't load Catalog Item 88805253, no furniture record found.
+
+Date/Time: 2017-02-03 17:31:02,960
+Thread: 71
+Couldn't load Catalog Item 88805254, no furniture record found.
+
+Date/Time: 2017-02-03 17:31:02,961
+Thread: 71
+Couldn't load Catalog Item 88805255, no furniture record found.
+
+Date/Time: 2017-02-03 17:31:02,961
+Thread: 71
+Couldn't load Catalog Item 88805256, no furniture record found.
+
+Date/Time: 2017-02-03 17:31:28,048
+Thread: 15
+Couldn't load Catalog Item 88805250, no furniture record found.
+
+Date/Time: 2017-02-03 17:31:28,049
+Thread: 15
+Couldn't load Catalog Item 88805251, no furniture record found.
+
+Date/Time: 2017-02-03 17:31:28,049
+Thread: 15
+Couldn't load Catalog Item 88805252, no furniture record found.
+
+Date/Time: 2017-02-03 17:31:28,049
+Thread: 15
+Couldn't load Catalog Item 88805253, no furniture record found.
+
+Date/Time: 2017-02-03 17:31:28,049
+Thread: 15
+Couldn't load Catalog Item 88805254, no furniture record found.
+
+Date/Time: 2017-02-03 17:31:28,049
+Thread: 15
+Couldn't load Catalog Item 88805255, no furniture record found.
+
+Date/Time: 2017-02-03 17:31:28,050
+Thread: 15
+Couldn't load Catalog Item 88805256, no furniture record found.
+
+Date/Time: 2017-02-03 17:35:42,276
+Thread: 78
+Couldn't load Catalog Item 88805250, no furniture record found.
+
+Date/Time: 2017-02-03 17:35:42,277
+Thread: 78
+Couldn't load Catalog Item 88805251, no furniture record found.
+
+Date/Time: 2017-02-03 17:35:42,277
+Thread: 78
+Couldn't load Catalog Item 88805252, no furniture record found.
+
+Date/Time: 2017-02-03 17:35:42,277
+Thread: 78
+Couldn't load Catalog Item 88805253, no furniture record found.
+
+Date/Time: 2017-02-03 17:35:42,277
+Thread: 78
+Couldn't load Catalog Item 88805254, no furniture record found.
+
+Date/Time: 2017-02-03 17:35:42,278
+Thread: 78
+Couldn't load Catalog Item 88805255, no furniture record found.
+
+Date/Time: 2017-02-03 17:35:42,278
+Thread: 78
+Couldn't load Catalog Item 88805256, no furniture record found.
+
+Date/Time: 2017-02-03 17:36:39,414
+Thread: 62
+Couldn't load Catalog Item 88805250, no furniture record found.
+
+Date/Time: 2017-02-03 17:36:39,414
+Thread: 62
+Couldn't load Catalog Item 88805251, no furniture record found.
+
+Date/Time: 2017-02-03 17:36:39,414
+Thread: 62
+Couldn't load Catalog Item 88805252, no furniture record found.
+
+Date/Time: 2017-02-03 17:36:39,415
+Thread: 62
+Couldn't load Catalog Item 88805253, no furniture record found.
+
+Date/Time: 2017-02-03 17:36:39,415
+Thread: 62
+Couldn't load Catalog Item 88805254, no furniture record found.
+
+Date/Time: 2017-02-03 17:36:39,415
+Thread: 62
+Couldn't load Catalog Item 88805255, no furniture record found.
+
+Date/Time: 2017-02-03 17:36:39,416
+Thread: 62
+Couldn't load Catalog Item 88805256, no furniture record found.
+
+Date/Time: 2017-02-03 17:38:46,559
+Thread: 101
+Couldn't load Catalog Item 88805250, no furniture record found.
+
+Date/Time: 2017-02-03 17:38:46,559
+Thread: 101
+Couldn't load Catalog Item 88805251, no furniture record found.
+
+Date/Time: 2017-02-03 17:38:46,560
+Thread: 101
+Couldn't load Catalog Item 88805252, no furniture record found.
+
+Date/Time: 2017-02-03 17:38:46,560
+Thread: 101
+Couldn't load Catalog Item 88805253, no furniture record found.
+
+Date/Time: 2017-02-03 17:38:46,560
+Thread: 101
+Couldn't load Catalog Item 88805254, no furniture record found.
+
+Date/Time: 2017-02-03 17:38:46,560
+Thread: 101
+Couldn't load Catalog Item 88805255, no furniture record found.
+
+Date/Time: 2017-02-03 17:38:46,560
+Thread: 101
+Couldn't load Catalog Item 88805256, no furniture record found.
+
+Date/Time: 2017-02-03 17:59:55,683
+Thread: 68
+Couldn't load Catalog Item 88805250, no furniture record found.
+
+Date/Time: 2017-02-03 17:59:55,684
+Thread: 68
+Couldn't load Catalog Item 88805251, no furniture record found.
+
+Date/Time: 2017-02-03 17:59:55,684
+Thread: 68
+Couldn't load Catalog Item 88805252, no furniture record found.
+
+Date/Time: 2017-02-03 17:59:55,684
+Thread: 68
+Couldn't load Catalog Item 88805253, no furniture record found.
+
+Date/Time: 2017-02-03 17:59:55,684
+Thread: 68
+Couldn't load Catalog Item 88805254, no furniture record found.
+
+Date/Time: 2017-02-03 17:59:55,684
+Thread: 68
+Couldn't load Catalog Item 88805255, no furniture record found.
+
+Date/Time: 2017-02-03 17:59:55,685
+Thread: 68
+Couldn't load Catalog Item 88805256, no furniture record found.
+
+Date/Time: 2017-02-04 04:54:09,315
+Thread: 1
+Couldn't load Catalog Item 88805250, no furniture record found.
+
+Date/Time: 2017-02-04 04:54:09,332
+Thread: 1
+Couldn't load Catalog Item 88805251, no furniture record found.
+
+Date/Time: 2017-02-04 04:54:09,332
+Thread: 1
+Couldn't load Catalog Item 88805252, no furniture record found.
+
+Date/Time: 2017-02-04 04:54:09,332
+Thread: 1
+Couldn't load Catalog Item 88805253, no furniture record found.
+
+Date/Time: 2017-02-04 04:54:09,332
+Thread: 1
+Couldn't load Catalog Item 88805254, no furniture record found.
+
+Date/Time: 2017-02-04 04:54:09,333
+Thread: 1
+Couldn't load Catalog Item 88805255, no furniture record found.
+
+Date/Time: 2017-02-04 04:54:09,333
+Thread: 1
+Couldn't load Catalog Item 88805256, no furniture record found.
+
+Date/Time: 2017-02-04 05:09:03,110
+Thread: 1
+Couldn't load Catalog Item 88805250, no furniture record found.
+
+Date/Time: 2017-02-04 05:09:03,112
+Thread: 1
+Couldn't load Catalog Item 88805251, no furniture record found.
+
+Date/Time: 2017-02-04 05:09:03,112
+Thread: 1
+Couldn't load Catalog Item 88805252, no furniture record found.
+
+Date/Time: 2017-02-04 05:09:03,112
+Thread: 1
+Couldn't load Catalog Item 88805253, no furniture record found.
+
+Date/Time: 2017-02-04 05:09:03,113
+Thread: 1
+Couldn't load Catalog Item 88805254, no furniture record found.
+
+Date/Time: 2017-02-04 05:09:03,113
+Thread: 1
+Couldn't load Catalog Item 88805255, no furniture record found.
+
+Date/Time: 2017-02-04 05:09:03,113
+Thread: 1
+Couldn't load Catalog Item 88805256, no furniture record found.
+
+Date/Time: 2017-02-04 05:14:57,075
+Thread: 1
+Couldn't load Catalog Item 88805250, no furniture record found.
+
+Date/Time: 2017-02-04 05:14:57,076
+Thread: 1
+Couldn't load Catalog Item 88805251, no furniture record found.
+
+Date/Time: 2017-02-04 05:14:57,077
+Thread: 1
+Couldn't load Catalog Item 88805252, no furniture record found.
+
+Date/Time: 2017-02-04 05:14:57,077
+Thread: 1
+Couldn't load Catalog Item 88805253, no furniture record found.
+
+Date/Time: 2017-02-04 05:14:57,078
+Thread: 1
+Couldn't load Catalog Item 88805254, no furniture record found.
+
+Date/Time: 2017-02-04 05:14:57,078
+Thread: 1
+Couldn't load Catalog Item 88805255, no furniture record found.
+
+Date/Time: 2017-02-04 05:14:57,078
+Thread: 1
+Couldn't load Catalog Item 88805256, no furniture record found.
+
+Date/Time: 2017-02-05 04:28:44,885
+Thread: 1
+Couldn't load Catalog Item 88805250, no furniture record found.
+
+Date/Time: 2017-02-05 04:28:44,911
+Thread: 1
+Couldn't load Catalog Item 88805251, no furniture record found.
+
+Date/Time: 2017-02-05 04:28:44,912
+Thread: 1
+Couldn't load Catalog Item 88805252, no furniture record found.
+
+Date/Time: 2017-02-05 04:28:44,912
+Thread: 1
+Couldn't load Catalog Item 88805253, no furniture record found.
+
+Date/Time: 2017-02-05 04:28:44,912
+Thread: 1
+Couldn't load Catalog Item 88805254, no furniture record found.
+
+Date/Time: 2017-02-05 04:28:44,912
+Thread: 1
+Couldn't load Catalog Item 88805255, no furniture record found.
+
+Date/Time: 2017-02-05 04:28:44,913
+Thread: 1
+Couldn't load Catalog Item 88805256, no furniture record found.
+
+Date/Time: 2017-02-05 17:08:04,468
+Thread: 1
+sclear comando desconhecido. Digite help para ver todos os comandos.
+
+Date/Time: 2017-02-06 04:03:43,780
+Thread: 1
+Couldn't load Catalog Item 88805250, no furniture record found.
+
+Date/Time: 2017-02-06 04:03:43,782
+Thread: 1
+Couldn't load Catalog Item 88805251, no furniture record found.
+
+Date/Time: 2017-02-06 04:03:43,782
+Thread: 1
+Couldn't load Catalog Item 88805252, no furniture record found.
+
+Date/Time: 2017-02-06 04:03:43,783
+Thread: 1
+Couldn't load Catalog Item 88805253, no furniture record found.
+
+Date/Time: 2017-02-06 04:03:43,783
+Thread: 1
+Couldn't load Catalog Item 88805254, no furniture record found.
+
+Date/Time: 2017-02-06 04:03:43,784
+Thread: 1
+Couldn't load Catalog Item 88805255, no furniture record found.
+
+Date/Time: 2017-02-06 04:03:43,785
+Thread: 1
+Couldn't load Catalog Item 88805256, no furniture record found.
+
+Date/Time: 2017-02-06 05:15:22,530
+Thread: 1
+Couldn't load Catalog Item 88805250, no furniture record found.
+
+Date/Time: 2017-02-06 05:15:22,531
+Thread: 1
+Couldn't load Catalog Item 88805251, no furniture record found.
+
+Date/Time: 2017-02-06 05:15:22,532
+Thread: 1
+Couldn't load Catalog Item 88805252, no furniture record found.
+
+Date/Time: 2017-02-06 05:15:22,532
+Thread: 1
+Couldn't load Catalog Item 88805253, no furniture record found.
+
+Date/Time: 2017-02-06 05:15:22,532
+Thread: 1
+Couldn't load Catalog Item 88805254, no furniture record found.
+
+Date/Time: 2017-02-06 05:15:22,532
+Thread: 1
+Couldn't load Catalog Item 88805255, no furniture record found.
+
+Date/Time: 2017-02-06 05:15:22,533
+Thread: 1
+Couldn't load Catalog Item 88805256, no furniture record found.
+
+Date/Time: 2017-02-06 05:17:03,682
+Thread: 1
+Couldn't load Catalog Item 88805250, no furniture record found.
+
+Date/Time: 2017-02-06 05:17:03,684
+Thread: 1
+Couldn't load Catalog Item 88805251, no furniture record found.
+
+Date/Time: 2017-02-06 05:17:03,684
+Thread: 1
+Couldn't load Catalog Item 88805252, no furniture record found.
+
+Date/Time: 2017-02-06 05:17:03,684
+Thread: 1
+Couldn't load Catalog Item 88805253, no furniture record found.
+
+Date/Time: 2017-02-06 05:17:03,684
+Thread: 1
+Couldn't load Catalog Item 88805254, no furniture record found.
+
+Date/Time: 2017-02-06 05:17:03,685
+Thread: 1
+Couldn't load Catalog Item 88805255, no furniture record found.
+
+Date/Time: 2017-02-06 05:17:03,685
+Thread: 1
+Couldn't load Catalog Item 88805256, no furniture record found.
+
+Date/Time: 2017-02-07 05:49:03,411
+Thread: 1
+Couldn't load Catalog Item 88805250, no furniture record found.
+
+Date/Time: 2017-02-07 05:49:03,412
+Thread: 1
+Couldn't load Catalog Item 88805251, no furniture record found.
+
+Date/Time: 2017-02-07 05:49:03,412
+Thread: 1
+Couldn't load Catalog Item 88805252, no furniture record found.
+
+Date/Time: 2017-02-07 05:49:03,413
+Thread: 1
+Couldn't load Catalog Item 88805253, no furniture record found.
+
+Date/Time: 2017-02-07 05:49:03,413
+Thread: 1
+Couldn't load Catalog Item 88805254, no furniture record found.
+
+Date/Time: 2017-02-07 05:49:03,413
+Thread: 1
+Couldn't load Catalog Item 88805255, no furniture record found.
+
+Date/Time: 2017-02-07 05:49:03,413
+Thread: 1
+Couldn't load Catalog Item 88805256, no furniture record found.
+
+Date/Time: 2017-02-07 06:05:47,059
+Thread: 1
+Couldn't load Catalog Item 88805250, no furniture record found.
+
+Date/Time: 2017-02-07 06:05:47,060
+Thread: 1
+Couldn't load Catalog Item 88805251, no furniture record found.
+
+Date/Time: 2017-02-07 06:05:47,061
+Thread: 1
+Couldn't load Catalog Item 88805252, no furniture record found.
+
+Date/Time: 2017-02-07 06:05:47,061
+Thread: 1
+Couldn't load Catalog Item 88805253, no furniture record found.
+
+Date/Time: 2017-02-07 06:05:47,061
+Thread: 1
+Couldn't load Catalog Item 88805254, no furniture record found.
+
+Date/Time: 2017-02-07 06:05:47,061
+Thread: 1
+Couldn't load Catalog Item 88805255, no furniture record found.
+
+Date/Time: 2017-02-07 06:05:47,062
+Thread: 1
+Couldn't load Catalog Item 88805256, no furniture record found.
+
+Date/Time: 2017-02-07 06:06:42,661
+Thread: 1
+Couldn't load Catalog Item 88805250, no furniture record found.
+
+Date/Time: 2017-02-07 06:06:42,662
+Thread: 1
+Couldn't load Catalog Item 88805251, no furniture record found.
+
+Date/Time: 2017-02-07 06:06:42,663
+Thread: 1
+Couldn't load Catalog Item 88805252, no furniture record found.
+
+Date/Time: 2017-02-07 06:06:42,663
+Thread: 1
+Couldn't load Catalog Item 88805253, no furniture record found.
+
+Date/Time: 2017-02-07 06:06:42,663
+Thread: 1
+Couldn't load Catalog Item 88805254, no furniture record found.
+
+Date/Time: 2017-02-07 06:06:42,663
+Thread: 1
+Couldn't load Catalog Item 88805255, no furniture record found.
+
+Date/Time: 2017-02-07 06:06:42,664
+Thread: 1
+Couldn't load Catalog Item 88805256, no furniture record found.
+
+Date/Time: 2017-02-07 06:06:55,746
+Thread: 1
+Couldn't load Catalog Item 88805250, no furniture record found.
+
+Date/Time: 2017-02-07 06:06:55,748
+Thread: 1
+Couldn't load Catalog Item 88805251, no furniture record found.
+
+Date/Time: 2017-02-07 06:06:55,748
+Thread: 1
+Couldn't load Catalog Item 88805252, no furniture record found.
+
+Date/Time: 2017-02-07 06:06:55,748
+Thread: 1
+Couldn't load Catalog Item 88805253, no furniture record found.
+
+Date/Time: 2017-02-07 06:06:55,748
+Thread: 1
+Couldn't load Catalog Item 88805254, no furniture record found.
+
+Date/Time: 2017-02-07 06:06:55,749
+Thread: 1
+Couldn't load Catalog Item 88805255, no furniture record found.
+
+Date/Time: 2017-02-07 06:06:55,749
+Thread: 1
+Couldn't load Catalog Item 88805256, no furniture record found.
+
+Date/Time: 2017-02-07 06:19:17,296
+Thread: 1
+Couldn't load Catalog Item 88805250, no furniture record found.
+
+Date/Time: 2017-02-07 06:19:17,297
+Thread: 1
+Couldn't load Catalog Item 88805251, no furniture record found.
+
+Date/Time: 2017-02-07 06:19:17,297
+Thread: 1
+Couldn't load Catalog Item 88805252, no furniture record found.
+
+Date/Time: 2017-02-07 06:19:17,298
+Thread: 1
+Couldn't load Catalog Item 88805253, no furniture record found.
+
+Date/Time: 2017-02-07 06:19:17,298
+Thread: 1
+Couldn't load Catalog Item 88805254, no furniture record found.
+
+Date/Time: 2017-02-07 06:19:17,298
+Thread: 1
+Couldn't load Catalog Item 88805255, no furniture record found.
+
+Date/Time: 2017-02-07 06:19:17,298
+Thread: 1
+Couldn't load Catalog Item 88805256, no furniture record found.
+
+Date/Time: 2017-02-11 13:36:50,571
+Thread: 1
+Couldn't load Catalog Item 88805250, no furniture record found.
+
+Date/Time: 2017-02-11 13:36:50,583
+Thread: 1
+Couldn't load Catalog Item 88805251, no furniture record found.
+
+Date/Time: 2017-02-11 13:36:50,584
+Thread: 1
+Couldn't load Catalog Item 88805252, no furniture record found.
+
+Date/Time: 2017-02-11 13:36:50,584
+Thread: 1
+Couldn't load Catalog Item 88805253, no furniture record found.
+
+Date/Time: 2017-02-11 13:36:50,584
+Thread: 1
+Couldn't load Catalog Item 88805254, no furniture record found.
+
+Date/Time: 2017-02-11 13:36:50,585
+Thread: 1
+Couldn't load Catalog Item 88805255, no furniture record found.
+
+Date/Time: 2017-02-11 13:36:50,585
+Thread: 1
+Couldn't load Catalog Item 88805256, no furniture record found.
+
+Date/Time: 2017-02-11 14:15:22,765
+Thread: 1
+Couldn't load Catalog Item 88805250, no furniture record found.
+
+Date/Time: 2017-02-11 14:15:22,767
+Thread: 1
+Couldn't load Catalog Item 88805251, no furniture record found.
+
+Date/Time: 2017-02-11 14:15:22,767
+Thread: 1
+Couldn't load Catalog Item 88805252, no furniture record found.
+
+Date/Time: 2017-02-11 14:15:22,767
+Thread: 1
+Couldn't load Catalog Item 88805253, no furniture record found.
+
+Date/Time: 2017-02-11 14:15:22,768
+Thread: 1
+Couldn't load Catalog Item 88805254, no furniture record found.
+
+Date/Time: 2017-02-11 14:15:22,768
+Thread: 1
+Couldn't load Catalog Item 88805255, no furniture record found.
+
+Date/Time: 2017-02-11 14:15:22,768
+Thread: 1
+Couldn't load Catalog Item 88805256, no furniture record found.
+
+Date/Time: 2017-02-11 21:19:52,469
+Thread: 1
+	clear comando desconhecido. Digite help para ver todos os comandos.
+

@@ -1,0 +1,82 @@
+Date/Time: 2017-02-03 19:55:14,767
+Thread: 1
+unload comando desconhecido. Digite help para ver todos os comandos.
+
+Date/Time: 2017-02-04 00:04:26,781
+Thread: 1
+Error in command [testbot]: System.IO.FileNotFoundException: Could not find file 'C:\Users\Administrator\Desktop\emulator\plusemu\bin\Debug\extra\soletrando.ini'.
+File name: 'C:\Users\Administrator\Desktop\emulator\plusemu\bin\Debug\extra\soletrando.ini'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding)
+   at System.IO.File.InternalReadAllLines(String path, Encoding encoding)
+   at Oblivion.Core.BotConfig.ReadFile(String path) in C:\Users\Administrator\Desktop\emulator\plusemu\Core\BotConfig.cs:line 21
+   at Oblivion.Core.BotConfig.Init(String bot) in C:\Users\Administrator\Desktop\emulator\plusemu\Core\BotConfig.cs:line 15
+   at Oblivion.Core.ConsoleCommandHandler.InvokeCommand(String inputData) in C:\Users\Administrator\Desktop\emulator\plusemu\Core\ConsoleCommandHandler.cs:line 154
+
+Date/Time: 2017-02-04 00:05:01,930
+Thread: 1
+testbots comando desconhecido. Digite help para ver todos os comandos.
+
+Date/Time: 2017-02-04 01:14:42,210
+Thread: 1
+clclear comando desconhecido. Digite help para ver todos os comandos.
+
+Date/Time: 2017-02-06 03:31:19,586
+Thread: 8
+idd comando desconhecido. Digite help para ver todos os comandos.
+
+Date/Time: 2017-02-09 19:33:32,356
+Thread: 1
+reload comando desconhecido. Digite help para ver todos os comandos.
+
+Date/Time: 2018-11-05 12:24:58,849
+Thread: 1
+restart comando desconhecido. Digite help para ver todos os comandos.
+
+Date/Time: 2018-11-05 12:25:01,622
+Thread: 1
+reniciar comando desconhecido. Digite help para ver todos os comandos.
+
+Date/Time: 2018-11-05 12:25:03,440
+Thread: 1
+renicia comando desconhecido. Digite help para ver todos os comandos.
+
+Date/Time: 2018-11-05 13:01:00,002
+Thread: 1
+Couldn't load Catalog Item 18716, no furniture record found.
+
+Date/Time: 2018-11-05 13:01:00,075
+Thread: 1
+Couldn't load photo poster item 777954880, no furniture record found.
+
+Date/Time: 2018-11-05 13:04:50,210
+Thread: 1
+Couldn't load Catalog Item 8082304, no furniture record found.
+
+Date/Time: 2018-11-05 13:04:50,213
+Thread: 1
+Couldn't load Catalog Item 38082334, no furniture record found.
+
+Date/Time: 2018-11-05 13:04:50,289
+Thread: 1
+Couldn't load photo poster item 777954880, no furniture record found.
+
+Date/Time: 2019-01-09 21:02:46,971
+Thread: 1
+Falha ao tentar se conectar ao MySQL.
+
+Date/Time: 2019-01-16 22:08:45,989
+Thread: 1
+Falha ao tentar se conectar ao MySQL.
+
+Date/Time: 2019-01-16 22:15:59,560
+Thread: 1
+Falha ao tentar se conectar ao MySQL.
+
+Date/Time: 2019-02-03 21:35:56,545
+Thread: 1
+Falha ao tentar se conectar ao MySQL.
+

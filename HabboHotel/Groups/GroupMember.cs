@@ -1,0 +1,16 @@
+﻿namespace Oblivion.HabboHotel.Groups
+{
+    public class GroupMember
+    {
+        public GroupMember(int Id, string Username, string Look)
+        {
+            this.Id = Id;
+            this.Username = Username;
+            this.Look = Look;
+        }
+
+        public int Id { get; set; }
+        public string Username { get; set; }
+        public string Look { get; set; }
+    }
+}

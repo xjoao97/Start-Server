@@ -1,0 +1,231 @@
+
+
+Room ID [463] is currently having issues cycling wired.System.NullReferenceException: Object reference not set to an instance of an object.
+   at Oblivion.HabboHotel.Rooms.RoomItemHandling.get_GetFloor() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\RoomItemHandling.cs:line 109
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.MoveFurniToUserBox.<OnCycle>b__11_1(Item Item) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\MoveFurniToUserBox.cs:line 53
+   at System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.MoveFurniToUserBox.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\MoveFurniToUserBox.cs:line 50
+   at Oblivion.HabboHotel.Rooms.Instance.WiredComponent.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Instance\WiredComponent.cs:line 43
+   at Oblivion.HabboHotel.Rooms.Room.ProcessRoom() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Room.cs:line 536
+
+
+
+
+Room ID [463] is currently having issues cycling wired.System.NullReferenceException: Object reference not set to an instance of an object.
+   at Oblivion.HabboHotel.Rooms.RoomItemHandling.get_GetFloor() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\RoomItemHandling.cs:line 109
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.MoveFurniToUserBox.<OnCycle>b__11_1(Item Item) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\MoveFurniToUserBox.cs:line 52
+   at System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.MoveFurniToUserBox.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\MoveFurniToUserBox.cs:line 49
+   at Oblivion.HabboHotel.Rooms.Instance.WiredComponent.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Instance\WiredComponent.cs:line 43
+   at Oblivion.HabboHotel.Rooms.Room.ProcessRoom() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Room.cs:line 536
+
+
+
+
+Room ID [463] is currently having issues cycling wired.System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.ExecuteWiredStacksBox.Execute(Object[] Params) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\ExecuteWiredStacksBox.cs:line 58
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Triggers.RepeaterBox.<>c.<OnCycle>b__9_2(IWiredItem Effect) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Triggers\RepeaterBox.cs:line 83
+   at System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Triggers.RepeaterBox.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Triggers\RepeaterBox.cs:line 83
+   at Oblivion.HabboHotel.Rooms.Instance.WiredComponent.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Instance\WiredComponent.cs:line 43
+   at Oblivion.HabboHotel.Rooms.Room.ProcessRoom() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Room.cs:line 536
+
+
+
+
+Room ID [463] is currently having issues cycling wired.System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.ExecuteWiredStacksBox.Execute(Object[] Params) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\ExecuteWiredStacksBox.cs:line 58
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Triggers.RepeaterBox.<>c.<OnCycle>b__9_2(IWiredItem Effect) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Triggers\RepeaterBox.cs:line 83
+   at System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Triggers.RepeaterBox.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Triggers\RepeaterBox.cs:line 83
+   at Oblivion.HabboHotel.Rooms.Instance.WiredComponent.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Instance\WiredComponent.cs:line 43
+   at Oblivion.HabboHotel.Rooms.Room.ProcessRoom() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Room.cs:line 536
+
+
+
+
+Room ID [463] is currently having issues cycling wired.System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.ExecuteWiredStacksBox.Execute(Object[] Params) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\ExecuteWiredStacksBox.cs:line 58
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Triggers.RepeaterBox.<>c.<OnCycle>b__9_2(IWiredItem Effect) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Triggers\RepeaterBox.cs:line 83
+   at System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Triggers.RepeaterBox.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Triggers\RepeaterBox.cs:line 83
+   at Oblivion.HabboHotel.Rooms.Instance.WiredComponent.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Instance\WiredComponent.cs:line 43
+   at Oblivion.HabboHotel.Rooms.Room.ProcessRoom() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Room.cs:line 536
+
+
+
+
+Room ID [463] is currently having issues cycling wired.System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.ExecuteWiredStacksBox.Execute(Object[] Params) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\ExecuteWiredStacksBox.cs:line 58
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Triggers.RepeaterBox.<>c.<OnCycle>b__9_2(IWiredItem Effect) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Triggers\RepeaterBox.cs:line 83
+   at System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Triggers.RepeaterBox.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Triggers\RepeaterBox.cs:line 83
+   at Oblivion.HabboHotel.Rooms.Instance.WiredComponent.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Instance\WiredComponent.cs:line 43
+   at Oblivion.HabboHotel.Rooms.Room.ProcessRoom() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Room.cs:line 536
+
+
+
+
+Room ID [463] is currently having issues cycling wired.System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.ExecuteWiredStacksBox.Execute(Object[] Params) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\ExecuteWiredStacksBox.cs:line 58
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Triggers.RepeaterBox.<>c.<OnCycle>b__9_2(IWiredItem Effect) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Triggers\RepeaterBox.cs:line 83
+   at System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Triggers.RepeaterBox.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Triggers\RepeaterBox.cs:line 83
+   at Oblivion.HabboHotel.Rooms.Instance.WiredComponent.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Instance\WiredComponent.cs:line 43
+   at Oblivion.HabboHotel.Rooms.Room.ProcessRoom() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Room.cs:line 536
+
+
+
+
+Room ID [463] is currently having issues cycling wired.System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.ExecuteWiredStacksBox.Execute(Object[] Params) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\ExecuteWiredStacksBox.cs:line 58
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Triggers.RepeaterBox.<>c.<OnCycle>b__9_2(IWiredItem Effect) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Triggers\RepeaterBox.cs:line 83
+   at System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Triggers.RepeaterBox.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Triggers\RepeaterBox.cs:line 83
+   at Oblivion.HabboHotel.Rooms.Instance.WiredComponent.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Instance\WiredComponent.cs:line 43
+   at Oblivion.HabboHotel.Rooms.Room.ProcessRoom() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Room.cs:line 536
+
+
+
+
+Room ID [463] is currently having issues cycling wired.System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.ExecuteWiredStacksBox.Execute(Object[] Params) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\ExecuteWiredStacksBox.cs:line 58
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Triggers.RepeaterBox.<>c.<OnCycle>b__9_2(IWiredItem Effect) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Triggers\RepeaterBox.cs:line 83
+   at System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Triggers.RepeaterBox.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Triggers\RepeaterBox.cs:line 83
+   at Oblivion.HabboHotel.Rooms.Instance.WiredComponent.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Instance\WiredComponent.cs:line 43
+   at Oblivion.HabboHotel.Rooms.Room.ProcessRoom() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Room.cs:line 536
+
+
+
+
+Room ID [463] is currently having issues cycling wired.System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.ExecuteWiredStacksBox.Execute(Object[] Params) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\ExecuteWiredStacksBox.cs:line 58
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Triggers.RepeaterBox.<>c.<OnCycle>b__9_2(IWiredItem Effect) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Triggers\RepeaterBox.cs:line 83
+   at System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Triggers.RepeaterBox.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Triggers\RepeaterBox.cs:line 83
+   at Oblivion.HabboHotel.Rooms.Instance.WiredComponent.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Instance\WiredComponent.cs:line 43
+   at Oblivion.HabboHotel.Rooms.Room.ProcessRoom() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Room.cs:line 536
+
+
+
+
+Room ID [463] is currently having issues cycling wired.System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.ExecuteWiredStacksBox.Execute(Object[] Params) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\ExecuteWiredStacksBox.cs:line 58
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Triggers.RepeaterBox.<>c.<OnCycle>b__9_2(IWiredItem Effect) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Triggers\RepeaterBox.cs:line 83
+   at System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Triggers.RepeaterBox.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Triggers\RepeaterBox.cs:line 83
+   at Oblivion.HabboHotel.Rooms.Instance.WiredComponent.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Instance\WiredComponent.cs:line 43
+   at Oblivion.HabboHotel.Rooms.Room.ProcessRoom() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Room.cs:line 536
+
+
+
+
+Room ID [463] is currently having issues cycling wired.System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.ExecuteWiredStacksBox.Execute(Object[] Params) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\ExecuteWiredStacksBox.cs:line 58
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Triggers.RepeaterBox.<>c.<OnCycle>b__9_2(IWiredItem Effect) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Triggers\RepeaterBox.cs:line 83
+   at System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Triggers.RepeaterBox.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Triggers\RepeaterBox.cs:line 83
+   at Oblivion.HabboHotel.Rooms.Instance.WiredComponent.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Instance\WiredComponent.cs:line 43
+   at Oblivion.HabboHotel.Rooms.Room.ProcessRoom() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Room.cs:line 536
+
+
+
+
+Room ID [463] is currently having issues cycling wired.System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.ExecuteWiredStacksBox.Execute(Object[] Params) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\ExecuteWiredStacksBox.cs:line 58
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Triggers.RepeaterBox.<>c.<OnCycle>b__9_2(IWiredItem Effect) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Triggers\RepeaterBox.cs:line 83
+   at System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Triggers.RepeaterBox.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Triggers\RepeaterBox.cs:line 83
+   at Oblivion.HabboHotel.Rooms.Instance.WiredComponent.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Instance\WiredComponent.cs:line 43
+   at Oblivion.HabboHotel.Rooms.Room.ProcessRoom() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Room.cs:line 536
+
+
+
+
+Room ID [463] is currently having issues cycling wired.System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.ExecuteWiredStacksBox.Execute(Object[] Params) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\ExecuteWiredStacksBox.cs:line 58
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Triggers.RepeaterBox.<>c.<OnCycle>b__9_2(IWiredItem Effect) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Triggers\RepeaterBox.cs:line 83
+   at System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Triggers.RepeaterBox.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Triggers\RepeaterBox.cs:line 83
+   at Oblivion.HabboHotel.Rooms.Instance.WiredComponent.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Instance\WiredComponent.cs:line 43
+   at Oblivion.HabboHotel.Rooms.Room.ProcessRoom() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Room.cs:line 536
+
+
+
+
+Room ID [463] is currently having issues cycling wired.System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.ExecuteWiredStacksBox.Execute(Object[] Params) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\ExecuteWiredStacksBox.cs:line 58
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Triggers.RepeaterBox.<>c.<OnCycle>b__9_2(IWiredItem Effect) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Triggers\RepeaterBox.cs:line 83
+   at System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Triggers.RepeaterBox.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Triggers\RepeaterBox.cs:line 83
+   at Oblivion.HabboHotel.Rooms.Instance.WiredComponent.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Instance\WiredComponent.cs:line 43
+   at Oblivion.HabboHotel.Rooms.Room.ProcessRoom() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Room.cs:line 536
+
+
+
+
+Room ID [463] is currently having issues cycling wired.System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.ExecuteWiredStacksBox.Execute(Object[] Params) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\ExecuteWiredStacksBox.cs:line 58
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Triggers.RepeaterBox.<>c.<OnCycle>b__9_2(IWiredItem Effect) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Triggers\RepeaterBox.cs:line 83
+   at System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Triggers.RepeaterBox.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Triggers\RepeaterBox.cs:line 83
+   at Oblivion.HabboHotel.Rooms.Instance.WiredComponent.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Instance\WiredComponent.cs:line 43
+   at Oblivion.HabboHotel.Rooms.Room.ProcessRoom() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Room.cs:line 536
+
+
+
+
+Room ID [463] is currently having issues cycling wired.System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.ExecuteWiredStacksBox.Execute(Object[] Params) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\ExecuteWiredStacksBox.cs:line 58
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Triggers.RepeaterBox.<>c.<OnCycle>b__9_2(IWiredItem Effect) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Triggers\RepeaterBox.cs:line 83
+   at System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Triggers.RepeaterBox.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Triggers\RepeaterBox.cs:line 83
+   at Oblivion.HabboHotel.Rooms.Instance.WiredComponent.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Instance\WiredComponent.cs:line 43
+   at Oblivion.HabboHotel.Rooms.Room.ProcessRoom() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Room.cs:line 536
+
+
+
+
+Room ID [463] is currently having issues cycling wired.System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.ExecuteWiredStacksBox.Execute(Object[] Params) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\ExecuteWiredStacksBox.cs:line 58
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Triggers.RepeaterBox.<>c.<OnCycle>b__9_2(IWiredItem Effect) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Triggers\RepeaterBox.cs:line 83
+   at System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Triggers.RepeaterBox.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Triggers\RepeaterBox.cs:line 83
+   at Oblivion.HabboHotel.Rooms.Instance.WiredComponent.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Instance\WiredComponent.cs:line 43
+   at Oblivion.HabboHotel.Rooms.Room.ProcessRoom() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Room.cs:line 536
+
+
+
+
+Room ID [463] is currently having issues cycling wired.System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.ExecuteWiredStacksBox.Execute(Object[] Params) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\ExecuteWiredStacksBox.cs:line 58
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Triggers.RepeaterBox.<>c.<OnCycle>b__9_2(IWiredItem Effect) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Triggers\RepeaterBox.cs:line 83
+   at System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Triggers.RepeaterBox.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Triggers\RepeaterBox.cs:line 83
+   at Oblivion.HabboHotel.Rooms.Instance.WiredComponent.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Instance\WiredComponent.cs:line 43
+   at Oblivion.HabboHotel.Rooms.Room.ProcessRoom() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Room.cs:line 536
+
+
+
+
+Room ID [463] is currently having issues cycling wired.System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.ExecuteWiredStacksBox.Execute(Object[] Params) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\ExecuteWiredStacksBox.cs:line 58
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Triggers.RepeaterBox.<>c.<OnCycle>b__9_2(IWiredItem Effect) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Triggers\RepeaterBox.cs:line 83
+   at System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Triggers.RepeaterBox.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Triggers\RepeaterBox.cs:line 83
+   at Oblivion.HabboHotel.Rooms.Instance.WiredComponent.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Instance\WiredComponent.cs:line 43
+   at Oblivion.HabboHotel.Rooms.Room.ProcessRoom() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Room.cs:line 536
+
+
+
+
+Room ID [463] is currently having issues cycling wired.System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.ExecuteWiredStacksBox.Execute(Object[] Params) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\ExecuteWiredStacksBox.cs:line 58
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Triggers.RepeaterBox.<>c.<OnCycle>b__9_2(IWiredItem Effect) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Triggers\RepeaterBox.cs:line 83
+   at System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Triggers.RepeaterBox.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Triggers\RepeaterBox.cs:line 83
+   at Oblivion.HabboHotel.Rooms.Instance.WiredComponent.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Instance\WiredComponent.cs:line 43
+   at Oblivion.HabboHotel.Rooms.Room.ProcessRoom() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Room.cs:line 536
+
+

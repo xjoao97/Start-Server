@@ -1,0 +1,25 @@
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\bin\Debug\Oblivion Emulator.exe.config
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\bin\Debug\Oblivion Emulator.exe
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\bin\Debug\Oblivion Emulator.pdb
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\bin\Debug\AStar.dll
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\bin\Debug\HabboEncryption.dll
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\bin\Debug\log4net.dll
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\bin\Debug\MySql.Data.dll
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\obj\x86\Debug\Oblivion Emulator.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\obj\x86\Debug\Oblivion Emulator.exe
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\obj\x86\Debug\Oblivion Emulator.pdb
+C:\Users\Administrator\Desktop\emulator\plusemu\bin\Debug\Oblivion Emulator.exe.config
+C:\Users\Administrator\Desktop\emulator\plusemu\obj\x86\Debug\Oblivion Emulator.exe
+C:\Users\Administrator\Desktop\emulator\plusemu\obj\x86\Debug\Oblivion Emulator.pdb
+C:\Users\Administrator\Desktop\emulator\plusemu\bin\Debug\Oblivion Emulator.exe
+C:\Users\Administrator\Desktop\emulator\plusemu\bin\Debug\Oblivion Emulator.pdb
+C:\Users\joaopedro\Downloads\Oblivion 1.0.2\obj\x86\Debug\Oblivion Emulator.csprojAssemblyReference.cache
+C:\Users\joaopedro\Downloads\Oblivion 1.0.2\obj\x86\Debug\Oblivion Emulator.csproj.CoreCompileInputs.cache
+C:\Users\joaopedro\Downloads\Oblivion 1.0.2\obj\x86\Debug\Oblivion Emulator.exe
+C:\Users\joaopedro\Downloads\Oblivion 1.0.2\obj\x86\Debug\Oblivion Emulator.pdb
+C:\Users\joaopedro\Downloads\Oblivion 1.0.2\bin\Debug\Oblivion Emulator.exe.config
+C:\Users\joaopedro\Downloads\Oblivion 1.0.2\bin\Debug\Oblivion Emulator.exe
+C:\Users\joaopedro\Downloads\Oblivion 1.0.2\bin\Debug\Oblivion Emulator.pdb
+C:\Users\joaopedro\Downloads\Oblivion 1.0.2\obj\x86\Debug\Oblivion Emulator.csproj.CopyComplete

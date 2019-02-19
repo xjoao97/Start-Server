@@ -1,0 +1,24 @@
+
+System.ArgumentException: Destination array was not long enough. Check destIndex and length, and the array's lower bounds.
+   at System.Array.Copy(Array sourceArray, Int32 sourceIndex, Array destinationArray, Int32 destinationIndex, Int32 length, Boolean reliable)
+   at System.Collections.Generic.List`1.CopyTo(T[] array, Int32 arrayIndex)
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Oblivion.HabboHotel.Rooms.Gamemap.GetItemsFromIds(List`1 Input) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\GameMap.cs:line 1152
+   at Oblivion.HabboHotel.Rooms.Gamemap.RemoveFromMap(Item item, Boolean handleGameItem) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\GameMap.cs:line 609
+   at Oblivion.HabboHotel.Rooms.RoomItemHandling.SetFloorItem(Item item, Int32 newX, Int32 newY, Double newZ) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\RoomItemHandling.cs:line 779
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.MatchPositionBox.SetPosition(Item Item, Int32 CoordX, Int32 CoordY, Double CoordZ, Int32 Rotation) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\MatchPositionBox.cs:line 189
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.MatchPositionBox.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\MatchPositionBox.cs:line 105
+
+
+System.ArgumentException: Destination array was not long enough. Check destIndex and length, and the array's lower bounds.
+   at System.Array.Copy(Array sourceArray, Int32 sourceIndex, Array destinationArray, Int32 destinationIndex, Int32 length, Boolean reliable)
+   at System.Collections.Generic.List`1.CopyTo(T[] array, Int32 arrayIndex)
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Oblivion.HabboHotel.Rooms.Gamemap.GetItemsFromIds(List`1 Input) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\GameMap.cs:line 1152
+   at Oblivion.HabboHotel.Rooms.Gamemap.RemoveFromMap(Item item, Boolean handleGameItem) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\GameMap.cs:line 609
+   at Oblivion.HabboHotel.Rooms.RoomItemHandling.SetFloorItem(Item item, Int32 newX, Int32 newY, Double newZ) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\RoomItemHandling.cs:line 779
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.MatchPositionBox.SetPosition(Item Item, Int32 CoordX, Int32 CoordY, Double CoordZ, Int32 Rotation) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\MatchPositionBox.cs:line 189
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.MatchPositionBox.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\MatchPositionBox.cs:line 105
+

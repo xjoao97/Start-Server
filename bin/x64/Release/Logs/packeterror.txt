@@ -1,0 +1,1159 @@
+
+Error in packet [520] BODY: [0]:soco DaphineKawaii [0][0][0][0][0][0][0]: 
+System.ArgumentException: An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at Oblivion.HabboHotel.Rooms.Chat.Commands.User.Fun.HugCommand.Execute(GameClient session, String[] Params) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Chat\Commands\User\Fun\HugCommand.cs:line 64
+   at Oblivion.HabboHotel.Rooms.Chat.Commands.CommandManager.Parse(GameClient Session, String Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Chat\Commands\CommandManager.cs:line 116
+   at Oblivion.Communication.Packets.Incoming.Rooms.Chat.ChatEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Chat\ChatEvent.cs:line 95
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [520] BODY: [0]:soco DaphineKawaii [0][0][0][0][0][0][0]: 
+System.ArgumentException: An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at Oblivion.HabboHotel.Rooms.Chat.Commands.User.Fun.HugCommand.Execute(GameClient session, String[] Params) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Chat\Commands\User\Fun\HugCommand.cs:line 64
+   at Oblivion.HabboHotel.Rooms.Chat.Commands.CommandManager.Parse(GameClient Session, String Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Chat\Commands\CommandManager.cs:line 116
+   at Oblivion.Communication.Packets.Incoming.Rooms.Chat.ChatEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Chat\ChatEvent.cs:line 95
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [520] BODY: [0]:soco DaphineKawaii [0][0][0][0][0][0][0]: 
+System.ArgumentException: An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at Oblivion.HabboHotel.Rooms.Chat.Commands.User.Fun.HugCommand.Execute(GameClient session, String[] Params) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Chat\Commands\User\Fun\HugCommand.cs:line 64
+   at Oblivion.HabboHotel.Rooms.Chat.Commands.CommandManager.Parse(GameClient Session, String Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Chat\Commands\CommandManager.cs:line 116
+   at Oblivion.Communication.Packets.Incoming.Rooms.Chat.ChatEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Chat\ChatEvent.cs:line 95
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]Vh[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]Vh[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]Vh[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]Vh[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]Vh[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]Vh[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]Vh[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]Vh[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]Vh[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]Vh[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]Vh[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]Vh[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]Vh[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]Vh[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]Vh[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]Vh[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]Vh[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]Vh[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]Vh[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]Vh[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]W)[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]Vh[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]W)[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]W)[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]Vh[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]Vh[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]Vh[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]Vh[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]Vh[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]Vh[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]Vh[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]Vh[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]Vh[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]Vh[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]Vh[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]Vh[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]Vh[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]Vh[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [1986] BODY: [0][0][0]L[0][0]m[0][0][0][0][0]2: 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Oblivion.HabboHotel.Items.ItemFactory.CreateMultipleItems(ItemData Data, Habbo Habbo, String ExtraData, Int32 Amount, Int32 GroupId) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\ItemFactory.cs:line 145
+   at Oblivion.Communication.Packets.Incoming.Catalog.PurchaseFromCatalogEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Catalog\PurchaseFromCatalogEvent.cs:line 254
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 154
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [105] BODY: [0]myworld_view[0][0]: 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Oblivion.HabboHotel.Navigator.NavigatorHandler.Search(ServerPacket Message, SearchResultList SearchResult, String SearchData, GameClient Session, Int32 FetchLimit) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Navigator\NavigatorHandler.cs:line 223
+   at Oblivion.Communication.Packets.Outgoing.Navigator.NavigatorSearchResultSetComposer..ctor(String Category, String Data, ICollection`1 SearchResultLists, GameClient Session, Int32 GoBack, Int32 FetchLimit) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Outgoing\Navigator\New\NavigatorSearchResultSetComposer.cs:line 36
+   at Oblivion.Communication.Packets.Incoming.Navigator.NewNavigatorSearchEvent.Parse(GameClient session, ClientPacket packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Navigator\New\NewNavigatorSearchEvent.cs:line 43
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 154
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]1o[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]1o[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]1o[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]1o[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]1o[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]1o[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]1o[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]1o[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]^?[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]^?[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]^?[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]^?[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]^?[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]^?[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]^?[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]^?[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]^?[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]^?[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]^?[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]^?[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]^?[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]^?[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]^?[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]^?[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]??[0][0][0][0]: 
+System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.
+Parameter name: count
+   at System.Linq.Enumerable.Range(Int32 start, Int32 count)
+   at Oblivion.HabboHotel.Rooms.Gamemap.Walkingtofurni(RoomUser user, Item item) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\GameMap.cs:line 135
+   at Oblivion.HabboHotel.Items.Interactor.InteractorGate.OnTrigger(GameClient session, Item item, Int32 request, Boolean hasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorGate.cs:line 47
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]^?[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]^?[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]^?[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]^?[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]^?[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]^?[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]^?[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]^?[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]^?[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]i6[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]i6[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]i6[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]i6[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]i6[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]i6[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]i6[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]i6[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]i6[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]i6[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]i6[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]i6[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]i6[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]iG[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]iG[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]iG[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]iG[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]iG[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]iG[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]iG[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]iG[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]iG[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]iG[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [2475] BODY: [0]iG[0][0][0][0]: 
+System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Interactor.InteractorSwitch.OnTrigger(GameClient Session, Item Item, Int32 Request, Boolean HasRights) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Interactor\InteractorSwitch.cs:line 43
+   at Oblivion.Communication.Packets.Incoming.Rooms.Engine.UseFurnitureEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Engine\UseFurnitureEvent.cs:line 74
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [867] BODY: [0]
+`X[0]FFFF33[0]quarto da kawaiichan :3: 
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Oblivion.Communication.Packets.Outgoing.ServerPacket.WriteString(String s) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Outgoing\ServerPacket.cs:line 59
+   at Oblivion.Communication.Packets.Outgoing.Rooms.Engine.ItemUpdateComposer.WriteWallItem(Item Item, Int32 UserId) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Outgoing\Rooms\Engine\ItemUpdateComposer.cs:line 27
+   at Oblivion.HabboHotel.Items.Item.UpdateState(Boolean inDb, Boolean inRoom) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Item.cs:line 1482
+   at Oblivion.Communication.Packets.Incoming.Rooms.Furni.Stickys.UpdateStickyNoteEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Furni\Stickys\UpdateStickyNoteEvent.cs:line 49
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 154
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [520] BODY: [0]:sex[0][0][0][0][0][0][0]: 
+System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Oblivion.HabboHotel.Rooms.Chat.Commands.User.Fun.SexCommand.Execute(GameClient session, String[] Params) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Chat\Commands\User\Fun\SexCommand.cs:line 20
+   at Oblivion.HabboHotel.Rooms.Chat.Commands.CommandManager.Parse(GameClient Session, String Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Chat\Commands\CommandManager.cs:line 116
+   at Oblivion.Communication.Packets.Incoming.Rooms.Chat.ChatEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Chat\ChatEvent.cs:line 95
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [520] BODY: [0]:sex[0][0][0][0][0][0][0]: 
+System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Oblivion.HabboHotel.Rooms.Chat.Commands.User.Fun.SexCommand.Execute(GameClient session, String[] Params) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Chat\Commands\User\Fun\SexCommand.cs:line 20
+   at Oblivion.HabboHotel.Rooms.Chat.Commands.CommandManager.Parse(GameClient Session, String Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Chat\Commands\CommandManager.cs:line 116
+   at Oblivion.Communication.Packets.Incoming.Rooms.Chat.ChatEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Chat\ChatEvent.cs:line 95
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [520] BODY: [0]:sex[0][0][0][0][0][0][0]: 
+System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at Oblivion.HabboHotel.Rooms.Chat.Commands.User.Fun.SexCommand.Execute(GameClient session, String[] Params) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Chat\Commands\User\Fun\SexCommand.cs:line 20
+   at Oblivion.HabboHotel.Rooms.Chat.Commands.CommandManager.Parse(GameClient Session, String Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Chat\Commands\CommandManager.cs:line 116
+   at Oblivion.Communication.Packets.Incoming.Rooms.Chat.ChatEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Chat\ChatEvent.cs:line 95
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [520] BODY: [0]:soco Haydo [0][0][0][0][0][0][0]: 
+System.ArgumentException: An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at Oblivion.HabboHotel.Rooms.Chat.Commands.User.Fun.HugCommand.Execute(GameClient session, String[] Params) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Chat\Commands\User\Fun\HugCommand.cs:line 64
+   at Oblivion.HabboHotel.Rooms.Chat.Commands.CommandManager.Parse(GameClient Session, String Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Chat\Commands\CommandManager.cs:line 116
+   at Oblivion.Communication.Packets.Incoming.Rooms.Chat.ChatEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Chat\ChatEvent.cs:line 95
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [520] BODY: [0]:soco Haydo [0][0][0][0][0][0][0]: 
+System.ArgumentException: An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at Oblivion.HabboHotel.Rooms.Chat.Commands.User.Fun.HugCommand.Execute(GameClient session, String[] Params) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Chat\Commands\User\Fun\HugCommand.cs:line 64
+   at Oblivion.HabboHotel.Rooms.Chat.Commands.CommandManager.Parse(GameClient Session, String Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Chat\Commands\CommandManager.cs:line 116
+   at Oblivion.Communication.Packets.Incoming.Rooms.Chat.ChatEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Chat\ChatEvent.cs:line 95
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [520] BODY: [0]:soco Redoniq [0][0][0][0][0][0][0]: 
+System.ArgumentException: An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at Oblivion.HabboHotel.Rooms.Chat.Commands.User.Fun.HugCommand.Execute(GameClient session, String[] Params) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Chat\Commands\User\Fun\HugCommand.cs:line 64
+   at Oblivion.HabboHotel.Rooms.Chat.Commands.CommandManager.Parse(GameClient Session, String Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Chat\Commands\CommandManager.cs:line 116
+   at Oblivion.Communication.Packets.Incoming.Rooms.Chat.ChatEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Chat\ChatEvent.cs:line 95
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [520] BODY: [0]:soco Redoniq [0][0][0][0][0][0][0]: 
+System.ArgumentException: An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at Oblivion.HabboHotel.Rooms.Chat.Commands.User.Fun.HugCommand.Execute(GameClient session, String[] Params) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Chat\Commands\User\Fun\HugCommand.cs:line 64
+   at Oblivion.HabboHotel.Rooms.Chat.Commands.CommandManager.Parse(GameClient Session, String Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Chat\Commands\CommandManager.cs:line 116
+   at Oblivion.Communication.Packets.Incoming.Rooms.Chat.ChatEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Chat\ChatEvent.cs:line 95
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [520] BODY: [0]:soco Redoniq [0][0][0][0][0][0][0]: 
+System.ArgumentException: An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at Oblivion.HabboHotel.Rooms.Chat.Commands.User.Fun.HugCommand.Execute(GameClient session, String[] Params) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Chat\Commands\User\Fun\HugCommand.cs:line 64
+   at Oblivion.HabboHotel.Rooms.Chat.Commands.CommandManager.Parse(GameClient Session, String Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Chat\Commands\CommandManager.cs:line 116
+   at Oblivion.Communication.Packets.Incoming.Rooms.Chat.ChatEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Chat\ChatEvent.cs:line 95
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [520] BODY: [0]:soco Redoniq [0][0][0][0][0][0][0]: 
+System.ArgumentException: An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at Oblivion.HabboHotel.Rooms.Chat.Commands.User.Fun.HugCommand.Execute(GameClient session, String[] Params) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Chat\Commands\User\Fun\HugCommand.cs:line 64
+   at Oblivion.HabboHotel.Rooms.Chat.Commands.CommandManager.Parse(GameClient Session, String Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Chat\Commands\CommandManager.cs:line 116
+   at Oblivion.Communication.Packets.Incoming.Rooms.Chat.ChatEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Chat\ChatEvent.cs:line 95
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [520] BODY: [0]:soco Redoniq [0][0][0][0][0][0][0]: 
+System.ArgumentException: An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at Oblivion.HabboHotel.Rooms.Chat.Commands.User.Fun.HugCommand.Execute(GameClient session, String[] Params) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Chat\Commands\User\Fun\HugCommand.cs:line 64
+   at Oblivion.HabboHotel.Rooms.Chat.Commands.CommandManager.Parse(GameClient Session, String Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Chat\Commands\CommandManager.cs:line 116
+   at Oblivion.Communication.Packets.Incoming.Rooms.Chat.ChatEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Chat\ChatEvent.cs:line 95
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [520] BODY: [0]:soco Redoniq [0][0][0][0][0][0][0]: 
+System.ArgumentException: An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at Oblivion.HabboHotel.Rooms.Chat.Commands.User.Fun.HugCommand.Execute(GameClient session, String[] Params) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Chat\Commands\User\Fun\HugCommand.cs:line 64
+   at Oblivion.HabboHotel.Rooms.Chat.Commands.CommandManager.Parse(GameClient Session, String Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Chat\Commands\CommandManager.cs:line 116
+   at Oblivion.Communication.Packets.Incoming.Rooms.Chat.ChatEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Chat\ChatEvent.cs:line 95
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [520] BODY: [0]:soco Redoniq [0][0][0][0][0][0][0]: 
+System.ArgumentException: An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at Oblivion.HabboHotel.Rooms.Chat.Commands.User.Fun.HugCommand.Execute(GameClient session, String[] Params) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Chat\Commands\User\Fun\HugCommand.cs:line 64
+   at Oblivion.HabboHotel.Rooms.Chat.Commands.CommandManager.Parse(GameClient Session, String Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Chat\Commands\CommandManager.cs:line 116
+   at Oblivion.Communication.Packets.Incoming.Rooms.Chat.ChatEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Chat\ChatEvent.cs:line 95
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+
+
+Error in packet [520] BODY: [0]:soco Redoniq [0][0][0][0][0][0][0]	: 
+System.ArgumentException: An item with the same key has already been added.
+   at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at Oblivion.HabboHotel.Rooms.Chat.Commands.User.Fun.HugCommand.Execute(GameClient session, String[] Params) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Chat\Commands\User\Fun\HugCommand.cs:line 64
+   at Oblivion.HabboHotel.Rooms.Chat.Commands.CommandManager.Parse(GameClient Session, String Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Chat\Commands\CommandManager.cs:line 116
+   at Oblivion.Communication.Packets.Incoming.Rooms.Chat.ChatEvent.Parse(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\Incoming\Rooms\Chat\ChatEvent.cs:line 95
+   at Oblivion.Communication.Packets.PacketManager.TryExecutePacket(GameClient Session, ClientPacket Packet) in C:\Users\Administrator\Desktop\emulator\plusemu\Communication\Packets\PacketManager.cs:line 155
+   at Oblivion.HabboHotel.GameClients.GameClient.parser_onNewPacket(ClientPacket Message) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\GameClients\GameClient.cs:line 66
+

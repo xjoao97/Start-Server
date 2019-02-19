@@ -1,0 +1,95 @@
+
+
+Room ID [3904] is currently having issues cycling wired.System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.AddScoreBox.TeleportUser(Habbo Player) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\AddScoreBox.cs:line 175
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.AddScoreBox.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\AddScoreBox.cs:line 55
+   at Oblivion.HabboHotel.Rooms.Instance.WiredComponent.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Instance\WiredComponent.cs:line 43
+   at Oblivion.HabboHotel.Rooms.Room.ProcessRoom() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Room.cs:line 533
+
+
+
+
+Room ID [3904] is currently having issues cycling wired.System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.AddScoreBox.TeleportUser(Habbo Player) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\AddScoreBox.cs:line 175
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.AddScoreBox.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\AddScoreBox.cs:line 55
+   at Oblivion.HabboHotel.Rooms.Instance.WiredComponent.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Instance\WiredComponent.cs:line 43
+   at Oblivion.HabboHotel.Rooms.Room.ProcessRoom() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Room.cs:line 533
+
+
+
+
+Room ID [3904] is currently having issues cycling wired.System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.AddScoreBox.TeleportUser(Habbo Player) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\AddScoreBox.cs:line 175
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.AddScoreBox.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\AddScoreBox.cs:line 55
+   at Oblivion.HabboHotel.Rooms.Instance.WiredComponent.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Instance\WiredComponent.cs:line 43
+   at Oblivion.HabboHotel.Rooms.Room.ProcessRoom() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Room.cs:line 533
+
+
+
+
+Room ID [3904] is currently having issues cycling wired.System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.AddScoreBox.TeleportUser(Habbo Player) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\AddScoreBox.cs:line 175
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.AddScoreBox.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\AddScoreBox.cs:line 55
+   at Oblivion.HabboHotel.Rooms.Instance.WiredComponent.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Instance\WiredComponent.cs:line 43
+   at Oblivion.HabboHotel.Rooms.Room.ProcessRoom() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Room.cs:line 533
+
+
+
+
+Room ID [3904] is currently having issues cycling wired.System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.AddScoreBox.TeleportUser(Habbo Player) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\AddScoreBox.cs:line 175
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.AddScoreBox.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\AddScoreBox.cs:line 55
+   at Oblivion.HabboHotel.Rooms.Instance.WiredComponent.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Instance\WiredComponent.cs:line 43
+   at Oblivion.HabboHotel.Rooms.Room.ProcessRoom() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Room.cs:line 533
+
+
+
+
+Room ID [3904] is currently having issues cycling wired.System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.AddScoreBox.TeleportUser(Habbo Player) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\AddScoreBox.cs:line 175
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.AddScoreBox.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\AddScoreBox.cs:line 55
+   at Oblivion.HabboHotel.Rooms.Instance.WiredComponent.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Instance\WiredComponent.cs:line 43
+   at Oblivion.HabboHotel.Rooms.Room.ProcessRoom() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Room.cs:line 533
+
+
+
+
+Room ID [3904] is currently having issues cycling wired.System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.AddScoreBox.TeleportUser(Habbo Player) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\AddScoreBox.cs:line 175
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.AddScoreBox.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\AddScoreBox.cs:line 55
+   at Oblivion.HabboHotel.Rooms.Instance.WiredComponent.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Instance\WiredComponent.cs:line 43
+   at Oblivion.HabboHotel.Rooms.Room.ProcessRoom() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Room.cs:line 533
+
+
+
+
+Room ID [3904] is currently having issues cycling wired.System.FormatException: Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.AddScoreBox.TeleportUser(Habbo Player) in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\AddScoreBox.cs:line 175
+   at Oblivion.HabboHotel.Items.Wired.Boxes.Effects.AddScoreBox.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Items\Wired\Boxes\Effects\AddScoreBox.cs:line 55
+   at Oblivion.HabboHotel.Rooms.Instance.WiredComponent.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Instance\WiredComponent.cs:line 43
+   at Oblivion.HabboHotel.Rooms.Room.ProcessRoom() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Room.cs:line 533
+
+
+
+
+Room ID [5199] is currently having issues cycling wired.System.NullReferenceException: Object reference not set to an instance of an object.
+   at Oblivion.HabboHotel.Rooms.Instance.WiredComponent.OnCycle() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Instance\WiredComponent.cs:line 31
+   at Oblivion.HabboHotel.Rooms.Room.ProcessRoom() in C:\Users\Administrator\Desktop\emulator\plusemu\HabboHotel\Rooms\Room.cs:line 532
+
+

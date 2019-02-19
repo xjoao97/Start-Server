@@ -1,0 +1,38 @@
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\bin\Debug\Oblivion Emulator.exe.config
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\bin\Debug\Oblivion Emulator.exe
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\bin\Debug\Oblivion Emulator.pdb
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\bin\Debug\dotMemory.Unit.dll
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\bin\Debug\dotMemory.Unit.xml
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\bin\x86\Release\Oblivion Emulator.exe
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\bin\x86\Release\Oblivion Emulator.pdb
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\bin\x86\Release\HabboEncryption.dll
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\bin\x86\Release\log4net.dll
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\bin\x86\Release\Oblivion Emulator.exe.config
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\bin\x86\Release\AStar.dll
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\bin\x86\Release\MySql.Data.dll
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\bin\x86\Release\Newtonsoft.Json.dll
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\bin\x86\Release\Newtonsoft.Json.xml
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\obj\x86\Release\Oblivion Emulator.exe
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\obj\x86\Release\Oblivion Emulator.pdb
+C:\Users\Administrator\Desktop\emulator\plusemu\bin\x86\Release\Oblivion Emulator.exe.config
+C:\Users\Administrator\Desktop\emulator\plusemu\bin\x86\Release\Oblivion Emulator.exe
+C:\Users\Administrator\Desktop\emulator\plusemu\bin\x86\Release\Oblivion Emulator.pdb
+C:\Users\Administrator\Desktop\emulator\plusemu\bin\x86\Release\AStar.dll
+C:\Users\Administrator\Desktop\emulator\plusemu\bin\x86\Release\log4net.dll
+C:\Users\Administrator\Desktop\emulator\plusemu\bin\x86\Release\MySql.Data.dll
+C:\Users\Administrator\Desktop\emulator\plusemu\obj\x86\Release\Oblivion Emulator.exe
+C:\Users\Administrator\Desktop\emulator\plusemu\obj\x86\Release\Oblivion Emulator.pdb
+C:\Users\Administrator\Desktop\emulator\plusemu - Copy\bin\x86\Release\Oblivion Emulator.exe.config
+C:\Users\Administrator\Desktop\emulator\plusemu - Copy\obj\x86\Release\Oblivion Emulator.exe
+C:\Users\Administrator\Desktop\emulator\plusemu - Copy\obj\x86\Release\Oblivion Emulator.pdb
+C:\Users\Administrator\Desktop\emulator\plusemu - Copy\bin\x86\Release\Oblivion Emulator.exe
+C:\Users\Administrator\Desktop\emulator\plusemu - Copy\bin\x86\Release\Oblivion Emulator.pdb
+C:\Users\Administrator\Desktop\emulator\plusemu - Copy\bin\x86\Release\AStar.dll
+C:\Users\Administrator\Desktop\emulator\plusemu - Copy\bin\x86\Release\HabboEncryption.dll
+C:\Users\Administrator\Desktop\emulator\plusemu - Copy\bin\x86\Release\log4net.dll
+C:\Users\Administrator\Desktop\emulator\plusemu - Copy\bin\x86\Release\MySql.Data.dll
+C:\Users\Administrator\Desktop\emulator\plusemu - Copy\bin\x86\Release\Newtonsoft.Json.dll
+C:\Users\Administrator\Desktop\emulator\plusemu - Copy\bin\x86\Release\Newtonsoft.Json.xml
+C:\Users\Administrator\Desktop\emulator\plusemu - Copy\obj\x86\Release\Oblivion Emulator.csprojResolveAssemblyReference.cache

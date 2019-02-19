@@ -1,0 +1,8 @@
+C:\Users\Administrator\Desktop\emulator\plusemu\bin\x64\Debug\Oblivion Emulator.exe.config
+C:\Users\Administrator\Desktop\emulator\plusemu\bin\x64\Debug\Oblivion Emulator.exe
+C:\Users\Administrator\Desktop\emulator\plusemu\bin\x64\Debug\Oblivion Emulator.pdb
+C:\Users\Administrator\Desktop\emulator\plusemu\bin\x64\Debug\AStar.dll
+C:\Users\Administrator\Desktop\emulator\plusemu\bin\x64\Debug\log4net.dll
+C:\Users\Administrator\Desktop\emulator\plusemu\bin\x64\Debug\MySql.Data.dll
+C:\Users\Administrator\Desktop\emulator\plusemu\obj\x64\Debug\Oblivion Emulator.exe
+C:\Users\Administrator\Desktop\emulator\plusemu\obj\x64\Debug\Oblivion Emulator.pdb

@@ -1,0 +1,22 @@
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\bin\x64\Release\Oblivion Emulator.exe.config
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\bin\x64\Release\Oblivion Emulator.exe
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\bin\x64\Release\Oblivion Emulator.pdb
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\bin\x64\Release\AStar.dll
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\bin\x64\Release\dotMemory.Unit.dll
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\bin\x64\Release\HabboEncryption.dll
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\bin\x64\Release\log4net.dll
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\bin\x64\Release\MySql.Data.dll
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\bin\x64\Release\Newtonsoft.Json.dll
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\bin\x64\Release\dotMemory.Unit.xml
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\bin\x64\Release\Newtonsoft.Json.xml
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\obj\x64\Release\Oblivion Emulator.exe
+C:\Users\Administrator\Desktop\emulator\plusemu\PlusEMU\obj\x64\Release\Oblivion Emulator.pdb
+C:\Users\Administrator\Desktop\emulator\plusemu\bin\x64\Release\Oblivion Emulator.exe
+C:\Users\Administrator\Desktop\emulator\plusemu\bin\x64\Release\Oblivion Emulator.pdb
+C:\Users\Administrator\Desktop\emulator\plusemu\bin\x64\Release\AStar.dll
+C:\Users\Administrator\Desktop\emulator\plusemu\bin\x64\Release\log4net.dll
+C:\Users\Administrator\Desktop\emulator\plusemu\bin\x64\Release\Oblivion Emulator.exe.config
+C:\Users\Administrator\Desktop\emulator\plusemu\obj\x64\Release\Oblivion Emulator.exe
+C:\Users\Administrator\Desktop\emulator\plusemu\obj\x64\Release\Oblivion Emulator.pdb
+C:\Users\Administrator\Desktop\emulator\plusemu\bin\x64\Release\MySql.Data.dll
+C:\Users\Administrator\Desktop\emulator\plusemu\obj\x64\Release\Oblivion Emulator.csprojResolveAssemblyReference.cache
