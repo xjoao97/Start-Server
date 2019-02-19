@@ -71,6 +71,7 @@ namespace Oblivion.HabboHotel.Items.Wired
         EffectGiveUserDuckets,
         EffectGiveUserCredits,
         TriggerScoreAchieved,
+        HighscoreClassicAlltime,
 
         ConditionFurniHasUsers,
         ConditionFurniHasFurni,
