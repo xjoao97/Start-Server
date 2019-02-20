@@ -531,7 +531,10 @@ namespace Oblivion.HabboHotel.Rooms.Instance
 
         public bool TryRemove(IWiredItem Item) => _wiredItems.Remove(Item);
 
-        //        public bool TryGet(int id, out IWiredItem Item) => _wiredItems[];
+       // public bool TryGet(int id, out IWiredItem Item)
+       // {
+       //     return _wiredItems.TryGetValue(id, out Item);
+       // }
         public IWiredItem GetWired(int item)
             => _wiredItems.FirstOrDefault(current => current != null && item == current.Item.Id);
 

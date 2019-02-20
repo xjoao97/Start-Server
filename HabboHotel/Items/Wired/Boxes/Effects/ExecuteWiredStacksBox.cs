@@ -52,10 +52,10 @@ namespace Oblivion.HabboHotel.Items.Wired.Boxes.Effects
 
         public bool Execute(params object[] Params)
         {
-//            if (Params.Length != 1)
-//                return false;
+            if (Params.Length != 1)
+                return false;
 
-            var Player = (Habbo) Params[0];
+            var Player = (Habbo)Params[0];
             if (Player == null)
                 return false;
 

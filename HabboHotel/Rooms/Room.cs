@@ -434,7 +434,7 @@ namespace Oblivion.HabboHotel.Rooms
 
             if (Key != null)
             {
-                Func<Item, bool> predicate = p => p.GetBaseItem().ItemName == "fball_score_" + Key;
+                bool predicate(Item p) => p.GetBaseItem().ItemName == "fball_score_" + Key;
 
                 foreach (
                     var item2 in

@@ -1,0 +1,13 @@
+Excluir a Tabela group_menberships e executar essa logo abaixo
+
+CREATE TABLE IF NOT EXISTS `group_memberships` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `group_id` int(11) unsigned NOT NULL,
+  `user_id` int(11) unsigned NOT NULL,
+  `has_chat` int(11) unsigned NOT NULL,
+  `rank` enum('0','1','2') NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `groupid` (`group_id`),
+  KEY `userid` (`user_id`),
+  KEY `rank` (`rank`)
+) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=latin1;
