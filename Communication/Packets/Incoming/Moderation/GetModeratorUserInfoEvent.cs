@@ -38,7 +38,7 @@ namespace Oblivion.Communication.Packets.Incoming.Moderation
                 Info = dbClient.getRow();
                 if (Info == null)
                 {
-                    dbClient.RunQuery("INSERT INTO `user_info` (`user_id`) VALUES ('" + UserId + "')");
+                    dbClient.runFastQuery("INSERT INTO `user_info` (`user_id`) VALUES ('" + UserId + "')");
                     dbClient.SetQuery(
                         "SELECT `cfhs`,`cfhs_abusive`,`cautions`,`bans`,`trading_locked`,`trading_locks_count` FROM `user_info` WHERE `user_id` = '" +
                         UserId + "' LIMIT 1");

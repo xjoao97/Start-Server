@@ -84,10 +84,10 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.AI.Pets
             if (pet != null)
                 using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                 {
-                    dbClient.RunQuery(
+                    dbClient.runFastQuery(
                         "UPDATE `bots` SET `room_id` = '0', `x` = '0', `Y` = '0', `Z` = '0' WHERE `id` = '" + pet.PetId +
                         "' LIMIT 1");
-                    dbClient.RunQuery("UPDATE `bots_petdata` SET `experience` = '" + pet.experience + "', `energy` = '" +
+                    dbClient.runFastQuery("UPDATE `bots_petdata` SET `experience` = '" + pet.experience + "', `energy` = '" +
                                       pet.Energy + "', `nutrition` = '" + pet.Nutrition + "', `respect` = '" +
                                       pet.Respect + "' WHERE `id` = '" + pet.PetId + "' LIMIT 1");
                 }

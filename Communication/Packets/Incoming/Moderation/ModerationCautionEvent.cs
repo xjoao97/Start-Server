@@ -23,7 +23,7 @@ namespace Oblivion.Communication.Packets.Incoming.Moderation
 
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.RunQuery("UPDATE `user_info` SET `cautions` = `cautions` + '1' WHERE `user_id` = '" +
+                dbClient.runFastQuery("UPDATE `user_info` SET `cautions` = `cautions` + '1' WHERE `user_id` = '" +
                                   Client.GetHabbo().Id + "' LIMIT 1");
             }
 

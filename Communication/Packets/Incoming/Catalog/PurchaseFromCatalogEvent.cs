@@ -211,7 +211,7 @@ namespace Oblivion.Communication.Packets.Incoming.Catalog
                 Item.LimitedEditionSells++;
                 using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                 {
-                    dbClient.RunQuery("UPDATE `catalog_items` SET `limited_sells` = '" + Item.LimitedEditionSells +
+                    dbClient.runFastQuery("UPDATE `catalog_items` SET `limited_sells` = '" + Item.LimitedEditionSells +
                                       "' WHERE `id` = '" + Item.Id + "' LIMIT 1");
                     LimitedEditionSells = Item.LimitedEditionSells;
                     LimitedEditionStack = Item.LimitedEditionStack;

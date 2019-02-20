@@ -18,7 +18,7 @@ namespace Oblivion.Communication.Packets.Incoming.Navigator
 
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.RunQuery("DELETE FROM user_favorites WHERE user_id = " + Session.GetHabbo().Id +
+                dbClient.runFastQuery("DELETE FROM user_favorites WHERE user_id = " + Session.GetHabbo().Id +
                                   " AND room_id = " + Id + " LIMIT 1");
             }
         }

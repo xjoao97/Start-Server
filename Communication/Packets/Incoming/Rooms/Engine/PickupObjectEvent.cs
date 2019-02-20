@@ -50,13 +50,13 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.Engine
                     if (Item.GetBaseItem().InteractionType == InteractionType.Moodlight)
                         using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                         {
-                            dbClient.RunQuery("DELETE FROM `room_items_moodlight` WHERE `item_id` = '" + Item.Id +
+                            dbClient.runFastQuery("DELETE FROM `room_items_moodlight` WHERE `item_id` = '" + Item.Id +
                                               "' LIMIT 1");
                         }
                     else if (Item.GetBaseItem().InteractionType == InteractionType.Toner)
                         using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                         {
-                            dbClient.RunQuery("DELETE FROM `room_items_toner` WHERE `id` = '" + Item.Id + "' LIMIT 1");
+                            dbClient.runFastQuery("DELETE FROM `room_items_toner` WHERE `id` = '" + Item.Id + "' LIMIT 1");
                         }
 
 
@@ -97,7 +97,7 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.Engine
                             Room.GetRoomItemHandler().RemoveFurniture(null, Item.Id);
                             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                             {
-                                dbClient.RunQuery("UPDATE `items` SET `room_id` = '0' WHERE `id` = '" + Item.Id +
+                                dbClient.runFastQuery("UPDATE `items` SET `room_id` = '0' WHERE `id` = '" + Item.Id +
                                                   "' LIMIT 1");
                             }
                         }

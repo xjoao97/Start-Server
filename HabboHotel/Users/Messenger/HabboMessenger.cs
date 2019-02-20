@@ -122,7 +122,7 @@ namespace Oblivion.HabboHotel.Users.Messenger
         {
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.RunQuery("DELETE FROM messenger_requests WHERE from_id = " + _userId + " OR to_id = " + _userId);
+                dbClient.runFastQuery("DELETE FROM messenger_requests WHERE from_id = " + _userId + " OR to_id = " + _userId);
             }
 
             ClearRequests();

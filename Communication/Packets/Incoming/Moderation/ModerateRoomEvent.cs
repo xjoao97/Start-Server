@@ -43,15 +43,15 @@ namespace Oblivion.Communication.Packets.Incoming.Moderation
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 if (SetName && SetLock)
-                    dbClient.RunQuery(
+                    dbClient.runFastQuery(
                         "UPDATE `rooms` SET `caption` = 'Quarto inapropriado', `description` = 'Inapropriado.', `tags` = '', `state` = '1' WHERE `id` = '" +
                         Room.RoomId + "' LIMIT 1");
                 else if (SetName)
-                    dbClient.RunQuery(
+                    dbClient.runFastQuery(
                         "UPDATE `rooms` SET `caption` = 'Quarto inapropriado', `description` = 'Inapropriado.', `tags` = '' WHERE `id` = '" +
                         Room.RoomId + "' LIMIT 1");
                 else if (SetLock)
-                    dbClient.RunQuery("UPDATE `rooms` SET `state` = '1', `tags` = '' WHERE `id` = '" + Room.RoomId +
+                    dbClient.runFastQuery("UPDATE `rooms` SET `state` = '1', `tags` = '' WHERE `id` = '" + Room.RoomId +
                                       "' LIMIT 1");
             }
 

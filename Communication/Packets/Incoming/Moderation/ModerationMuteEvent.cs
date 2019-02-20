@@ -36,7 +36,7 @@ namespace Oblivion.Communication.Packets.Incoming.Moderation
 
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.RunQuery("UPDATE `users` SET `time_muted` = '" + Length + "' WHERE `id` = '" + Habbo.Id +
+                dbClient.runFastQuery("UPDATE `users` SET `time_muted` = '" + Length + "' WHERE `id` = '" + Habbo.Id +
                                   "' LIMIT 1");
             }
 

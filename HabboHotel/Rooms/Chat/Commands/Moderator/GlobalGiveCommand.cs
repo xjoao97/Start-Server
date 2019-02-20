@@ -45,7 +45,7 @@ namespace Oblivion.HabboHotel.Rooms.Chat.Commands.Moderator
                         }
                         using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                         {
-                            dbClient.RunQuery("UPDATE users SET credits = credits + " + amount);
+                            dbClient.runFastQuery("UPDATE users SET credits = credits + " + amount);
                         }
                         break;
                     }
@@ -71,7 +71,7 @@ namespace Oblivion.HabboHotel.Rooms.Chat.Commands.Moderator
                         }
                         using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                         {
-                            dbClient.RunQuery("UPDATE users SET activity_points = activity_points + " + amount);
+                            dbClient.runFastQuery("UPDATE users SET activity_points = activity_points + " + amount);
                         }
                         break;
                     }
@@ -97,7 +97,7 @@ namespace Oblivion.HabboHotel.Rooms.Chat.Commands.Moderator
                         }
                         using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                         {
-                            dbClient.RunQuery("UPDATE users SET vip_points = vip_points + " + amount);
+                            dbClient.runFastQuery("UPDATE users SET vip_points = vip_points + " + amount);
                         }
                         break;
                     }
@@ -122,7 +122,7 @@ namespace Oblivion.HabboHotel.Rooms.Chat.Commands.Moderator
                         }
                         using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                         {
-                            dbClient.RunQuery("UPDATE users SET gotw_points = gotw_points + " + amount);
+                            dbClient.runFastQuery("UPDATE users SET gotw_points = gotw_points + " + amount);
                         }
                         break;
                     }

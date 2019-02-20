@@ -215,7 +215,7 @@ namespace Oblivion.Communication.Packets.Incoming.Catalog
                     dbClient.RunQuery();
 
                     //Here we're clearing up a record, this is dumb, but okay.
-                    dbClient.RunQuery("DELETE FROM `items` WHERE `id` = " + newItemId + " LIMIT 1;");
+                    dbClient.runFastQuery("DELETE FROM `items` WHERE `id` = " + newItemId + " LIMIT 1;");
                 }
 
                 var GiveItem = ItemFactory.CreateGiftItem(PresentData, Habbo, ED, ED, newItemId);

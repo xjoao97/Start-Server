@@ -33,7 +33,7 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.AI.Pets.Horse
 
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.RunQuery("UPDATE `bots_petdata` SET `anyone_ride` = '" + Pet.PetData.AnyoneCanRide +
+                dbClient.runFastQuery("UPDATE `bots_petdata` SET `anyone_ride` = '" + Pet.PetData.AnyoneCanRide +
                                   "' WHERE `id` = '" + PetId + "' LIMIT 1");
             }
 

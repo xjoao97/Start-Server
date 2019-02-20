@@ -49,12 +49,12 @@ namespace Oblivion.Communication.Packets.Incoming.Groups
             //Now the :S stuff.
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.RunQuery("DELETE FROM `groups` WHERE `id` = '" + Group.Id + "'");
-                dbClient.RunQuery("DELETE FROM `group_memberships` WHERE `group_id` = '" + Group.Id + "'");
-                dbClient.RunQuery("DELETE FROM `group_requests` WHERE `group_id` = '" + Group.Id + "'");
-                dbClient.RunQuery("UPDATE `rooms` SET `group_id` = '0' WHERE `group_id` = '" + Group.Id + "' LIMIT 1");
-                dbClient.RunQuery("UPDATE `user_stats` SET `groupid` = '0' WHERE `groupid` = '" + Group.Id + "' LIMIT 1");
-                dbClient.RunQuery("DELETE FROM `items_groups` WHERE `group_id` = '" + Group.Id + "'");
+                dbClient.runFastQuery("DELETE FROM `groups` WHERE `id` = '" + Group.Id + "'");
+                dbClient.runFastQuery("DELETE FROM `group_memberships` WHERE `group_id` = '" + Group.Id + "'");
+                dbClient.runFastQuery("DELETE FROM `group_requests` WHERE `group_id` = '" + Group.Id + "'");
+                dbClient.runFastQuery("UPDATE `rooms` SET `group_id` = '0' WHERE `group_id` = '" + Group.Id + "' LIMIT 1");
+                dbClient.runFastQuery("UPDATE `user_stats` SET `groupid` = '0' WHERE `groupid` = '" + Group.Id + "' LIMIT 1");
+                dbClient.runFastQuery("DELETE FROM `items_groups` WHERE `group_id` = '" + Group.Id + "'");
             }
 
             //Unload it last.

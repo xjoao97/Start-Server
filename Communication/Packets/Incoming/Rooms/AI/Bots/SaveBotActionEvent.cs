@@ -112,7 +112,7 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.AI.Bots
 
                     using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                     {
-                        dbClient.RunQuery("DELETE FROM `bots_speech` WHERE `bot_id` = '" + Bot.BotData.Id + "'");
+                        dbClient.runFastQuery("DELETE FROM `bots_speech` WHERE `bot_id` = '" + Bot.BotData.Id + "'");
                     }
 
                     #region Save Data - TODO: MAKE METHODS FOR THIS.
@@ -166,7 +166,7 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.AI.Bots
 
                     using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                     {
-                        dbClient.RunQuery("UPDATE `bots` SET `walk_mode` = '" + Bot.BotData.WalkingMode +
+                        dbClient.runFastQuery("UPDATE `bots` SET `walk_mode` = '" + Bot.BotData.WalkingMode +
                                           "' WHERE `id` = '" + Bot.BotData.Id + "' LIMIT 1");
                     }
                     break;

@@ -142,16 +142,16 @@ namespace Oblivion.HabboHotel.Rooms.Chat.Commands.User
                                 MemberClient.GetHabbo().GetStats().FavouriteGroupId = 0;
                         }
 
-                        Adapter.RunQuery("DELETE FROM `groups` WHERE `id` = '" + RoomForSale.Group.Id + "'");
-                        Adapter.RunQuery("DELETE FROM `group_memberships` WHERE `group_id` = '" + RoomForSale.Group.Id +
+                        Adapter.runFastQuery("DELETE FROM `groups` WHERE `id` = '" + RoomForSale.Group.Id + "'");
+                        Adapter.runFastQuery("DELETE FROM `group_memberships` WHERE `group_id` = '" + RoomForSale.Group.Id +
                                          "'");
-                        Adapter.RunQuery("DELETE FROM `group_requests` WHERE `group_id` = '" + RoomForSale.Group.Id +
+                        Adapter.runFastQuery("DELETE FROM `group_requests` WHERE `group_id` = '" + RoomForSale.Group.Id +
                                          "'");
-                        Adapter.RunQuery("UPDATE `rooms` SET `group_id` = '0' WHERE `group_id` = '" +
+                        Adapter.runFastQuery("UPDATE `rooms` SET `group_id` = '0' WHERE `group_id` = '" +
                                          RoomForSale.Group.Id + "' LIMIT 1");
-                        Adapter.RunQuery("UPDATE `user_stats` SET `groupid` = '0' WHERE `groupid` = '" +
+                        Adapter.runFastQuery("UPDATE `user_stats` SET `groupid` = '0' WHERE `groupid` = '" +
                                          RoomForSale.Group.Id + "' LIMIT 1");
-                        Adapter.RunQuery("DELETE FROM `items_groups` WHERE `group_id` = '" + RoomForSale.Group.Id + "'");
+                        Adapter.runFastQuery("DELETE FROM `items_groups` WHERE `group_id` = '" + RoomForSale.Group.Id + "'");
                     }
                     OblivionServer.GetGame().GetGroupManager().DeleteGroup(RoomForSale.Group.Id);
                     RoomForSale.RoomData.Group = null;

@@ -34,7 +34,7 @@ namespace Oblivion.HabboHotel.Items.Data.Moodlight
             if (Row == null)
                 using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                 {
-                    dbClient.RunQuery(
+                    dbClient.runFastQuery(
                         "INSERT INTO `room_items_moodlight` (item_id,enabled,current_preset,preset_one,preset_two,preset_three) VALUES (" +
                         ItemId + ",0,1,'#000000,255,0','#000000,255,0','#000000,255,0')");
                     dbClient.SetQuery(
@@ -58,7 +58,7 @@ namespace Oblivion.HabboHotel.Items.Data.Moodlight
 
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.RunQuery("UPDATE room_items_moodlight SET enabled = 1 WHERE item_id = '" + ItemId + "' LIMIT 1");
+                dbClient.runFastQuery("UPDATE room_items_moodlight SET enabled = 1 WHERE item_id = '" + ItemId + "' LIMIT 1");
             }
         }
 
@@ -68,7 +68,7 @@ namespace Oblivion.HabboHotel.Items.Data.Moodlight
 
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.RunQuery("UPDATE room_items_moodlight SET enabled = 0 WHERE item_id = '" + ItemId + "' LIMIT 1");
+                dbClient.runFastQuery("UPDATE room_items_moodlight SET enabled = 0 WHERE item_id = '" + ItemId + "' LIMIT 1");
             }
         }
 

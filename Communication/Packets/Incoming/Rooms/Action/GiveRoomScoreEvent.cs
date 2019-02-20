@@ -46,7 +46,7 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.Action
 
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.RunQuery("UPDATE rooms SET score = '" + Room.Score + "' WHERE id = '" + Room.RoomId +
+                dbClient.runFastQuery("UPDATE rooms SET score = '" + Room.Score + "' WHERE id = '" + Room.RoomId +
                                   "' LIMIT 1");
             }
 

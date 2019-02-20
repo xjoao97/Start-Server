@@ -46,7 +46,7 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.Engine
 
                 using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                 {
-                    dbClient.RunQuery("UPDATE `room_items_toner` SET `enabled` = '" + Room.TonerData.Enabled +
+                    dbClient.runFastQuery("UPDATE `room_items_toner` SET `enabled` = '" + Room.TonerData.Enabled +
                                       "' LIMIT 1");
                 }
                 return;

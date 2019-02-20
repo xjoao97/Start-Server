@@ -62,7 +62,7 @@ namespace Oblivion.Communication.Packets.Incoming.Nucs
                 habbo._NUX = false;
                 using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                 {
-                    dbClient.RunQuery("UPDATE users SET nux_user = 'false' WHERE id = " + Session.GetHabbo().Id + ";");
+                    dbClient.runFastQuery("UPDATE users SET nux_user = 'false' WHERE id = " + Session.GetHabbo().Id + ";");
                 }
                 var nuxStatus = new ServerPacket(ServerPacketHeader.NuxUserStatus);
                 nuxStatus.WriteInteger(0);

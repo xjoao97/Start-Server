@@ -53,7 +53,7 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.Furni
 
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.RunQuery("DELETE FROM `items` WHERE `id` = '" + Exchange.Id + "' LIMIT 1");
+                dbClient.runFastQuery("DELETE FROM `items` WHERE `id` = '" + Exchange.Id + "' LIMIT 1");
             }
 
             Session.SendMessage(new FurniListUpdateComposer());

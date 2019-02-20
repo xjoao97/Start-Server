@@ -19,7 +19,7 @@ namespace Oblivion.HabboHotel.Rooms.Chat.Commands.User
             session.GetHabbo().AllowBotSpeech = !session.GetHabbo().AllowBotSpeech;
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.RunQuery("UPDATE `users` SET `bots_muted` = '" + (session.GetHabbo().AllowBotSpeech ? 1 : 0) +
+                dbClient.runFastQuery("UPDATE `users` SET `bots_muted` = '" + (session.GetHabbo().AllowBotSpeech ? 1 : 0) +
                                   "' WHERE `id` = '" + session.GetHabbo().Id + "' LIMIT 1");
             }
 

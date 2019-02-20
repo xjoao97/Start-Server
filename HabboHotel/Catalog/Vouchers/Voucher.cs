@@ -26,7 +26,7 @@
             CurrentUses += 1;
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.RunQuery(
+                dbClient.runFastQuery(
                     "UPDATE `catalog_vouchers` SET `current_uses` = `current_uses` + '1' WHERE `voucher` = '" + Code +
                     "' LIMIT 1");
             }

@@ -34,7 +34,7 @@ namespace Oblivion.HabboHotel.Rooms.Chat.Commands.Moderator
             {
                 using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                 {
-                    dbClient.RunQuery("UPDATE `user_info` SET `trading_locked` = '0' WHERE `user_id` = '" + habbo.Id +
+                    dbClient.runFastQuery("UPDATE `user_info` SET `trading_locked` = '0' WHERE `user_id` = '" + habbo.Id +
                                       "' LIMIT 1");
                 }
 
@@ -60,7 +60,7 @@ namespace Oblivion.HabboHotel.Rooms.Chat.Commands.Moderator
                 var length = OblivionServer.GetUnixTimestamp() + days * 86400;
                 using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                 {
-                    dbClient.RunQuery("UPDATE `user_info` SET `trading_locked` = '" + length +
+                    dbClient.runFastQuery("UPDATE `user_info` SET `trading_locked` = '" + length +
                                       "', `trading_locks_count` = `trading_locks_count` + '1' WHERE `user_id` = '" +
                                       habbo.Id + "' LIMIT 1");
                 }

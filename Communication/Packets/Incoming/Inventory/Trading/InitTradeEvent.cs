@@ -38,7 +38,7 @@ namespace Oblivion.Communication.Packets.Incoming.Inventory.Trading
 
                     using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                     {
-                        dbClient.RunQuery("UPDATE `user_info` SET `trading_locked` = '0' WHERE `id` = '" +
+                        dbClient.runFastQuery("UPDATE `user_info` SET `trading_locked` = '0' WHERE `id` = '" +
                                           Session.GetHabbo().Id + "' LIMIT 1");
                     }
                 }

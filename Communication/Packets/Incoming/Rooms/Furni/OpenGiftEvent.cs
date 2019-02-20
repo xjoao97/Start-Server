@@ -48,8 +48,8 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.Furni
 
                 using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                 {
-                    dbClient.RunQuery("DELETE FROM `items` WHERE `id` = '" + Present.Id + "' LIMIT 1");
-                    dbClient.RunQuery("DELETE FROM `user_presents` WHERE `item_id` = '" + Present.Id + "' LIMIT 1");
+                    dbClient.runFastQuery("DELETE FROM `items` WHERE `id` = '" + Present.Id + "' LIMIT 1");
+                    dbClient.runFastQuery("DELETE FROM `user_presents` WHERE `item_id` = '" + Present.Id + "' LIMIT 1");
                 }
 
                 Session.GetHabbo().GetInventoryComponent().RemoveItem(Present.Id);
@@ -65,8 +65,8 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.Furni
 
                 using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                 {
-                    dbClient.RunQuery("DELETE FROM `items` WHERE `id` = '" + Present.Id + "' LIMIT 1");
-                    dbClient.RunQuery("DELETE FROM `user_presents` WHERE `item_id` = '" + Present.Id + "' LIMIT 1");
+                    dbClient.runFastQuery("DELETE FROM `items` WHERE `id` = '" + Present.Id + "' LIMIT 1");
+                    dbClient.runFastQuery("DELETE FROM `user_presents` WHERE `item_id` = '" + Present.Id + "' LIMIT 1");
                 }
                 Session.GetHabbo().GetInventoryComponent().RemoveItem(Present.Id);
 
@@ -82,8 +82,8 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.Furni
 
                 using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                 {
-                    dbClient.RunQuery("DELETE FROM `items` WHERE `id` = '" + Present.Id + "' LIMIT 1");
-                    dbClient.RunQuery("DELETE FROM `user_presents` WHERE `item_id` = '" + Present.Id + "' LIMIT 1");
+                    dbClient.runFastQuery("DELETE FROM `items` WHERE `id` = '" + Present.Id + "' LIMIT 1");
+                    dbClient.runFastQuery("DELETE FROM `user_presents` WHERE `item_id` = '" + Present.Id + "' LIMIT 1");
                 }
 
                 Session.GetHabbo().GetInventoryComponent().RemoveItem(Present.Id);
@@ -98,8 +98,8 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.Furni
 
                 using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                 {
-                    dbClient.RunQuery("DELETE FROM `items` WHERE `id` = '" + Present.Id + "' LIMIT 1");
-                    dbClient.RunQuery("DELETE FROM `user_presents` WHERE `item_id` = '" + Present.Id + "' LIMIT 1");
+                    dbClient.runFastQuery("DELETE FROM `items` WHERE `id` = '" + Present.Id + "' LIMIT 1");
+                    dbClient.runFastQuery("DELETE FROM `user_presents` WHERE `item_id` = '" + Present.Id + "' LIMIT 1");
                 }
 
                 Session.GetHabbo().GetInventoryComponent().RemoveItem(Present.Id);
@@ -137,7 +137,7 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.Furni
                     dbClient.AddParameter("edata", Row["extra_data"]);
                     dbClient.RunQuery();
 
-                    dbClient.RunQuery("DELETE FROM `user_presents` WHERE `item_id` = " + Present.Id + " LIMIT 1");
+                    dbClient.runFastQuery("DELETE FROM `user_presents` WHERE `item_id` = " + Present.Id + " LIMIT 1");
                 }
 
                 Present.BaseItem = Convert.ToInt32(Row["base_id"]);
@@ -155,7 +155,7 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.Furni
                     {
                         using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                         {
-                            dbClient.RunQuery("UPDATE `items` SET `room_id` = '0' WHERE `id` = " + Present.Id +
+                            dbClient.runFastQuery("UPDATE `items` SET `room_id` = '0' WHERE `id` = " + Present.Id +
                                               " LIMIT 1");
                         }
 
@@ -166,7 +166,7 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.Furni
                 {
                     using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                     {
-                        dbClient.RunQuery("UPDATE `items` SET `room_id` = '0' WHERE `id` = " + Present.Id + " LIMIT 1");
+                        dbClient.runFastQuery("UPDATE `items` SET `room_id` = '0' WHERE `id` = " + Present.Id + " LIMIT 1");
                     }
 
                     ItemIsInRoom = false;

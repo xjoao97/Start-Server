@@ -45,7 +45,7 @@ namespace Oblivion.HabboHotel.Rooms.Chat.Commands.Moderator
 
                 using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                 {
-                    dbClient.RunQuery("UPDATE `users` SET `time_muted` = '" + time + "' WHERE `id` = '" + habbo.Id +
+                    dbClient.runFastQuery("UPDATE `users` SET `time_muted` = '" + time + "' WHERE `id` = '" + habbo.Id +
                                       "' LIMIT 1");
                 }
 

@@ -141,7 +141,7 @@ namespace Oblivion.HabboHotel.Groups
                 dbClient.AddParameter("rid", Group.RoomId);
                 dbClient.RunQuery();
 
-                dbClient.RunQuery("DELETE FROM `room_rights` WHERE `room_id` = '" + RoomId + "'");
+                dbClient.runFastQuery("DELETE FROM `room_rights` WHERE `room_id` = '" + RoomId + "'");
             }
         }
 
@@ -173,13 +173,13 @@ namespace Oblivion.HabboHotel.Groups
         {
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.RunQuery("DELETE FROM `groups` WHERE `id` = '" + Group.Id + "'");
-                dbClient.RunQuery("DELETE FROM `group_memberships` WHERE `group_id` = '" + Group.Id + "'");
+                dbClient.runFastQuery("DELETE FROM `groups` WHERE `id` = '" + Group.Id + "'");
+                dbClient.runFastQuery("DELETE FROM `group_memberships` WHERE `group_id` = '" + Group.Id + "'");
 
 
-                dbClient.RunQuery("DELETE FROM `group_requests` WHERE `group_id` = '" + Group.Id + "'");
-                dbClient.RunQuery("UPDATE `rooms` SET `group_id` = '0' WHERE `group_id` = '" + Group.Id + "' LIMIT 1");
-                dbClient.RunQuery("UPDATE `user_stats` SET `groupid` = '0' WHERE `groupid` = '" + Group.Id + "' LIMIT 1");
+                dbClient.runFastQuery("DELETE FROM `group_requests` WHERE `group_id` = '" + Group.Id + "'");
+                dbClient.runFastQuery("UPDATE `rooms` SET `group_id` = '0' WHERE `group_id` = '" + Group.Id + "' LIMIT 1");
+                dbClient.runFastQuery("UPDATE `user_stats` SET `groupid` = '0' WHERE `groupid` = '" + Group.Id + "' LIMIT 1");
             }
             
             _groups.Remove(Group.Id);

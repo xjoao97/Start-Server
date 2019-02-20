@@ -51,7 +51,7 @@ namespace Oblivion.HabboHotel.Rooms.Chat.Commands.Moderator
                 userInfo = dbClient.getRow();
                 if (userInfo == null)
                 {
-                    dbClient.RunQuery("INSERT INTO `user_info` (`user_id`) VALUES ('" + Convert.ToInt32(userData["id"]) +
+                    dbClient.runFastQuery("INSERT INTO `user_info` (`user_id`) VALUES ('" + Convert.ToInt32(userData["id"]) +
                                       "')");
 
                     dbClient.SetQuery("SELECT * FROM `user_info` WHERE `user_id` = '" + Convert.ToInt32(userData["id"]) +

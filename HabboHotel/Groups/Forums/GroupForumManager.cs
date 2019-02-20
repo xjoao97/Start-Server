@@ -54,17 +54,17 @@ namespace Oblivion.HabboHotel.Groups.Forums
         {
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.RunQuery("DELETE FROM `group_forums_settings` WHERE `group_id` = '" + Group.Id + "'");
+                dbClient.runFastQuery("DELETE FROM `group_forums_settings` WHERE `group_id` = '" + Group.Id + "'");
 
-                dbClient.RunQuery(
+                dbClient.runFastQuery(
                     "DELETE post FROM group_forums_thread_posts post INNER JOIN group_forums_threads threads ON threads.forum_id = '" +
                     Group.Id + "' WHERE threads.id = post.thread_id");
 
-                dbClient.RunQuery(
+                dbClient.runFastQuery(
                     "DELETE v FROM group_forums_thread_views v INNER JOIN group_forums_threads threads ON threads.forum_id = '" +
                     Group.Id + "' WHERE v.thread_id = threads.id");
 
-                dbClient.RunQuery("DELETE t FROM group_forums_threads t WHERE t.forum_id = '" + Group.Id + "'");
+                dbClient.runFastQuery("DELETE t FROM group_forums_threads t WHERE t.forum_id = '" + Group.Id + "'");
             }
         }
 

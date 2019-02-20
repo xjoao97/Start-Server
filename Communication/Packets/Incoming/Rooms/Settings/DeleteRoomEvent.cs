@@ -40,7 +40,7 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.Settings
                 if (Item.GetBaseItem().InteractionType == InteractionType.Moodlight)
                     using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                     {
-                        dbClient.RunQuery("DELETE FROM `room_items_moodlight` WHERE `item_id` = '" + Item.Id +
+                        dbClient.runFastQuery("DELETE FROM `room_items_moodlight` WHERE `item_id` = '" + Item.Id +
                                           "' LIMIT 1");
                     }
 
@@ -64,7 +64,7 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.Settings
                     Room.GetRoomItemHandler().RemoveFurniture(null, Item.Id);
                     using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                     {
-                        dbClient.RunQuery("UPDATE `items` SET `room_id` = '0' WHERE `id` = '" + Item.Id + "' LIMIT 1");
+                        dbClient.runFastQuery("UPDATE `items` SET `room_id` = '0' WHERE `id` = '" + Item.Id + "' LIMIT 1");
                     }
                 }
             }
@@ -73,12 +73,12 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.Settings
 
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.RunQuery("DELETE FROM `user_roomvisits` WHERE `room_id` = '" + RoomId + "'");
-                dbClient.RunQuery("DELETE FROM `rooms` WHERE `id` = '" + RoomId + "' LIMIT 1");
-                dbClient.RunQuery("DELETE FROM `user_favorites` WHERE `room_id` = '" + RoomId + "'");
-                dbClient.RunQuery("DELETE FROM `items` WHERE `room_id` = '" + RoomId + "'");
-                dbClient.RunQuery("DELETE FROM `room_rights` WHERE `room_id` = '" + RoomId + "'");
-                dbClient.RunQuery("UPDATE `users` SET `home_room` = '0' WHERE `home_room` = '" + RoomId + "'");
+                dbClient.runFastQuery("DELETE FROM `user_roomvisits` WHERE `room_id` = '" + RoomId + "'");
+                dbClient.runFastQuery("DELETE FROM `rooms` WHERE `id` = '" + RoomId + "' LIMIT 1");
+                dbClient.runFastQuery("DELETE FROM `user_favorites` WHERE `room_id` = '" + RoomId + "'");
+                dbClient.runFastQuery("DELETE FROM `items` WHERE `room_id` = '" + RoomId + "'");
+                dbClient.runFastQuery("DELETE FROM `room_rights` WHERE `room_id` = '" + RoomId + "'");
+                dbClient.runFastQuery("UPDATE `users` SET `home_room` = '0' WHERE `home_room` = '" + RoomId + "'");
             }
 
             var removedRoom = (from p in Session.GetHabbo().UsersRooms where p.Id == RoomId select p).SingleOrDefault();

@@ -33,7 +33,7 @@ namespace Oblivion.Communication.Packets.Incoming.GameCenter
                 if (count == 0)
                 {
                     var ssoTicket = "Fastfood-" + GenerateSso(32) + "-" + session.GetHabbo().Id;
-                    dbClient.RunQuery("INSERT INTO user_auth_food(user_id, auth_ticket) VALUES ('" + habboId +
+                    dbClient.runFastQuery("INSERT INTO user_auth_food(user_id, auth_ticket) VALUES ('" + habboId +
                                       "', '" +
                                       ssoTicket + "')");
                     session.SendMessage(new LoadGameComposer(gameData, ssoTicket));
