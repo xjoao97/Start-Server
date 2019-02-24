@@ -34,6 +34,7 @@ namespace Oblivion.HabboHotel
 {
     public class Game
     {
+        internal bool ClientManagerCycleEnded, RoomManagerCycleEnded;
         private const int CycleSleepTime = 25;
         private static GroupForumManager _groupForumManager;
         //  private static readonly ILog log = LogManager.GetLogger("Oblivion.HabboHotel.Game");
@@ -144,6 +145,7 @@ namespace Oblivion.HabboHotel
                 {
                     _cycleEnded = false;
 
+                    RoomManagerCycleEnded = false;
                     OblivionServer.GetGame().GetRoomManager().OnCycle();
                     OblivionServer.GetGame().GetClientManager().OnCycle();
 
@@ -161,8 +163,7 @@ namespace Oblivion.HabboHotel
         {
             _cycleActive = false;
 
-            while (!_cycleEnded)
-                Thread.Sleep(CycleSleepTime);
+            while (!_cycleEnded || !RoomManagerCycleEnded) Thread.Sleep(25);
         }
 
         public PacketManager GetPacketManager() => _packetManager;

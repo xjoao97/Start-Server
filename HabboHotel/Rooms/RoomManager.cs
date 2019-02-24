@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Data;
 using System.Linq;
+using System.Threading.Tasks;
 using log4net;
 using Oblivion.Core;
 using Oblivion.HabboHotel.GameClients;
@@ -81,26 +82,32 @@ namespace Oblivion.HabboHotel.Rooms
             try
             {
                 var sinceLastTime = DateTime.Now - _cycleLastExecution;
-                if (!(sinceLastTime.TotalMilliseconds >= 500)) return;
-                _cycleLastExecution = DateTime.Now;
-                foreach (var Room in _rooms.Values.ToList().Where(Room => !Room.isCrashed))
-                    if (Room.OngoingProcess == false)
+                if (sinceLastTime.TotalMilliseconds >= 500)
+                {
+                    _cycleLastExecution = DateTime.Now;
+                    foreach (var room in _rooms.Values.ToList())
                     {
-//                        Room.ProcessTask = new Task(Room.ProcessRoom);
-                        OblivionServer.QueueRooms.StartNew(() => Room.ProcessRoom());
+                        if (room.isCrashed)
+                            continue;
 
-//                        Room.ProcessTask.Start();
-                        Room.IsLagging = 0;
+                        if (room.ProcessTask == null || room.ProcessTask.IsCompleted)
+                        {
+                            room.ProcessTask = new Task(room.ProcessRoom);
+                            room.ProcessTask.Start();
+                            room.IsLagging = 0;
+                        }
+                        else
+                        {
+                            room.IsLagging++;
+                            if (room.IsLagging >= 30)
+                            {
+                                room.isCrashed = true;
+                                UnloadRoom(room.Id);
+                            }
+                        }
                     }
-                    else
-                    {
-                        Room.IsLagging++;
-                        if (Room.IsLagging < 30) continue;
-                        Room.isCrashed = true;
-                        UnloadRoom(Room);
-                        Logging.WriteLine("[RoomMgr] Room crashed (task didn't complete within 30 seconds): " +
-                                          Room.RoomId);
-                    }
+                }
+                OblivionServer.GetGame().RoomManagerCycleEnded = true;
             }
             catch (Exception e)
             {
@@ -181,6 +188,14 @@ namespace Oblivion.HabboHotel.Rooms
             }
             Model = null;
             return false;
+        }
+
+        public void UnloadRoom(int roomId)
+        {
+            if (_rooms.TryRemove(roomId, out Room room))
+            {
+                room.Dispose();
+            }
         }
 
         public void UnloadRoom(Room Room, bool RemoveData = false)

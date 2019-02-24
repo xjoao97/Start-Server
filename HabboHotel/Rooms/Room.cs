@@ -67,7 +67,7 @@ namespace Oblivion.HabboHotel.Rooms
         public Dictionary<int, double> MutedUsers;
 
 
-//        public Task ProcessTask;
+        public Task ProcessTask;
         public bool RoomMuted;
         public TeamManager teambanzai;
         public TeamManager teamfreeze;
@@ -675,6 +675,12 @@ namespace Oblivion.HabboHotel.Rooms
                 isCrashed = false;
                 mDisposed = true;
 
+                try
+                {
+                    if (ProcessTask != null && ProcessTask.IsCompleted)
+                        ProcessTask.Dispose();
+                }
+                catch { }
 
                 GetRoomItemHandler().SaveFurniture();
 
