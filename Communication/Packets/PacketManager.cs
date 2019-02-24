@@ -48,7 +48,6 @@ using Oblivion.Communication.Packets.Incoming.Rooms.Furni.YouTubeTelevisions;
 using Oblivion.Communication.Packets.Incoming.Rooms.Polls;
 using Oblivion.Communication.Packets.Incoming.Rooms.Settings;
 using Oblivion.Communication.Packets.Incoming.Sound;
-using Oblivion.Communication.Packets.Incoming.Talents;
 using Oblivion.Communication.Packets.Incoming.Users;
 using Oblivion.HabboHotel.GameClients;
 
@@ -113,7 +112,7 @@ namespace Oblivion.Communication.Packets
             RegisterSound();
             RegisterMisc();
             RegisterInventory();
-            RegisterTalents();
+            //RegisterTalents();
             RegisterPurse();
             RegisterRoomAvatar();
             RegisterAvatar();
@@ -431,8 +430,8 @@ namespace Oblivion.Communication.Packets
             _incomingPackets.Add(ClientPacketHeader.AvatarEffectSelectedMessageEvent, new AvatarEffectSelectedEvent());
         }
 
-        private void RegisterTalents()
-            => _incomingPackets.Add(ClientPacketHeader.GetTalentTrackMessageEvent, new GetTalentTrackEvent());
+       // private void RegisterTalents()
+          //  => _incomingPackets.Add(ClientPacketHeader.GetTalentTrackMessageEvent, new GetTalentTrackEvent());
 
         private void RegisterPurse()
             => _incomingPackets.Add(ClientPacketHeader.GetCreditsInfoMessageEvent, new GetCreditsInfoEvent());

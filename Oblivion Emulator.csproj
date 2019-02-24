@@ -309,7 +309,6 @@
     <Compile Include="Communication\Packets\Incoming\Sound\GetJukeboxPlayListEvent.cs" />
     <Compile Include="Communication\Packets\Incoming\Sound\LoadJukeboxDiscsEvent.cs" />
     <Compile Include="Communication\Packets\Incoming\Sound\RemoveDiscFromPlayListEvent.cs" />
-    <Compile Include="Communication\Packets\Incoming\Talents\GetTalentTrackEvent.cs" />
     <Compile Include="Communication\Packets\Incoming\Users\GetUserTagsEvent.cs" />
     <Compile Include="Communication\Packets\Incoming\Users\SetUserFocusPreferenceEvent.cs" />
     <Compile Include="Communication\Packets\Outgoing\Availability\MaintenanceStatusComposer.cs" />
@@ -704,9 +703,6 @@
     <Compile Include="Communication\Packets\Outgoing\Sound\SetJukeboxSongMusicDataComposer.cs" />
     <Compile Include="Communication\Packets\Outgoing\Sound\SoundSettingsComposer.cs" />
     <Compile Include="Communication\Packets\Outgoing\Sound\TraxSongInfoComposer.cs" />
-    <Compile Include="Communication\Packets\Outgoing\Talents\TalentLevelUpComposer.cs" />
-    <Compile Include="Communication\Packets\Outgoing\Talents\TalentTrackComposer.cs" />
-    <Compile Include="Communication\Packets\Outgoing\Talents\TalentTrackLevelComposer.cs" />
     <Compile Include="Communication\Packets\Outgoing\Users\GetRelationshipsComposer.cs" />
     <Compile Include="Communication\Packets\Outgoing\Users\HabboGroupBadgesComposer.cs" />
     <Compile Include="Communication\Packets\Outgoing\Users\HabboUserBadgesComposer.cs" />
@@ -1059,10 +1055,6 @@
     <Compile Include="HabboHotel\Subscriptions\SubscriptionManager.cs" />
     <Compile Include="HabboHotel\Surveys\Question.cs" />
     <Compile Include="HabboHotel\Surveys\SurveyManager.cs" />
-    <Compile Include="HabboHotel\Talents\TalentTrackSubLevel.cs" />
-    <Compile Include="HabboHotel\Talents\TalentTrackManager.cs" />
-    <Compile Include="HabboHotel\Talents\TalentTrackLevel.cs" />
-    <Compile Include="HabboHotel\Talents\TalentType.cs" />
     <Compile Include="HabboHotel\Users\Calendar\CalendarComponent.cs" />
     <Compile Include="HabboHotel\Users\Clothing\ClothingComponent.cs" />
     <Compile Include="HabboHotel\Users\Clothing\Parts\ClothingParts.cs" />

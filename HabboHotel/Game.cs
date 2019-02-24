@@ -27,7 +27,6 @@ using Oblivion.HabboHotel.Rewards;
 using Oblivion.HabboHotel.Rooms;
 using Oblivion.HabboHotel.Rooms.Chat;
 using Oblivion.HabboHotel.Rooms.TraxMachine;
-using Oblivion.HabboHotel.Talents;
 
 #endregion
 
