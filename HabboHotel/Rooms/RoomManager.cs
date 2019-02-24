@@ -1,54 +1,51 @@
-﻿#region
-
-using System;
-using System.Collections.Concurrent;
+﻿using System;
 using System.Collections.Generic;
-using System.Collections.Specialized;
 using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
-using log4net;
 using Oblivion.Core;
 using Oblivion.HabboHotel.GameClients;
-
-#endregion
+using System.Collections.Concurrent;
+using log4net;
 
 namespace Oblivion.HabboHotel.Rooms
 {
     public class RoomManager
     {
-        private static readonly ILog Log = LogManager.GetLogger("Oblivion.HabboHotel.Rooms.RoomManager");
-        private readonly HybridDictionary _loadedRoomData;
-        //private DateTime _purgeLastExecution;
-
-        private readonly HybridDictionary _roomModels;
-
+        private static readonly ILog log = LogManager.GetLogger("Oblivion.HabboHotel.Rooms.RoomManager");
+        private Dictionary<string, RoomModel> _roomModels;
         private readonly ConcurrentDictionary<int, Room> _rooms;
-        public List<Room> LoadedBallRooms;
-
-
+        private readonly ConcurrentDictionary<int, RoomData> _loadedRoomData;
         private DateTime _cycleLastExecution;
+        private readonly DateTime _purgeLastExecution;
+        public List<Room> LoadedBallRooms;
         private DateTime _cycleBallLastExecution;
 
 
         public RoomManager()
         {
-            _roomModels = new HybridDictionary();
-
+            _roomModels = new Dictionary<string, RoomModel>();
             _rooms = new ConcurrentDictionary<int, Room>();
-            _loadedRoomData = new HybridDictionary();
+            _loadedRoomData = new ConcurrentDictionary<int, RoomData>();
+            LoadModels();
+            _purgeLastExecution = DateTime.Now.AddHours(3);
             LoadedBallRooms = new List<Room>();
 
             LoadModels();
 
-            //    _purgeLastExecution = DateTime.Now.AddHours(3);
 
-            Log.Info("Room Manager -> LOADED");
+            log.Info("Room Manager -> LOADED");
         }
 
-        public int LoadedRoomDataCount => _loadedRoomData.Count;
+        public int LoadedRoomDataCount
+        {
+            get { return _loadedRoomData.Count; }
+        }
 
-        public int Count => _rooms.Count;
+        public int Count
+        {
+            get { return _rooms.Count; }
+        }
 
         public void OnCycle()
         {
@@ -157,7 +154,7 @@ namespace Oblivion.HabboHotel.Rooms
                     return;
 
                 var Modelname = Convert.ToString(Row["id"]);
-                if (!_roomModels.Contains(Id))
+                if (!_roomModels.ContainsKey(Id))
                     _roomModels.Add(Modelname,
                         new RoomModel(Convert.ToInt32(Row["door_x"]), Convert.ToInt32(Row["door_y"]),
                             Convert.ToDouble(Row["door_z"]), Convert.ToInt32(Row["door_dir"]),
@@ -169,7 +166,7 @@ namespace Oblivion.HabboHotel.Rooms
 
         public void ReloadModel(string Id)
         {
-            if (!_roomModels.Contains(Id))
+            if (!_roomModels.ContainsKey(Id))
             {
                 LoadModel(Id);
                 return;
@@ -181,13 +178,7 @@ namespace Oblivion.HabboHotel.Rooms
 
         public bool TryGetModel(string Id, out RoomModel Model)
         {
-            if (_roomModels.Contains(Id))
-            {
-                Model = (RoomModel) _roomModels[Id];
-                return true;
-            }
-            Model = null;
-            return false;
+            return _roomModels.TryGetValue(Id, out Model);
         }
 
         public void UnloadRoom(int roomId)
@@ -203,17 +194,16 @@ namespace Oblivion.HabboHotel.Rooms
             if (Room == null)
                 return;
 
-            Room room;
-            if (_rooms.TryRemove(Room.RoomId, out room))
+            if (_rooms.TryRemove(Room.RoomId, out Room room))
             {
                 Room.Dispose();
 
                 if (RemoveData)
                 {
-                    _loadedRoomData.Remove(Room.Id);
+                    _loadedRoomData.TryRemove(Room.Id, out RoomData Data);
                 }
             }
-            //Logging.WriteLine("[RoomMgr] Unloaded room: \"" + Room.Name + "\" (ID: " + Room.RoomId + ")");
+
         }
 
         public List<RoomData> SearchGroupRooms(string Query)
@@ -340,21 +330,26 @@ namespace Oblivion.HabboHotel.Rooms
             return room.Any() ? room.First() : null;
         }
 
-        public RoomModel GetModel(string Model) => _roomModels.Contains(Model) ? (RoomModel) _roomModels[Model] : null;
+        public RoomModel GetModel(string Model)
+        {
+            if (_roomModels.ContainsKey(Model))
+                return _roomModels[Model];
+
+            return null;
+        }
 
         public RoomData GenerateRoomData(int RoomId)
         {
-            if (_loadedRoomData.Contains(RoomId))
-                return (RoomData) _loadedRoomData[RoomId];
+            if (_loadedRoomData.ContainsKey(RoomId))
+                return _loadedRoomData[RoomId];
 
             var Data = new RoomData();
 
-            Room Room;
 
-            if (TryGetRoom(RoomId, out Room))
+            if (TryGetRoom(RoomId, out Room Room))
                 return Room.RoomData;
 
-            DataRow Row;
+            DataRow Row = null;
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.SetQuery("SELECT * FROM rooms WHERE id = " + RoomId + " LIMIT 1");
@@ -366,30 +361,32 @@ namespace Oblivion.HabboHotel.Rooms
 
             Data.Fill(Row);
 
-            if (!_loadedRoomData.Contains(RoomId))
-                _loadedRoomData.Add(RoomId, Data);
+            if (!_loadedRoomData.ContainsKey(RoomId))
+                _loadedRoomData.TryAdd(RoomId, Data);
 
             return Data;
         }
 
         public RoomData FetchRoomData(int RoomId, DataRow dRow)
         {
-            if (_loadedRoomData.Contains(RoomId))
-                return (RoomData) _loadedRoomData[RoomId];
-            var data = new RoomData();
+            if (_loadedRoomData.ContainsKey(RoomId))
+                return _loadedRoomData[RoomId];
+            else
+            {
+                var data = new RoomData();
 
-            data.Fill(dRow);
+                data.Fill(dRow);
 
-            if (!_loadedRoomData.Contains(RoomId))
-                _loadedRoomData.Add(RoomId, data);
-            return data;
+                if (!_loadedRoomData.ContainsKey(RoomId))
+                    _loadedRoomData.TryAdd(RoomId, data);
+                return data;
+            }
         }
 
         public Room LoadRoom(int Id)
         {
-            Room Room;
 
-            if (TryGetRoom(Id, out Room))
+            if (TryGetRoom(Id, out Room Room))
                 return Room;
 
             var Data = GenerateRoomData(Id);
@@ -404,12 +401,15 @@ namespace Oblivion.HabboHotel.Rooms
             return Room;
         }
 
-        public bool TryGetRoom(int RoomId, out Room Room) => _rooms.TryGetValue(RoomId, out Room);
-
-        public RoomData CreateRoom(GameClient Session, string Name, string Description, string Model, int Category,
-            int MaxVisitors, int TradeSettings)
+        public bool TryGetRoom(int RoomId, out Room Room)
         {
-            if (!_roomModels.Contains(Model))
+            return _rooms.TryGetValue(RoomId, out Room);
+        }
+
+        public RoomData CreateRoom(GameClient Session, string Name, string Description, string Model, int Category, int MaxVisitors, int TradeSettings,
+           string wallpaper = "0.0", string floor = "0.0", string landscape = "0.0", int wallthick = 0, int floorthick = 0)
+        {
+            if (!_roomModels.ContainsKey(Model))
             {
                 Session.SendNotification(OblivionServer.GetGame().GetLanguageLocale().TryGetValue("room_model_missing"));
                 return null;
@@ -422,12 +422,11 @@ namespace Oblivion.HabboHotel.Rooms
                 return null;
             }
 
-            int RoomId;
+            var RoomId = 0;
 
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.SetQuery(
-                    "INSERT INTO `rooms` (`roomtype`,`caption`,`description`,`owner`,`model_name`,`category`,`users_max`,`trade_settings`) VALUES ('private',@caption,@description,@UserId,@model,@category,@usersmax,@tradesettings)");
+                dbClient.SetQuery("INSERT INTO `rooms` (`roomtype`,`caption`,`description`,`owner`,`model_name`,`category`,`users_max`,`trade_settings`,`wallpaper`,`floor`,`landscape`,`floorthick`,`wallthick`) VALUES ('private',@caption,@description,@UserId,@model,@category,@usersmax,@tradesettings,@wallpaper,@floor,@landscape,@floorthick,@wallthick)");
                 dbClient.AddParameter("caption", Name);
                 dbClient.AddParameter("description", Description);
                 dbClient.AddParameter("UserId", Session.GetHabbo().Id);
@@ -435,6 +434,11 @@ namespace Oblivion.HabboHotel.Rooms
                 dbClient.AddParameter("category", Category);
                 dbClient.AddParameter("usersmax", MaxVisitors);
                 dbClient.AddParameter("tradesettings", TradeSettings);
+                dbClient.AddParameter("wallpaper", wallpaper);
+                dbClient.AddParameter("floor", floor);
+                dbClient.AddParameter("landscape", landscape);
+                dbClient.AddParameter("floorthick", floorthick);
+                dbClient.AddParameter("wallthick", wallthick);
 
                 RoomId = Convert.ToInt32(dbClient.InsertQuery());
             }
@@ -444,7 +448,10 @@ namespace Oblivion.HabboHotel.Rooms
             return newRoomData;
         }
 
-        public ICollection<Room> GetRooms() => _rooms.Values;
+        public ICollection<Room> GetRooms()
+        {
+            return _rooms.Values;
+        }
 
         public void Dispose()
         {
@@ -454,11 +461,11 @@ namespace Oblivion.HabboHotel.Rooms
             {
                 OblivionServer.GetGame().GetRoomManager().UnloadRoom(Room);
                 Console.Clear();
-                Log.Info("<<- SERVER SHUTDOWN ->> ROOM ITEM SAVE: " + $"{(double) i / length * 100:0.##}" +
+                log.Info("<<- SERVER SHUTDOWN ->> ROOM ITEM SAVE: " + $"{(double) i / length * 100:0.##}" +
                          "%");
                 i++;
             }
-            Log.Info("Done disposing rooms!");
+            log.Info("Done disposing rooms!");
         }
     }
 }
