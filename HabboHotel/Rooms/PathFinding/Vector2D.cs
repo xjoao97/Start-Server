@@ -22,7 +22,7 @@
         {
             var dx = X - Point.X;
             var dy = Y - Point.Y;
-            return dx * dx + dy * dy;
+            return (dx * dx) + (dy * dy);
         }
 
         public override bool Equals(object obj)

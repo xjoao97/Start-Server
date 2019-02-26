@@ -1,97 +1,119 @@
-﻿#region
-
-using Oblivion.HabboHotel.GameClients;
+﻿using Oblivion.HabboHotel.GameClients;
 using Oblivion.HabboHotel.Items.Wired;
 
-#endregion
 
 namespace Oblivion.HabboHotel.Items.Interactor
 {
-    internal class InteractorGate : IFurniInteractor
+    public class InteractorGate : IFurniInteractor
     {
-        public void OnPlace(GameClient session, Item item)
+        public void OnPlace(GameClient Session, Item Item)
         {
         }
 
-        public void OnRemove(GameClient session, Item item)
+        public void OnRemove(GameClient Session, Item Item)
         {
         }
 
-        public void OnTrigger(GameClient session, Item item, int request, bool hasRights)
+        public void OnTrigger(GameClient Session, Item Item, int Request, bool HasRights)
         {
-            if (!hasRights)
-                return;
-            if (item?.GetBaseItem() == null || item.GetBaseItem().InteractionType != InteractionType.Gate)
-                return;
-            var modes = item.GetBaseItem().Modes - 1;
-            if (modes <= 0)
-                item.UpdateState(false, true);
+            int Modes = Item.GetBaseItem().Modes - 1;
 
-            if (item.GetRoom() == null || item.GetRoom().GetGameMap() == null ||
-                item.GetRoom().GetGameMap().SquareHasUsers(item.GetX, item.GetY))
-                return;
-
-            int currentMode;
-            int.TryParse(item.ExtraData, out currentMode);
-
-            int newMode;
-            if (currentMode <= 0)
-                newMode = 1;
-            else if (currentMode >= modes)
-                newMode = 0;
-            else
-                newMode = currentMode + 1;
-            //  ConsoleWriter.Writer.WriteLine(newMode.ToString());
-
-            if (newMode == 0 && !item.GetRoom().GetGameMap().itemCanBePlacedHere(item.GetX, item.GetY))
-                return;
-
-            if (
-                item.GetRoom()
-                    .GetGameMap()
-                    .Walkingtofurni(
-                        item.GetRoom().GetRoomUserManager().GetRoomUserByHabbo(session.GetHabbo().Username), item) &&
-                newMode == 0)
-                item.GetRoom().GetRoomUserManager().GetRoomUserByHabbo(session.GetHabbo().Username).ClearMovement(true);
-
-            item.ExtraData = newMode.ToString();
-            item.UpdateState();
-            item.GetRoom().GetGameMap().updateMapForItem(item);
-            item.GetRoom().GetWired().TriggerEvent(WiredBoxType.TriggerStateChanges, session.GetHabbo(), item);
-            // ConsoleWriter.Writer.WriteLine("Closed");
-            // 
-        }
-
-        public void OnWiredTrigger(Item item)
-        {
-//todo: fix this like ^
-
-            var num = item.GetBaseItem().Modes - 1;
-            if (num <= 0)
-                item.UpdateState(false, true);
-            if (item.GetRoom() == null || item.GetRoom().GetGameMap() == null ||
-                item.GetRoom().GetGameMap().SquareHasUsers(item.GetX, item.GetY))
-                return;
-            var num2 = 0;
-            int.TryParse(item.ExtraData, out num2);
-            int num3;
-            if (num2 <= 0)
+            if (!HasRights)
             {
-                num3 = 1;
+                return;
+            }
+            else if (Modes <= 0)
+            {
+                Item.UpdateState(false, true);
+            }
+
+            int CurrentMode = 0;
+            int NewMode = 0;
+
+            if (!int.TryParse(Item.ExtraData, out CurrentMode))
+            {
+            }
+
+            if (CurrentMode <= 0)
+            {
+                NewMode = 1;
+            }
+            else if (CurrentMode >= Modes)
+            {
+                NewMode = 0;
             }
             else
             {
-                if (num2 >= num)
-                    num3 = 0;
-                else
-                    num3 = num2 + 1;
+                NewMode = CurrentMode + 1;
             }
-            if (num3 == 0 && !item.GetRoom().GetGameMap().itemCanBePlacedHere(item.GetX, item.GetY))
+
+            if (NewMode == 0)
+            {
+                if (!Item.GetRoom().GetGameMap().itemCanBePlacedHere(Item.GetX, Item.GetY))
+                {
+                    return;
+                }
+            }
+
+            if (Item.GetRoom() == null || Item.GetRoom().GetGameMap() == null ||
+               Item.GetRoom().GetGameMap().SquareHasUsers(Item.GetX, Item.GetY))
                 return;
 
-            item.ExtraData = num3.ToString();
-            item.UpdateState();
-            item.GetRoom().GetGameMap().updateMapForItem(item);
+            Item.ExtraData = NewMode.ToString();
+            Item.UpdateState();
+
+            Item.RegenerateBlock(NewMode.ToString(), Item.GetRoom().GetGameMap());
+            Item.GetRoom().GetGameMap().updateMapForItem(Item);
+            Item.GetRoom().GetWired().TriggerEvent(WiredBoxType.TriggerStateChanges, Session.GetHabbo(), Item);
+            //Item.GetRoom().GenerateMaps();
+        }
+
+        public void OnWiredTrigger(Item Item)
+        {
+            int Modes = Item.GetBaseItem().Modes - 1;
+
+            if (Modes <= 0)
+            {
+                Item.UpdateState(false, true);
+            }
+
+            int CurrentMode = 0;
+            int NewMode = 0;
+
+            if (!int.TryParse(Item.ExtraData, out CurrentMode))
+            {
+            }
+
+            if (CurrentMode <= 0)
+            {
+                NewMode = 1;
+            }
+            else if (CurrentMode >= Modes)
+            {
+                NewMode = 0;
+            }
+            else
+            {
+                NewMode = CurrentMode + 1;
+            }
+
+            if (NewMode == 0)
+            {
+                if (!Item.GetRoom().GetGameMap().itemCanBePlacedHere(Item.GetX, Item.GetY))
+                {
+                    return;
+                }
+            }
+
+            if (Item.GetRoom() == null || Item.GetRoom().GetGameMap() == null ||
+               Item.GetRoom().GetGameMap().SquareHasUsers(Item.GetX, Item.GetY))
+                return;
+
+            Item.ExtraData = NewMode.ToString();
+            Item.UpdateState();
+
+            Item.GetRoom().GetGameMap().updateMapForItem(Item);
+            //Item.GetRoom().GenerateMaps();
         }
     }
 }

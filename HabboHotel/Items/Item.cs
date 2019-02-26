@@ -1510,6 +1510,30 @@ namespace Oblivion.HabboHotel.Items
             return Data;
         }
 
+        public void RegenerateBlock(string NewMode, Gamemap Tile)
+        {
+            try
+            {
+                var list = new List<RoomUser>();
+
+                if (!int.TryParse(NewMode, out int CurrentMode))
+                {
+                }
+
+                if (CurrentMode <= 0)
+                {
+                    foreach (RoomUser user in _room.GetGameMap().GetRoomUsers(new Point(this.GetX, this.GetY)))
+                    {
+                        user.SqState = 0;
+                    }
+                    _room.GetGameMap().GameMap[this.GetX, this.GetY] = 0;
+                }
+            }
+            catch
+            {
+            }
+        }
+
         public Room GetRoom()
         {
             if (_room != null)
