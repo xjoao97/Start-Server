@@ -67,6 +67,30 @@ namespace Oblivion.Database.Adapter
             return result;
         }
 
+        public string GetCommand() =>
+           command.CommandText;
+
+        public MySqlDataReader ExecuteReader()
+        {
+            MySqlDataReader reader = null;
+            try
+            {
+                reader = command.ExecuteReader();
+                return reader;
+            }
+            catch (MySqlException exception)
+            {
+                Writer.LogQueryError(exception, command.CommandText);
+
+                return null;
+            }
+            finally
+            {
+                command.CommandText = string.Empty;
+                command.Parameters.Clear();
+            }
+        }
+
         public DataRow getRow()
         {
             DataRow row = null;
