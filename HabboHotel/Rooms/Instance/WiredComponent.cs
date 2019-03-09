@@ -11,6 +11,7 @@ using Oblivion.HabboHotel.Items.Wired.Boxes.Effects;
 using Oblivion.HabboHotel.Items.Wired.Boxes.Triggers;
 using System.Data;
 using System.Collections.Concurrent;
+using System.Drawing;
 
 #endregion
 
@@ -19,34 +20,40 @@ namespace Oblivion.HabboHotel.Rooms.Instance
     public class WiredComponent
     {
         private readonly Room _room;
-        private readonly List<IWiredItem> _wiredItems;
+        private readonly ConcurrentDictionary<int, IWiredItem> _wiredItems;
 
         public WiredComponent(Room Instance) //, RoomItem Items)
         {
             _room = Instance;
-            _wiredItems = new List<IWiredItem>();
+            _wiredItems = new ConcurrentDictionary<int, IWiredItem>();
         }
 
         public void OnCycle()
         {
-            if (_wiredItems == null)
-                return;
-
-            foreach (var Item in _wiredItems)
+            DateTime Start = DateTime.Now;
+            foreach (KeyValuePair<int, IWiredItem> Item in _wiredItems.ToList())
             {
-                var SelectedItem = _room.GetRoomItemHandler().GetItem(Item.Item.Id);
+                var SelectedItem = _room.GetRoomItemHandler().GetItem(Item.Value.Item.Id);
 
                 if (SelectedItem == null)
-                    TryRemove(Item);
+                    TryRemove(Item.Key);
 
-                var cycle = Item as IWiredCycle;
-                if (cycle == null) continue;
-                var Cycle = cycle;
-
-                if (Cycle.TickCount <= 0)
-                    Cycle.OnCycle();
-                else
-                    Cycle.TickCount--;
+                if (Item.Value is IWiredCycle Cycle)
+                {
+                    if (Cycle.TickCount <= 0)
+                    {
+                        Cycle.OnCycle();
+                    }
+                    else
+                    {
+                        Cycle.TickCount--;
+                    }
+                }
+            }
+            TimeSpan Span = (DateTime.Now - Start);
+            if (Span.Milliseconds > 400)
+            {
+                //log.Warn("<Room " + _room.Id + "> Wired took " + Span.TotalMilliseconds + "ms to execute - Rooms lagging behind");
             }
         }
 
@@ -369,11 +376,17 @@ namespace Oblivion.HabboHotel.Rooms.Instance
                 if (Type == WiredBoxType.TriggerUserSays)
                 {
                     var RanBoxes = new List<IWiredItem>();
-                    foreach (
-                        var Box in
-                        _wiredItems.Where(Box => Box?.Type == WiredBoxType.TriggerUserSays)
-                            .Where(Box => !RanBoxes.Contains(Box)))
-                        RanBoxes.Add(Box);
+                    foreach (IWiredItem Box in _wiredItems.Values.ToList())
+                    {
+                        if (Box == null)
+                            continue;
+
+                        if (Box.Type == WiredBoxType.TriggerUserSays)
+                        {
+                            if (!RanBoxes.Contains(Box))
+                                RanBoxes.Add(Box);
+                        }
+                    }
 
                     var Message = Convert.ToString(Params[1]);
                     foreach (
@@ -389,9 +402,15 @@ namespace Oblivion.HabboHotel.Rooms.Instance
                         return true;
                     }
                 }
-                foreach (var Box in _wiredItems.Where(Box => Box?.Type == Type && IsTrigger(Box.Item)))
+                foreach (IWiredItem Box in _wiredItems.Values.ToList())
                 {
-                    result = Box.Execute(Params);
+                    if (Box == null)
+                        continue;
+
+                    if (Box.Type == Type && IsTrigger(Box.Item))
+                    {
+                        result = Box.Execute(Params);
+                    }
                 }
             }
             catch
@@ -404,35 +423,54 @@ namespace Oblivion.HabboHotel.Rooms.Instance
 
         public bool TriggerEvent(WiredBoxType Type, params object[] Params)
         {
-            var Finished = false;
+            bool Finished = false;
             try
             {
                 if (Type == WiredBoxType.TriggerUserSays)
                 {
                     var RanBoxes = new List<IWiredItem>();
-                    foreach (
-                        var Box in
-                        _wiredItems.Where(Box => Box?.Type == WiredBoxType.TriggerUserSays)
-                            .Where(Box => !RanBoxes.Contains(Box)))
-                        RanBoxes.Add(Box);
+                    foreach (var Box in _wiredItems.Values.ToList())
+                    {
+                        if (Box == null)
+                            continue;
+
+                        if (Box.Type == WiredBoxType.TriggerUserSays)
+                        {
+                            if (!RanBoxes.Contains(Box))
+                                RanBoxes.Add(Box);
+                        }
+                    }
 
                     var Message = Convert.ToString(Params[1]);
-                    foreach (
-                        var Box in
-                        RanBoxes.ToList()
-                            .Where(Box => Box != null)
-                            .Where(
-                                Box =>
-                                    Message.Contains(" " + Box.StringData) || Message.Contains(Box.StringData + " ") ||
-                                    Message == Box.StringData))
-                        Finished = Box.Execute(Params);
+                    foreach (var Box in RanBoxes.ToList())
+                    {
+                        if (Box == null)
+                            continue;
+
+                        if (Message.Contains(" " + Box.StringData) || Message.Contains(Box.StringData + " ") || Message == Box.StringData)
+                        {
+                            Finished = Box.Execute(Params);
+                        }
+                    }
                     return Finished;
                 }
-                foreach (var Box in _wiredItems.Where(Box => Box?.Type == Type && IsTrigger(Box.Item)))
-                    Finished = Box.Execute(Params);
+                else
+                {
+                    foreach (var Box in _wiredItems.Values.ToList())
+                    {
+                        if (Box == null)
+                            continue;
+
+                        if (Box.Type == Type && IsTrigger(Box.Item))
+                        {
+                            Finished = Box.Execute(Params);
+                        }
+                    }
+                }
             }
             catch
             {
+                //log.Error("Error when triggering Wired Event: " + e);
                 return false;
             }
 
@@ -440,16 +478,30 @@ namespace Oblivion.HabboHotel.Rooms.Instance
         }
 
         public ICollection<IWiredItem> GetTriggers(IWiredItem Item)
-            =>
-                _wiredItems.Where(
-                    I => IsTrigger(I.Item) && I.Item.GetX == Item.Item.GetX && I.Item.GetY == Item.Item.GetY).ToList();
+        {
+            var Items = new List<IWiredItem>();
+            foreach (IWiredItem I in _wiredItems.Values)
+            {
+                if (IsTrigger(I.Item) && I.Item.GetX == Item.Item.GetX && I.Item.GetY == Item.Item.GetY)
+                {
+                    Items.Add(I);
+                }
+            }
+
+            return Items;
+        }
 
         public ICollection<IWiredItem> GetEffects(IWiredItem Item)
         {
-            var Items =
-                _wiredItems.Where(
-                        I => IsEffect(I.Item) && I.Item.GetX == Item.Item.GetX && I.Item.GetY == Item.Item.GetY)
-                    .ToList();
+            var Items = new List<IWiredItem>();
+
+            foreach (IWiredItem I in _wiredItems.Values)
+            {
+                if (IsEffect(I.Item) && I.Item.GetX == Item.Item.GetX && I.Item.GetY == Item.Item.GetY)
+                {
+                    Items.Add(I);
+                }
+            }
 
             return Items.OrderBy(x => x.Item.GetZ).ToList();
         }
@@ -476,9 +528,19 @@ namespace Oblivion.HabboHotel.Rooms.Instance
         }
 
         public ICollection<IWiredItem> GetConditions(IWiredItem Item)
-            =>
-                _wiredItems.Where(
-                    I => IsCondition(I.Item) && I.Item.GetX == Item.Item.GetX && I.Item.GetY == Item.Item.GetY).ToList();
+        {
+            var Items = new List<IWiredItem>();
+
+            foreach (IWiredItem I in _wiredItems.Values)
+            {
+                if (IsCondition(I.Item) && I.Item.GetX == Item.Item.GetX && I.Item.GetY == Item.Item.GetY)
+                {
+                    Items.Add(I);
+                }
+            }
+
+            return Items;
+        }
 
         public void OnEvent(Item Item)
         {
@@ -527,16 +589,26 @@ namespace Oblivion.HabboHotel.Rooms.Instance
             }
         }
 
-        public void AddBox(IWiredItem Item) => _wiredItems.Add(Item);
+        public bool AddBox(IWiredItem Item)
+        {
+            return _wiredItems.TryAdd(Item.Item.Id, Item);
+        }
 
-        public bool TryRemove(IWiredItem Item) => _wiredItems.Remove(Item);
+        public bool TryRemove(int ItemId)
+        {
+            return _wiredItems.TryRemove(ItemId, out IWiredItem Item);
+        }
 
-       // public bool TryGet(int id, out IWiredItem Item)
-       // {
-       //     return _wiredItems.TryGetValue(id, out Item);
-       // }
-        public IWiredItem GetWired(int item)
-            => _wiredItems.FirstOrDefault(current => current != null && item == current.Item.Id);
+         public bool TryGet(int id, out IWiredItem Item)
+         {
+             return _wiredItems.TryGetValue(id, out Item);
+        }
+
+
+
+
+
+
 
 
         public void Cleanup() => _wiredItems.Clear();

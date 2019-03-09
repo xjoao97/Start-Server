@@ -28,8 +28,8 @@ namespace Oblivion.HabboHotel.Items.Interactor
             if (!HasRights)
                 return;
 
-            IWiredItem Box = Item.GetRoom().GetWired().GetWired(Item.Id);
-            if (Box == null)
+            IWiredItem Box = null;
+            if (!Item.GetRoom().GetWired().TryGet(Item.Id, out Box))
                 return;
 
 

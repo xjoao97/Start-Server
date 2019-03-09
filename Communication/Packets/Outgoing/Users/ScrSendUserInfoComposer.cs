@@ -1,8 +1,10 @@
-﻿namespace Oblivion.Communication.Packets.Outgoing.Users
+﻿using Oblivion.HabboHotel.Users;
+
+namespace Oblivion.Communication.Packets.Outgoing.Users
 {
     internal class ScrSendUserInfoComposer : ServerPacket
     {
-        public ScrSendUserInfoComposer()
+        public ScrSendUserInfoComposer(Habbo habbo)
             : base(ServerPacketHeader.ScrSendUserInfoMessageComposer)
         {
             var DisplayMonths = 0;

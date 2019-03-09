@@ -10,13 +10,16 @@ using Oblivion.Communication.Packets.Outgoing.Inventory.Furni;
 using Oblivion.Communication.Packets.Outgoing.Inventory.Pets;
 using Oblivion.Communication.Packets.Outgoing.Inventory.Purse;
 using Oblivion.Communication.Packets.Outgoing.Moderation;
+using Oblivion.Communication.Packets.Outgoing.Rooms.Notifications;
 using Oblivion.Core;
 using Oblivion.HabboHotel.Catalog;
 using Oblivion.HabboHotel.Catalog.Utilities;
 using Oblivion.HabboHotel.GameClients;
 using Oblivion.HabboHotel.Groups;
+using Oblivion.Communication.Packets.Outgoing.Users;
 using Oblivion.HabboHotel.Items;
 using Oblivion.HabboHotel.Users.Effects;
+using Oblivion.Database.Interfaces;
 
 #endregion
 
@@ -51,6 +54,81 @@ namespace Oblivion.Communication.Packets.Incoming.Catalog
                 {
                     return;
                 }
+
+            if (Item.Data != null)
+            {
+                // NOMBRES DE COLORES
+                if (Item.Data.InteractionType == InteractionType.NAME_COLOR)
+                {
+                    if (Item.CostCredits > Session.GetHabbo().Credits)
+                        return;
+
+                    if (Item.CostCredits > 0)
+                    {
+                        Session.GetHabbo().Credits -= Item.CostCredits;
+                        Session.SendMessage(new CreditBalanceComposer(Session.GetHabbo().Credits));
+                    }
+
+                    using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
+                    {
+                        dbClient.runFastQuery("UPDATE users SET name_color = '" + Item.Name + "' WHERE id = '" + Session.GetHabbo().Id + "'");
+                    }
+
+                    Session.GetHabbo().NameColor = Item.Name;
+                    Session.SendMessage(new ScrSendUserInfoComposer(Session.GetHabbo()));
+                    Session.SendMessage(new PurchaseOkComposer(Item, Item.Data));
+                    Session.SendMessage(new FurniListUpdateComposer());
+                    return;
+                }
+
+                // COLOR DE PREFIJO
+                if (Item.Data.InteractionType == InteractionType.PREFIX_COLOR)
+                {
+                    if (Item.CostCredits > Session.GetHabbo().Credits)
+                        return;
+
+                    if (Item.CostCredits > 0)
+                    {
+                        Session.GetHabbo().Credits -= Item.CostCredits;
+                        Session.SendMessage(new CreditBalanceComposer(Session.GetHabbo().Credits));
+                    }
+
+                    using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
+                    {
+                        dbClient.runFastQuery("UPDATE users SET prefix_color = '" + Item.Name + "' WHERE id = '" + Session.GetHabbo().Id + "'");
+                    }
+
+                    Session.GetHabbo().PrefixColor = Item.Name;
+                    Session.SendMessage(new ScrSendUserInfoComposer(Session.GetHabbo()));
+                    Session.SendMessage(new PurchaseOkComposer(Item, Item.Data));
+                    Session.SendMessage(new FurniListUpdateComposer());
+                    return;
+                }
+
+                // PREFIJO
+                if (Item.Data.InteractionType == InteractionType.PREFIX_NAME)
+                {
+                    if (Item.CostCredits > Session.GetHabbo().Credits)
+                        return;
+
+                    if (Item.CostCredits > 0)
+                    {
+                        Session.GetHabbo().Credits -= Item.CostCredits;
+                        Session.SendMessage(new CreditBalanceComposer(Session.GetHabbo().Credits));
+                    }
+
+                    using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
+                    {
+                        dbClient.runFastQuery("UPDATE users SET prefix_name = '" + ExtraData + "' WHERE id = '" + Session.GetHabbo().Id + "'");
+                    }
+
+                    Session.GetHabbo().PrefixName = ExtraData;
+                    Session.SendMessage(new ScrSendUserInfoComposer(Session.GetHabbo()));
+                    Session.SendMessage(new PurchaseOkComposer(Item, Item.Data));
+                    Session.SendMessage(new FurniListUpdateComposer());
+                    return;
+                }
+            }
 
             if (Amount < 1 || Amount > 100 || !Item.HaveOffer)
                 Amount = 1;
@@ -194,6 +272,8 @@ namespace Oblivion.Communication.Packets.Incoming.Catalog
                     ExtraData = "";
                     break;
             }
+
+            
 
             #endregion
 

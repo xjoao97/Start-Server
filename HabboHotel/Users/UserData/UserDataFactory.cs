@@ -27,6 +27,7 @@ namespace Oblivion.HabboHotel.Users.UserDataManagement
             DataTable dIgnores;
             DataTable dBadges;
             // DataTable dEffects = null;
+            DataTable tagsTable;
             DataTable dFriends;
             DataTable dRequests;
             DataTable dRooms;
@@ -39,7 +40,7 @@ namespace Oblivion.HabboHotel.Users.UserDataManagement
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.SetQuery(
-                    "SELECT users.id,users.username,users.auth_ticket,users.rank,users.motto,users.look,users.gender,users.last_online,users.credits,users.activity_points,users.home_room,users.block_newfriends,users.hide_online,users.hide_inroom,users.vip,users.account_created,users.vip_points,users.epoints,users.machine_id,users.nux_user,users.volume,users.chat_preference,users.focus_preference,users.pets_muted,users.bots_muted,users.advertising_report_blocked,users.last_change,users.gotw_points,users.ignore_invites,users.time_muted,users.allow_gifts,users.friend_bar_state,users.disable_forced_effects,users.allow_mimic,users.disabled_alert " +
+                    "SELECT users.id,users.username,users.auth_ticket,users.rank,users.motto,users.look,users.gender,users.last_online,users.credits,users.activity_points,users.home_room,users.block_newfriends,users.hide_online,users.hide_inroom,users.vip,users.account_created,users.vip_points,users.epoints,users.machine_id,users.nux_user,users.volume,users.chat_preference,users.focus_preference,users.pets_muted,users.bots_muted,users.advertising_report_blocked,users.last_change,users.gotw_points,users.ignore_invites,users.time_muted,users.allow_gifts,users.friend_bar_state,users.disable_forced_effects,users.allow_mimic,users.disabled_alert,users.prefix_name,users.prefix_color,users.name_color  " +
                     "FROM users WHERE auth_ticket = @sso LIMIT 1");
                 dbClient.AddParameter("sso", SessionTicket);
                 dUserInfo = dbClient.getRow();
@@ -102,6 +103,9 @@ namespace Oblivion.HabboHotel.Users.UserDataManagement
                 dbClient.SetQuery("SELECT `quest_id`,`progress` FROM user_quests WHERE `user_id` = '" + UserId + "'");
                 dQuests = dbClient.getTable();
 
+                dbClient.SetQuery(string.Format("SELECT `tag` FROM `user_tags` WHERE `user_id` = {0}", UserId));
+                tagsTable = dbClient.getTable();
+
                 dbClient.SetQuery(
                     "SELECT `id`,`user_id`,`target`,`type` FROM `user_relationships` WHERE `user_id` = '" + UserId + "'");
                 dRelations = dbClient.getTable();
@@ -120,7 +124,7 @@ namespace Oblivion.HabboHotel.Users.UserDataManagement
                 dbClient.SetQuery("SELECT command_name FROM user_blockcmd WHERE user_id = '" + UserId + "'");
                 dBlockedCommands = dbClient.getTable();
 
-                dbClient.runFastQuery("UPDATE `users` SET `online` = '1', `auth_ticket` = '' WHERE `id` = '" + UserId + "'");
+                dbClient.runFastQuery("UPDATE `users` SET `online` = '1', `auth_ticket` = '' WHERE `id` = '" + UserId + "' LIMIT 1");
                 //                dbClient.RunQuery("DELETE FROM `user_auth_ticket` WHERE `user_id` = '" + UserId + "'");
             }
 
@@ -136,7 +140,7 @@ namespace Oblivion.HabboHotel.Users.UserDataManagement
             var ignores = (from DataRow dRow in dIgnores.Rows select Convert.ToInt32(dRow["ignore_id"])).ToList();
 
             var badges = (from DataRow dRow in dBadges.Rows
-                select new Badge(Convert.ToString(dRow["badge_id"]), Convert.ToInt32(dRow["badge_slot"]))).ToList();
+                          select new Badge(Convert.ToString(dRow["badge_id"]), Convert.ToInt32(dRow["badge_slot"]))).ToList();
 
             var friends = new Dictionary<int, MessengerBuddy>();
             foreach (DataRow dRow in dFriends.Rows)
@@ -179,7 +183,7 @@ namespace Oblivion.HabboHotel.Users.UserDataManagement
             }
 
             var rooms = (from DataRow dRow in dRooms.Rows
-                    select OblivionServer.GetGame().GetRoomManager().FetchRoomData(Convert.ToInt32(dRow["id"]), dRow))
+                         select OblivionServer.GetGame().GetRoomManager().FetchRoomData(Convert.ToInt32(dRow["id"]), dRow))
                 .ToList();
 
             var quests = new Dictionary<int, int>();
@@ -201,16 +205,26 @@ namespace Oblivion.HabboHotel.Users.UserDataManagement
                             new Relationship(Convert.ToInt32(Row[0]), Convert.ToInt32(Row[2]),
                                 Convert.ToInt32(Row[3].ToString())));
 
+            var tags = (from DataRow row in tagsTable.Rows select row["tag"].ToString().Replace(" ", "")).ToList();
             var blockedCommands = (from DataRow r in dBlockedCommands.Rows select r["command_name"].ToString()).ToList();
 
             var user = HabboFactory.GenerateHabbo(dUserInfo, userInfo);
+
+            dUserInfo = null;
+            dAchievements = null;
+            dFavouriteRooms = null;
+            dBadges = null;
+            dFriends = null;
+            dRequests = null;
+            dRooms = null;
+            dRelations = null;
 
             errorCode = 0;
 
             if (user.Rank >= 6)
                 user.CustomBubbleId = 23;
 
-            return new UserData(UserId, Achievements, favouritedRooms, ignores, badges, friends, requests, rooms, quests,
+            return new UserData(UserId, Achievements, favouritedRooms, tags, ignores, badges, friends, requests, rooms, quests,
                 user, Relationships, blockedCommands, disabledEventAlert);
         }
 
@@ -227,7 +241,7 @@ namespace Oblivion.HabboHotel.Users.UserDataManagement
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.SetQuery(
-                    "SELECT `id`,`username`,`rank`,`motto`,`look`,`gender`,`last_online`,`credits`,`activity_points`,`home_room`,`block_newfriends`,`hide_online`,`hide_inroom`,`vip`,`account_created`,`vip_points`,`epoints`,`machine_id`,`volume`,`chat_preference`, `focus_preference`, `pets_muted`,`bots_muted`,`advertising_report_blocked`,`last_change`,`gotw_points`,`ignore_invites`,`time_muted`,`allow_gifts`,`friend_bar_state`,`disable_forced_effects`,`allow_mimic`,`disabled_alert`,`nux_user` FROM `users` WHERE `id` = @id LIMIT 1");
+                     "SELECT `id`,`username`,`rank`,`motto`,`look`,`gender`,`last_online`,`credits`,`activity_points`,`home_room`,`block_newfriends`,`hide_online`,`hide_inroom`,`vip`,`account_created`,`vip_points`,`epoints`,`machine_id`,`volume`,`chat_preference`, `focus_preference`, `pets_muted`,`bots_muted`,`advertising_report_blocked`,`last_change`,`gotw_points`,`ignore_invites`,`time_muted`,`allow_gifts`,`friend_bar_state`,`disable_forced_effects`,`allow_mimic`,`disabled_alert`,`nux_user`,`prefix_name`,`prefix_color`,`name_color` FROM `users` WHERE `id` = @id LIMIT 1");
                 dbClient.AddParameter("id", UserId);
                 dUserInfo = dbClient.getRow();
 
@@ -276,6 +290,7 @@ namespace Oblivion.HabboHotel.Users.UserDataManagement
             var quests = new Dictionary<int, int>();
             var blockedCommands = (from DataRow r in dBlockedCommands.Rows select r["command_name"].ToString()).ToList();
             var relationships = new Dictionary<int, Relationship>();
+            var tags = new List<string>();
             foreach (
                 var Row in
                 dRelations.Rows.Cast<DataRow>().Where(Row => !relationships.ContainsKey(Convert.ToInt32(Row["id"]))))
@@ -284,7 +299,7 @@ namespace Oblivion.HabboHotel.Users.UserDataManagement
                         Convert.ToInt32(Row["type"].ToString())));
 
             var user = HabboFactory.GenerateHabbo(dUserInfo, UserInfo);
-            return new UserData(UserId, achievements, favouritedRooms, ignores, badges, friends, friendRequests, rooms,
+            return new UserData(UserId, achievements, favouritedRooms, tags, ignores, badges, friends, friendRequests, rooms,
                 quests, user, relationships, blockedCommands, disabledEventAlert);
         }
     }

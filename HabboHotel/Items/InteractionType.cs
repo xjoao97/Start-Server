@@ -2,6 +2,9 @@
 {
     public enum InteractionType
     {
+        NAME_COLOR,
+        PREFIX_COLOR,
+        PREFIX_NAME,
         None,
         Gate,
         Postit,
@@ -128,6 +131,12 @@
                 case "":
                 case "default":
                     return InteractionType.None;
+                case "prefix_name":
+                    return InteractionType.PREFIX_NAME;
+                case "prefix_color":
+                    return InteractionType.PREFIX_COLOR;
+                case "name_color":
+                    return InteractionType.NAME_COLOR;
                 case "gate":
                     return InteractionType.Gate;
                 case "postit":

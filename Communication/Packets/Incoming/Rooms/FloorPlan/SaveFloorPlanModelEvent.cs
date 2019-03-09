@@ -42,31 +42,27 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.FloorPlan
                 return;
             }
 
-            var modelData = Map.Split((char) 13);
+            var modelData = Map.Split('\n');
 
             var SizeY = modelData.Length;
             var SizeX = modelData[0].Length;
 
-            if (SizeY > 64 || SizeX > 64)
-            {
-                Session.SendMessage(new RoomNotificationComposer("floorplan_editor.error", "errors",
-                    "O máximo é 64x64!"));
-                return;
-            }
 
             var lastLineLength = 0;
             var isValid = true;
 
-            foreach (var t in modelData)
+            for (int i = 0; i < modelData.Length; i++)
             {
                 if (lastLineLength == 0)
                 {
-                    lastLineLength = t.Length;
+                    lastLineLength = modelData[i].Length;
                     continue;
                 }
 
-                if (lastLineLength != t.Length)
+                if (lastLineLength != modelData[i].Length)
+                {
                     isValid = false;
+                }
             }
 
             if (!isValid)
@@ -112,6 +108,7 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.FloorPlan
                 WallHeight = 15;
 
             var ModelName = "model_bc_" + Room.Id;
+            Map += '\n' + new string('x', SizeX);
 
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
@@ -122,7 +119,7 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.FloorPlan
                 if (Row == null) //The row is still null, let's insert instead.
                 {
                     dbClient.SetQuery(
-                        "INSERT INTO `room_models` (`id`,`door_x`,`door_y`, `door_z`, `door_dir`,`heightmap`,`custom`,`wall_height`) VALUES (@ModelName, @DoorX, @DoorY, @DoorZ, @DoorDirection, @Map,'1',@WallHeight)");
+                        "REPLACE INTO `room_models` (`id`,`door_x`,`door_y`, `door_z`, `door_dir`,`heightmap`,`custom`,`wall_height`) VALUES (@ModelName, @DoorX, @DoorY, @DoorZ, @DoorDirection, @Map,'1',@WallHeight)");
                     dbClient.AddParameter("ModelName", "model_bc_" + Room.Id);
                     dbClient.AddParameter("DoorX", DoorX);
                     dbClient.AddParameter("DoorY", DoorY);
@@ -146,9 +143,8 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.FloorPlan
                     dbClient.RunQuery();
                 }
 
-                dbClient.SetQuery(
-                    "UPDATE `rooms` SET `model_name` = @ModelName, `wallthick` = @WallThick, `floorthick` = @FloorThick WHERE `id` = '" +
-                    Room.Id + "' LIMIT 1");
+                dbClient.SetQuery("UPDATE `rooms` SET `model_name` = @ModelName, `wallthick` = @WallThick, `floorthick` = @FloorThick WHERE `id` = @roomId LIMIT 1");
+                dbClient.AddParameter("roomId", Room.Id);
                 dbClient.AddParameter("ModelName", "model_bc_" + Room.Id);
                 dbClient.AddParameter("WallThick", WallThick);
                 dbClient.AddParameter("FloorThick", FloorThick);

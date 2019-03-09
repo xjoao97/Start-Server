@@ -28,9 +28,10 @@ namespace Oblivion.HabboHotel.Users.UserDataManagement
         public List<RoomData> rooms;
         public Habbo user;
         public int userID;
+        public List<string> Tags;
 
         public UserData(int userID, ConcurrentDictionary<string, UserAchievement> achievements,
-            List<int> favouritedRooms, List<int> ignores,
+            List<int> favouritedRooms, List<string> Tags, List<int> ignores,
             List<Badge> badges, Dictionary<int, MessengerBuddy> friends, Dictionary<int, MessengerRequest> requests,
             List<RoomData> rooms, Dictionary<int, int> quests, Habbo user,
             Dictionary<int, Relationship> Relations, List<string> blockedcommands, bool disabledeventalert)
@@ -38,6 +39,7 @@ namespace Oblivion.HabboHotel.Users.UserDataManagement
             this.userID = userID;
             this.achievements = achievements;
             this.favouritedRooms = favouritedRooms;
+            this.Tags = Tags;
             this.ignores = ignores;
             this.badges = badges;
             this.friends = friends;

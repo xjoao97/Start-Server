@@ -1,0 +1,4 @@
+ALTER TABLE `users`
+ ADD COLUMN `prefix_name` VARCHAR(100) NOT NULL AFTER `gotw_points`,
+ ADD COLUMN `prefix_color` VARCHAR(100) NOT NULL AFTER `prefix_name`,
+ ADD COLUMN `name_color` VARCHAR(100) NOT NULL AFTER `prefix_color`;

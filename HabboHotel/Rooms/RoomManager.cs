@@ -129,7 +129,7 @@ namespace Oblivion.HabboHotel.Rooms
                 foreach (DataRow Row in Data.Rows)
                 {
                     var Modelname = Convert.ToString(Row["id"]);
-                    //var staticFurniture = Convert.ToString(Row["public_items"]);
+                    var staticFurniture = Convert.ToString(Row["public_items"]);
 
                     _roomModels.Add(Modelname,
                         new RoomModel(Convert.ToInt32(Row["door_x"]), Convert.ToInt32(Row["door_y"]),
@@ -365,6 +365,24 @@ namespace Oblivion.HabboHotel.Rooms
                 _loadedRoomData.TryAdd(RoomId, Data);
 
             return Data;
+        }
+
+        public bool RoomExist(int RoomId)
+        {
+
+            DataRow Row = null;
+            using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
+            {
+                dbClient.SetQuery("SELECT id FROM rooms WHERE id = " + RoomId + " LIMIT 1");
+                Row = dbClient.getRow();
+            }
+
+            if (Row == null)
+                return false;
+
+
+
+            return true;
         }
 
         public RoomData FetchRoomData(int RoomId, DataRow dRow)

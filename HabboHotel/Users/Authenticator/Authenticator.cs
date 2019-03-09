@@ -43,6 +43,10 @@ namespace Oblivion.HabboHotel.Users.Authenticator
                 OblivionServer.EnumToBool(Row["allow_gifts"].ToString()),
                 Convert.ToInt32(Row["friend_bar_state"]),
                 OblivionServer.EnumToBool(Row["disable_forced_effects"].ToString()),
-                OblivionServer.EnumToBool(Row["allow_mimic"].ToString()));
+                OblivionServer.EnumToBool(Row["allow_mimic"].ToString()),
+                Convert.ToString(Row["prefix_name"]), 
+                Convert.ToString(Row["prefix_color"]), 
+                Convert.ToString(Row["name_color"]));
+
     }
 }

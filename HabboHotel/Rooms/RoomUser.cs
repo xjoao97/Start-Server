@@ -14,7 +14,9 @@ using Oblivion.HabboHotel.Items.Wired;
 using Oblivion.HabboHotel.Pathfinding;
 using Oblivion.HabboHotel.Rooms.AI;
 using Oblivion.HabboHotel.Rooms.Games.Freeze;
+using Oblivion.Communication.Packets.Outgoing.Rooms.Engine;
 using Oblivion.HabboHotel.Rooms.Games.Teams;
+using System;
 
 #endregion
 
@@ -484,6 +486,42 @@ namespace Oblivion.HabboHotel.Rooms
              #endregion
          }*/
 
+        public void SendNameVoidPacket()
+        {
+            if (GetClient() == null || GetClient().GetHabbo() == null)
+                return;
+
+            var Username = GetClient().GetHabbo().Username;
+            string Prefix, NameColor = null;
+
+            if (!string.IsNullOrEmpty(GetClient().GetHabbo().PrefixName) && !string.IsNullOrEmpty(GetClient().GetHabbo().PrefixColor))
+                Prefix = "<font color='#" + GetClient().GetHabbo().PrefixColor + "'>[" + GetClient().GetHabbo().PrefixName + "]</font> ";
+            else if (!string.IsNullOrEmpty(GetClient().GetHabbo().PrefixName) && string.IsNullOrEmpty(GetClient().GetHabbo().PrefixColor))
+                Prefix = "[" + GetClient().GetHabbo().PrefixName + "] ";
+            else
+                Prefix = "";
+
+            if (!string.IsNullOrEmpty(GetClient().GetHabbo().NameColor))
+                NameColor = "<font color='#" + GetClient().GetHabbo().NameColor + "'>" + GetClient().GetHabbo().Username + "</font>";
+            else
+                NameColor = GetClient().GetHabbo().Username;
+
+            if (!string.IsNullOrEmpty(Prefix) || !string.IsNullOrEmpty(NameColor))
+                Username = Prefix + NameColor;
+
+            GetRoom().SendMessage(new UserNameChangeComposer(RoomId, VirtualId, Username));
+        }
+
+        public void SendNamePacket()
+        {
+            if (GetClient() == null || GetClient().GetHabbo() == null)
+                return;
+
+            string Username = GetClient().GetHabbo().Username;
+
+            GetRoom().SendMessage(new UserNameChangeComposer(RoomId, VirtualId, Username));
+        }
+
         public void OnChat(int Colour, string Message, bool Shout)
         {
             if (GetClient() == null || GetClient().GetHabbo() == null || mRoom == null)
@@ -533,7 +571,9 @@ namespace Oblivion.HabboHotel.Rooms
             }
             else
             {
+                SendNameVoidPacket();
                 foreach (var User in mRoom.GetRoomUserManager().GetRoomUsers().ToList())
+
                 {
                     if (User?.GetClient() == null || User.GetClient().GetHabbo() == null ||
                         User.GetClient().GetHabbo().MutedUsers.Contains(mClient.GetHabbo().Id))
@@ -542,6 +582,7 @@ namespace Oblivion.HabboHotel.Rooms
 
                     if (mRoom.ChatDistance > 0 && Gamemap.TileDistance(X, Y, User.X, User.Y) > mRoom.ChatDistance)
                         continue;
+                    SendNamePacket();
 
                     if (User.GetClient().GetHabbo().ChatPreference)
                     {

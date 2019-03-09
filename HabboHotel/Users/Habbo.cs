@@ -51,6 +51,9 @@ namespace Oblivion.HabboHotel.Users
         public bool _NUX;
         public bool AnswredPoll = false;
         private ProcessComponent _process;
+        private string _prefixName;
+        private string _prefixColor;
+        private string _NameColor;
 
         public ConcurrentDictionary<string, UserAchievement> Achievements;
         private BadgeComponent BadgeComponent;
@@ -86,8 +89,11 @@ namespace Oblivion.HabboHotel.Users
             string machineID, bool nux, string clientVolume, bool ChatPreference, bool FocusPreference, bool PetsMuted,
             bool BotsMuted, bool AdvertisingReportBlocked, double LastNameChange,
             int GOTWPoints, bool IgnoreInvites, double TimeMuted, double TradingLock, bool AllowGifts,
-            int FriendBarState, bool DisableForcedEffects, bool AllowMimic)
+            int FriendBarState, bool DisableForcedEffects, bool AllowMimic, string PrefixName, string PrefixColor, string NameColor)
         {
+            this._prefixName = PrefixName;
+            this._prefixColor = PrefixColor;
+            this._NameColor = NameColor;
             this.Id = Id;
             this.Username = Username;
             this.Rank = Rank;
@@ -277,6 +283,22 @@ namespace Oblivion.HabboHotel.Users
 
         public string sexWith { get; set; }
         public string fuckWith { get; set; }
+
+        public string PrefixName
+        {
+            get { return this._prefixName; }
+            set { this._prefixName = value; }
+        }
+        public string PrefixColor
+        {
+            get { return this._prefixColor; }
+            set { this._prefixColor = value; }
+        }
+        public string NameColor
+        {
+            get { return this._NameColor; }
+            set { this._NameColor = value; }
+        }
 
         public int Id { get; set; }
 

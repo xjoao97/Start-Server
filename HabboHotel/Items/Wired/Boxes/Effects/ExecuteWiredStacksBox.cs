@@ -1,53 +1,75 @@
-﻿#region
-
-using System;
+﻿using System.Linq;
+using System.Collections.Generic;
 using System.Collections.Concurrent;
-using System.Linq;
+
 using Oblivion.Communication.Packets.Incoming;
 using Oblivion.HabboHotel.Rooms;
 using Oblivion.HabboHotel.Users;
+using System.Collections;
 
-#endregion
-
-namespace Oblivion.HabboHotel.Items.Wired.Boxes.Effects
+namespace Oblivion.HabboHotel.Items.Wired.Boxes.Conditions
 {
-    internal class ExecuteWiredStacksBox : IWiredItem
+    class ExecuteWiredStacksBox : IWiredItem
     {
+        public Room Instance { get; set; }
+        public Item Item { get; set; }
+        public WiredBoxType Type { get { return WiredBoxType.EffectExecuteWiredStacks; } }
+        public ConcurrentDictionary<int, Item> SetItems { get; set; }
+        public string StringData { get; set; }
+        public bool BoolData { get; set; }
+        public string ItemsData { get; set; }
+        public int Delay { get { return this._delay; } set { this._delay = value; this.TickCount = value + 1; } }
+        public int TickCount { get; set; }
+        private int _delay = 0;
+        private Queue _queue;
+
         public ExecuteWiredStacksBox(Room Instance, Item Item)
         {
             this.Instance = Instance;
             this.Item = Item;
-            SetItems = new ConcurrentDictionary<int, Item>();
+            this.SetItems = new ConcurrentDictionary<int, Item>();
+            this.TickCount = Delay;
+            this._queue = new Queue();
         }
-
-        public Room Instance { get; set; }
-
-        public Item Item { get; set; }
-
-        public WiredBoxType Type => WiredBoxType.EffectExecuteWiredStacks;
-
-        public ConcurrentDictionary<int, Item> SetItems { get; set; }
-
-        public string StringData { get; set; }
-
-        public bool BoolData { get; set; }
-
-        public string ItemsData { get; set; }
 
         public void HandleSave(ClientPacket Packet)
         {
-            var Unknown = Packet.PopInt();
-            var Unknown2 = Packet.PopString();
+            int Unknown = Packet.PopInt();
+            string Unknown2 = Packet.PopString();
 
-            SetItems.Clear();
+            if (this.SetItems.Count > 0)
+                this.SetItems.Clear();
 
-            var FurniCount = Packet.PopInt();
-            for (var i = 0; i < FurniCount; i++)
+            int FurniCount = Packet.PopInt();
+            for (int i = 0; i < FurniCount; i++)
             {
-                var SelectedItem = Instance.GetRoomItemHandler().GetItem(Packet.PopInt());
+                Item SelectedItem = Instance.GetRoomItemHandler().GetItem(Packet.PopInt());
                 if (SelectedItem != null)
                     SetItems.TryAdd(SelectedItem.Id, SelectedItem);
             }
+            this.Delay = Packet.PopInt();
+        }
+
+        public bool OnCycle()
+        {
+            if (_queue.Count == 0)
+            {
+                this._queue.Clear();
+                this.TickCount = Delay;
+                return true;
+            }
+
+            while (_queue.Count > 0)
+            {
+                Habbo Player = (Habbo)_queue.Dequeue();
+                if (Player == null || Player.CurrentRoom != Instance)
+                    continue;
+
+                this.ExecuteWiredStacks(Player);
+            }
+
+            this.TickCount = Delay;
+            return true;
         }
 
         public bool Execute(params object[] Params)
@@ -55,24 +77,45 @@ namespace Oblivion.HabboHotel.Items.Wired.Boxes.Effects
             if (Params.Length != 1)
                 return false;
 
-            var Player = (Habbo)Params[0];
+            Habbo Player = (Habbo)Params[0];
             if (Player == null)
                 return false;
 
-            foreach (var Item in SetItems.Values.ToList().Where(Item => Item != null && Instance.GetRoomItemHandler().GetFloor.Contains(Item) && Item.IsWired))
+            this._queue.Enqueue(Player);
+            return true;
+        }
+
+        private void ExecuteWiredStacks(Habbo Player)
+        {
+            foreach (Item Item in this.SetItems.Values.ToList())
             {
-                IWiredItem WiredItem = Instance.GetWired().GetWired(Item.Id);
-                if (WiredItem == null)
+                if (Item == null || !Instance.GetRoomItemHandler().GetFloor.Contains(Item) || !Item.IsWired)
                     continue;
 
-                if (WiredItem.Type != WiredBoxType.EffectExecuteWiredStacks && WiredItem.Type != WiredBoxType.TriggerRepeat)
+                IWiredItem WiredItem;
+                if (Instance.GetWired().TryGet(Item.Id, out WiredItem))
                 {
-                    WiredItem.Execute(Player);
-                    Instance?.GetWired().OnEvent(WiredItem.Item);
+                    if (WiredItem.Type == WiredBoxType.EffectExecuteWiredStacks)
+                        continue;
+                    else
+                    {
+                        ICollection<IWiredItem> Effects = Instance.GetWired().GetEffects(WiredItem);
+                        if (Effects.Count > 0)
+                        {
+                            foreach (IWiredItem EffectItem in Effects.ToList())
+                            {
+                                if (SetItems.ContainsKey(EffectItem.Item.Id) && EffectItem.Item.Id != Item.Id)
+                                    continue;
+                                else if (EffectItem.Type == WiredBoxType.EffectExecuteWiredStacks)
+                                    continue;
+                                else
+                                    EffectItem.Execute(Player);
+                            }
+                        }
+                    }
                 }
+                else continue;
             }
-
-            return true;
         }
     }
 }

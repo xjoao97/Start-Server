@@ -1,21 +1,24 @@
-﻿#region
+﻿using System;
+using System.Linq;
+using System.Text;
+using System.Collections.Generic;
 
-using Oblivion.HabboHotel.GameClients;
-using Oblivion.HabboHotel.Quests;
 using Oblivion.HabboHotel.Rooms;
-
-#endregion
+using Oblivion.HabboHotel.Quests;
+using Oblivion.HabboHotel.GameClients;
 
 namespace Oblivion.HabboHotel.Items.Interactor
 {
-    internal class InteractorSwitch : IFurniInteractor
+    class InteractorSwitch : IFurniInteractor
     {
         public void OnPlace(GameClient Session, Item Item)
         {
+
         }
 
         public void OnRemove(GameClient Session, Item Item)
         {
+
         }
 
         public void OnTrigger(GameClient Session, Item Item, int Request, bool HasRights)
@@ -36,9 +39,11 @@ namespace Oblivion.HabboHotel.Items.Interactor
 
                 OblivionServer.GetGame().GetQuestManager().ProgressUserQuest(Session, QuestType.FURNI_SWITCH);
 
-                var CurrentMode = int.Parse(Item.ExtraData);
-                int NewMode;
-                
+                int NewMode = 0;
+
+                if (!int.TryParse(Item.ExtraData, out int CurrentMode))
+                {
+                }
 
                 if (CurrentMode <= 0)
                     NewMode = 1;
@@ -51,13 +56,11 @@ namespace Oblivion.HabboHotel.Items.Interactor
                 Item.UpdateState();
             }
             else
-            {
                 User.MoveTo(Item.SquareInFront);
-            }
         }
-
         public void OnWiredTrigger(Item Item)
         {
+
         }
     }
 }
