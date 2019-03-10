@@ -68,7 +68,7 @@ namespace Oblivion.HabboHotel.Rooms.TraxMachine
             var baseItem = item.BaseItem;
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.runFastQuery("SELECT extradata FROM catalog_items WHERE item_id = '" + baseItem + "' LIMIT 1");
+                dbClient.RunFastQuery("SELECT extradata FROM catalog_items WHERE item_id = '" + baseItem + "' LIMIT 1");
                 extradata = dbClient.getInteger();
                 item.ExtraData = extradata.ToString();
             }

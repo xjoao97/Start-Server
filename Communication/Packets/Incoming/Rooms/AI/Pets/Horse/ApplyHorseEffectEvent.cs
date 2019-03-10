@@ -41,9 +41,9 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.AI.Pets.Horse
                 PetUser.PetData.Saddle = 9;
                 using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                 {
-                    dbClient.runFastQuery("UPDATE `bots_petdata` SET `have_saddle` = '9' WHERE `id` = '" +
+                    dbClient.RunFastQuery("UPDATE `bots_petdata` SET `have_saddle` = '9' WHERE `id` = '" +
                                       PetUser.PetData.PetId + "' LIMIT 1");
-                    dbClient.runFastQuery("DELETE FROM `items` WHERE `id` = '" + Item.Id + "' LIMIT 1");
+                    dbClient.RunFastQuery("DELETE FROM `items` WHERE `id` = '" + Item.Id + "' LIMIT 1");
                 }
 
                 //We only want to use this if we're successful. 
@@ -54,9 +54,9 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.AI.Pets.Horse
                 PetUser.PetData.Saddle = 10;
                 using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                 {
-                    dbClient.runFastQuery("UPDATE `bots_petdata` SET `have_saddle` = '10' WHERE `id` = '" +
+                    dbClient.RunFastQuery("UPDATE `bots_petdata` SET `have_saddle` = '10' WHERE `id` = '" +
                                       PetUser.PetData.PetId + "' LIMIT 1");
-                    dbClient.runFastQuery("DELETE FROM `items` WHERE `id` = '" + Item.Id + "' LIMIT 1");
+                    dbClient.RunFastQuery("DELETE FROM `items` WHERE `id` = '" + Item.Id + "' LIMIT 1");
                 }
 
                 //We only want to use this if we're successful. 
@@ -72,9 +72,9 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.AI.Pets.Horse
                 PetUser.PetData.PetHair = Parse;
                 using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                 {
-                    dbClient.runFastQuery("UPDATE `bots_petdata` SET `pethair` = '" + PetUser.PetData.PetHair +
+                    dbClient.RunFastQuery("UPDATE `bots_petdata` SET `pethair` = '" + PetUser.PetData.PetHair +
                                       "' WHERE `id` = '" + PetUser.PetData.PetId + "' LIMIT 1");
-                    dbClient.runFastQuery("DELETE FROM `items` WHERE `id` = '" + Item.Id + "' LIMIT 1");
+                    dbClient.RunFastQuery("DELETE FROM `items` WHERE `id` = '" + Item.Id + "' LIMIT 1");
                 }
 
                 //We only want to use this if we're successful. 
@@ -90,9 +90,9 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.AI.Pets.Horse
 
                 using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                 {
-                    dbClient.runFastQuery("UPDATE `bots_petdata` SET `hairdye` = '" + PetUser.PetData.HairDye +
+                    dbClient.RunFastQuery("UPDATE `bots_petdata` SET `hairdye` = '" + PetUser.PetData.HairDye +
                                       "' WHERE `id` = '" + PetUser.PetData.PetId + "' LIMIT 1");
-                    dbClient.runFastQuery("DELETE FROM `items` WHERE `id` = '" + Item.Id + "' LIMIT 1");
+                    dbClient.RunFastQuery("DELETE FROM `items` WHERE `id` = '" + Item.Id + "' LIMIT 1");
                 }
 
                 //We only want to use this if we're successful. 
@@ -115,9 +115,9 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.AI.Pets.Horse
 
                 using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                 {
-                    dbClient.runFastQuery("UPDATE `bots_petdata` SET `race` = '" + PetUser.PetData.Race + "' WHERE `id` = '" +
+                    dbClient.RunFastQuery("UPDATE `bots_petdata` SET `race` = '" + PetUser.PetData.Race + "' WHERE `id` = '" +
                                       PetUser.PetData.PetId + "' LIMIT 1");
-                    dbClient.runFastQuery("DELETE FROM `items` WHERE `id` = '" + Item.Id + "' LIMIT 1");
+                    dbClient.RunFastQuery("DELETE FROM `items` WHERE `id` = '" + Item.Id + "' LIMIT 1");
                 }
 
                 //We only want to use this if we're successful. 

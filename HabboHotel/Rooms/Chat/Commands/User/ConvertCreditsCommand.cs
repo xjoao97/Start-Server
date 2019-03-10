@@ -55,7 +55,7 @@ namespace Oblivion.HabboHotel.Rooms.Chat.Commands.User
 
                     using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                     {
-                        dbClient.runFastQuery("DELETE FROM `items` WHERE `id` = '" + item.Id + "' LIMIT 1");
+                        dbClient.RunFastQuery("DELETE FROM `items` WHERE `id` = '" + item.Id + "' LIMIT 1");
                     }
 
                     session.GetHabbo().GetInventoryComponent().RemoveItem(item.Id);

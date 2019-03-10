@@ -19,9 +19,8 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.Engine
             if (Session?.GetHabbo() == null || !Session.GetHabbo().InRoom)
                 return;
 
-            Room Room;
 
-            if (!OblivionServer.GetGame().GetRoomManager().TryGetRoom(Session.GetHabbo().CurrentRoomId, out Room))
+            if (!OblivionServer.GetGame().GetRoomManager().TryGetRoom(Session.GetHabbo().CurrentRoomId, out Room Room))
                 return;
 
             var itemID = Packet.PopInt();
@@ -46,7 +45,7 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.Engine
 
                 using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                 {
-                    dbClient.runFastQuery("UPDATE `room_items_toner` SET `enabled` = '" + Room.TonerData.Enabled +
+                    dbClient.RunFastQuery("UPDATE `room_items_toner` SET `enabled` = '" + Room.TonerData.Enabled +
                                       "' LIMIT 1");
                 }
                 return;

@@ -129,7 +129,7 @@ namespace Oblivion.HabboHotel.Groups
                 if (GetRequests == null) return;
                 foreach (var UserId in from DataRow Row in GetRequests.Rows select Convert.ToInt32(Row["user_id"]))
                     if (_members.Contains(UserId) || _administrators.Contains(UserId))
-                        dbClient.runFastQuery("DELETE FROM `group_requests` WHERE `group_id` = '" + Id +
+                        dbClient.RunFastQuery("DELETE FROM `group_requests` WHERE `group_id` = '" + Id +
                                           "' AND `user_id` = '" + UserId + "'");
                     else if (!_requests.Contains(UserId))
                         _requests.Add(UserId);

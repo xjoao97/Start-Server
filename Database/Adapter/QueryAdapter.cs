@@ -167,7 +167,7 @@ namespace Oblivion.Database.Adapter
             }
         }
 
-        public void runFastQuery(string query)
+        public void RunFastQuery(string query)
         {
             if (!dbEnabled)
                 return;

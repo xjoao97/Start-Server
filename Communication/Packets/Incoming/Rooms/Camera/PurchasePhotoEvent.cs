@@ -41,7 +41,7 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.Camera
 
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.runFastQuery("UPDATE `camera_photos` SET `file_state` = 'purchased' WHERE `id` = '" + preview.Id +
+                dbClient.RunFastQuery("UPDATE `camera_photos` SET `file_state` = 'purchased' WHERE `id` = '" + preview.Id +
                                   "' LIMIT 1");
             }
 

@@ -27,7 +27,7 @@ namespace Oblivion.Communication.Packets.Incoming.Navigator
 
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.runFastQuery("INSERT INTO user_favorites (user_id,room_id) VALUES (" + Session.GetHabbo().Id + "," +
+                dbClient.RunFastQuery("INSERT INTO user_favorites (user_id,room_id) VALUES (" + Session.GetHabbo().Id + "," +
                                   RoomId + ")");
             }
         }

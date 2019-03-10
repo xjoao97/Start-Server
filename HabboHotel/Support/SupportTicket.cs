@@ -87,7 +87,7 @@ namespace Oblivion.HabboHotel.Support
             if (UpdateInDb)
                 using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                 {
-                    dbClient.runFastQuery("UPDATE moderation_tickets SET status = 'picked', moderator_id = " + pModeratorId +
+                    dbClient.RunFastQuery("UPDATE moderation_tickets SET status = 'picked', moderator_id = " + pModeratorId +
                                       ", timestamp = '" + OblivionServer.GetUnixTimestamp() + "' WHERE id = " + Id + "");
                 }
         }
@@ -119,7 +119,7 @@ namespace Oblivion.HabboHotel.Support
 
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.runFastQuery("UPDATE moderation_tickets SET status = '" + dbType + "' WHERE id = " + Id +
+                dbClient.RunFastQuery("UPDATE moderation_tickets SET status = '" + dbType + "' WHERE id = " + Id +
                                   " LIMIT 1");
             }
         }
@@ -131,7 +131,7 @@ namespace Oblivion.HabboHotel.Support
 
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.runFastQuery("UPDATE moderation_tickets SET status = 'open' WHERE id = " + Id + " LIMIT 1");
+                dbClient.RunFastQuery("UPDATE moderation_tickets SET status = 'open' WHERE id = " + Id + " LIMIT 1");
             }
         }
     }

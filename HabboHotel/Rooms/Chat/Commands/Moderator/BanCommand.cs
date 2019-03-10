@@ -53,7 +53,7 @@ namespace Oblivion.HabboHotel.Rooms.Chat.Commands.Moderator
             var username = habbo.Username;
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.runFastQuery("UPDATE `user_info` SET `bans` = `bans` + '1' WHERE `user_id` = '" + habbo.Id +
+                dbClient.RunFastQuery("UPDATE `user_info` SET `bans` = `bans` + '1' WHERE `user_id` = '" + habbo.Id +
                                   "' LIMIT 1");
             }
 

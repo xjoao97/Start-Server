@@ -32,8 +32,7 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.AI.Bots
             if (ActionId < 1 || ActionId > 5)
                 return;
 
-            RoomUser Bot;
-            if (!Room.GetRoomUserManager().TryGetBot(BotId, out Bot))
+            if (!Room.GetRoomUserManager().TryGetBot(BotId, out RoomUser Bot))
                 return;
 
             if (Bot.BotData.ownerID != Session.GetHabbo().Id &&
@@ -112,7 +111,7 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.AI.Bots
 
                     using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                     {
-                        dbClient.runFastQuery("DELETE FROM `bots_speech` WHERE `bot_id` = '" + Bot.BotData.Id + "'");
+                        dbClient.RunFastQuery("DELETE FROM `bots_speech` WHERE `bot_id` = '" + Bot.BotData.Id + "'");
                     }
 
                     #region Save Data - TODO: MAKE METHODS FOR THIS.
@@ -166,7 +165,7 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.AI.Bots
 
                     using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                     {
-                        dbClient.runFastQuery("UPDATE `bots` SET `walk_mode` = '" + Bot.BotData.WalkingMode +
+                        dbClient.RunFastQuery("UPDATE `bots` SET `walk_mode` = '" + Bot.BotData.WalkingMode +
                                           "' WHERE `id` = '" + Bot.BotData.Id + "' LIMIT 1");
                     }
                     break;

@@ -15,7 +15,7 @@ namespace Oblivion.Database.Interfaces
         DataRow getRow();
         string getString();
         DataTable getTable();
-        void runFastQuery(string query);
+        void RunFastQuery(string query);
         string GetCommand();
         MySqlDataReader ExecuteReader();
         void RunQuery(string query);

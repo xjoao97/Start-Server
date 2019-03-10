@@ -686,7 +686,7 @@ namespace Oblivion.HabboHotel.Rooms
 
                 using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                 {
-                    dbClient.runFastQuery("UPDATE `rooms` SET `users_now` = '0' WHERE `id` = '" + Id + "' LIMIT 1");
+                    dbClient.RunFastQuery("UPDATE `rooms` SET `users_now` = '0' WHERE `id` = '" + Id + "' LIMIT 1");
                 }
 
                 if (_roomUserManager.PetCount > 0)
@@ -741,7 +741,7 @@ namespace Oblivion.HabboHotel.Rooms
 
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.runFastQuery("REPLACE INTO `room_bans` VALUES (" + pId + ", " + Id + ", " +
+                dbClient.RunFastQuery("REPLACE INTO `room_bans` VALUES (" + pId + ", " + Id + ", " +
                                   (OblivionServer.GetUnixTimestamp() + Time) + ")");
             }
         }
@@ -776,7 +776,7 @@ namespace Oblivion.HabboHotel.Rooms
         {
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.runFastQuery("DELETE FROM `room_bans` WHERE `user_id` = '" + UserId + "' AND `room_id` = '" + Id +
+                dbClient.RunFastQuery("DELETE FROM `room_bans` WHERE `user_id` = '" + UserId + "' AND `room_id` = '" + Id +
                                   "' LIMIT 1");
             }
 

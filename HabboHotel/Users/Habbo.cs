@@ -159,7 +159,7 @@ namespace Oblivion.HabboHotel.Users
                 TradingLockExpiry = 0;
                 using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                 {
-                    dbClient.runFastQuery("UPDATE `user_info` SET `trading_locked` = '0' WHERE `user_id` = '" + Id +
+                    dbClient.RunFastQuery("UPDATE `user_info` SET `trading_locked` = '0' WHERE `user_id` = '" + Id +
                                       "' LIMIT 1");
                 }
             }
@@ -231,7 +231,7 @@ namespace Oblivion.HabboHotel.Users
 
                 if (StatRow == null) //No row, add it yo
                 {
-                    dbClient.runFastQuery("INSERT INTO `user_stats` (`id`) VALUES ('" + Id + "')");
+                    dbClient.RunFastQuery("INSERT INTO `user_stats` (`id`) VALUES ('" + Id + "')");
                     dbClient.SetQuery(
                         "SELECT `id`,`roomvisits`,`onlinetime`,`respect`,`respectgiven`,`giftsgiven`,`giftsreceived`,`dailyrespectpoints`,`dailypetrespectpoints`,`achievementscore`,`quest_id`,`quest_progress`,`groupid`,`tickets_answered`,`respectstimestamp`,`forum_posts`, `calendar_gifts` FROM `user_stats` WHERE `id` = @user_id LIMIT 1");
                     dbClient.AddParameter("user_id", Id);
@@ -262,7 +262,7 @@ namespace Oblivion.HabboHotel.Users
                         _habboStats.DailyRespectPoints = DailyRespects;
                         _habboStats.DailyPetRespectPoints = DailyRespects;
 
-                        dbClient.runFastQuery("UPDATE `user_stats` SET `dailyRespectPoints` = '" + DailyRespects +
+                        dbClient.RunFastQuery("UPDATE `user_stats` SET `dailyRespectPoints` = '" + DailyRespects +
                                           "', `dailyPetRespectPoints` = '" + DailyRespects +
                                           "', `respectsTimestamp` = '" + DateTime.Today.ToString("MM/dd") +
                                           "' WHERE `id` = '" + Id + "' LIMIT 1");
@@ -534,7 +534,7 @@ namespace Oblivion.HabboHotel.Users
             var Amount = Session.GetHabbo().Credits;
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.runFastQuery("UPDATE `users` SET `credits` = `credits` + '" + Amount + "' WHERE `id` = '" +
+                dbClient.RunFastQuery("UPDATE `users` SET `credits` = `credits` + '" + Amount + "' WHERE `id` = '" +
                                   Session.GetHabbo().Id + "' LIMIT 1");
             }
             Session.SendMessage(new CreditBalanceComposer(Amount));
@@ -613,7 +613,7 @@ namespace Oblivion.HabboHotel.Users
                 _habboSaved = true;
                 using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                 {
-                    dbClient.runFastQuery("UPDATE `users` SET `online` = '0', `last_online` = '" +
+                    dbClient.RunFastQuery("UPDATE `users` SET `online` = '0', `last_online` = '" +
                                       OblivionServer.GetUnixTimestamp() + "', `activity_points` = '" + Duckets +
                                       "', `credits` = '" + Credits + "', `vip_points` = '" + Diamonds +
                                       "', `home_room` = '" + HomeRoom + "', `gotw_points` = '" + GOTWPoints +
@@ -634,7 +634,7 @@ namespace Oblivion.HabboHotel.Users
                                       _habboStats.ForumPosts + "' WHERE `id` = '" + Id + "' LIMIT 1;");
 
                     if (GetPermissions().HasRight("mod_tickets"))
-                        dbClient.runFastQuery(
+                        dbClient.RunFastQuery(
                             "UPDATE `moderation_tickets` SET `status` = 'open', `moderator_id` = '0' WHERE `status` ='picked' AND `moderator_id` = '" +
                             Id + "'");
                 }
@@ -858,7 +858,7 @@ namespace Oblivion.HabboHotel.Users
 
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.runFastQuery(
+                dbClient.RunFastQuery(
                     "INSERT INTO user_roomvisits (user_id,room_id,entry_timestamp,exit_timestamp,hour,minute) VALUES ('" +
                     GetClient().GetHabbo().Id + "','" + GetClient().GetHabbo().CurrentRoomId + "','" +
                     OblivionServer.GetUnixTimestamp() + "','0','" + DateTime.Now.Hour + "','" + DateTime.Now.Minute +

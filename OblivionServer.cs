@@ -162,10 +162,10 @@ namespace Oblivion
                 //Reset our statistics first.
                 using (var dbClient = GetDatabaseManager().GetQueryReactor())
                 {
-                    dbClient.runFastQuery("TRUNCATE `catalog_marketplace_data`");
-                    dbClient.runFastQuery("UPDATE `rooms` SET `users_now` = '0' WHERE `users_now` > '0';");
-                    dbClient.runFastQuery("UPDATE `users` SET `online` = '0' WHERE `online` = '1'");
-                    dbClient.runFastQuery(
+                    dbClient.RunFastQuery("TRUNCATE `catalog_marketplace_data`");
+                    dbClient.RunFastQuery("UPDATE `rooms` SET `users_now` = '0' WHERE `users_now` > '0';");
+                    dbClient.RunFastQuery("UPDATE `users` SET `online` = '0' WHERE `online` = '1'");
+                    dbClient.RunFastQuery(
                         "UPDATE `server_status` SET `users_online` = '0', `loaded_rooms` = '0', `status` = '1'");
                 }
 
@@ -392,12 +392,12 @@ namespace Oblivion
 
             using (var dbClient = _manager.GetQueryReactor())
             {
-                dbClient.runFastQuery("UPDATE `server_status` SET `users_online` = '0', `loaded_rooms` = '0'");
-                dbClient.runFastQuery("TRUNCATE `catalog_marketplace_data`");
+                dbClient.RunFastQuery("UPDATE `server_status` SET `users_online` = '0', `loaded_rooms` = '0'");
+                dbClient.RunFastQuery("TRUNCATE `catalog_marketplace_data`");
 //                dbClient.RunQuery("TRUNCATE `user_auth_ticket`");
-                dbClient.runFastQuery("TRUNCATE `user_auth_food`");
-                dbClient.runFastQuery("UPDATE `users` SET online = '0', auth_ticket = ''");
-                dbClient.runFastQuery("UPDATE `rooms` SET `users_now` = '0' WHERE `users_now` > '0'");
+                dbClient.RunFastQuery("TRUNCATE `user_auth_food`");
+                dbClient.RunFastQuery("UPDATE `users` SET online = '0', auth_ticket = ''");
+                dbClient.RunFastQuery("UPDATE `rooms` SET `users_now` = '0' WHERE `users_now` > '0'");
             }
 
             Log.Info("Oblivion Emulator, desligado com sucesso.");

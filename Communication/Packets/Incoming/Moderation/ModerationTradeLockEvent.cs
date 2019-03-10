@@ -44,7 +44,7 @@ namespace Oblivion.Communication.Packets.Incoming.Moderation
 
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.runFastQuery("UPDATE `user_info` SET `trading_locked` = '" + Length +
+                dbClient.RunFastQuery("UPDATE `user_info` SET `trading_locked` = '" + Length +
                                   "', `trading_locks_count` = `trading_locks_count` + '1' WHERE `user_id` = '" +
                                   Habbo.Id + "' LIMIT 1");
             }

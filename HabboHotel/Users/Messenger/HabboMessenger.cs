@@ -122,7 +122,7 @@ namespace Oblivion.HabboHotel.Users.Messenger
         {
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.runFastQuery("DELETE FROM messenger_requests WHERE from_id = " + _userId + " OR to_id = " + _userId);
+                dbClient.RunFastQuery("DELETE FROM messenger_requests WHERE from_id = " + _userId + " OR to_id = " + _userId);
             }
 
             ClearRequests();
@@ -132,7 +132,7 @@ namespace Oblivion.HabboHotel.Users.Messenger
         {
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.runFastQuery("DELETE FROM messenger_requests WHERE (from_id = " + _userId + " AND to_id = " +
+                dbClient.RunFastQuery("DELETE FROM messenger_requests WHERE (from_id = " + _userId + " AND to_id = " +
                                   sender + ") OR (to_id = " + _userId + " AND from_id = " + sender + ")");
             }
 
@@ -143,7 +143,7 @@ namespace Oblivion.HabboHotel.Users.Messenger
         {
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.runFastQuery("REPLACE INTO messenger_friendships (user_one_id,user_two_id) VALUES (" + _userId +
+                dbClient.RunFastQuery("REPLACE INTO messenger_friendships (user_one_id,user_two_id) VALUES (" + _userId +
                                   "," + friendID + ")");
             }
 
@@ -166,7 +166,7 @@ namespace Oblivion.HabboHotel.Users.Messenger
         {
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.runFastQuery("DELETE FROM messenger_friendships WHERE (user_one_id = " + _userId +
+                dbClient.RunFastQuery("DELETE FROM messenger_friendships WHERE (user_one_id = " + _userId +
                                   " AND user_two_id = " + friendID + ") OR (user_two_id = " + _userId +
                                   " AND user_one_id = " + friendID + ")");
             }
@@ -282,7 +282,7 @@ namespace Oblivion.HabboHotel.Users.Messenger
 
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.runFastQuery("REPLACE INTO `messenger_requests` (`from_id`,`to_id`) VALUES ('" + _userId + "','" +
+                dbClient.RunFastQuery("REPLACE INTO `messenger_requests` (`from_id`,`to_id`) VALUES ('" + _userId + "','" +
                                   ToId + "')");
             }
 

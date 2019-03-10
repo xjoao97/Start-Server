@@ -37,7 +37,7 @@ namespace Oblivion.HabboHotel.Global
         {
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.runFastQuery("UPDATE server_status SET users_online = '0', loaded_rooms = '0', status = '0'");
+                dbClient.RunFastQuery("UPDATE server_status SET users_online = '0', loaded_rooms = '0', status = '0'");
             }
 
             _timer.Dispose();
@@ -74,7 +74,7 @@ namespace Oblivion.HabboHotel.Global
 
                 if (_lastDate == DateTime.Now.ToShortDateString() && UsersOnline > _lastDatePeak ||
                     _lastDate != DateTime.Now.ToShortDateString())
-                    dbClient.runFastQuery("REPLACE INTO server_peaks VALUES ('" + DateTime.Now.ToShortDateString() + "', " +
+                    dbClient.RunFastQuery("REPLACE INTO server_peaks VALUES ('" + DateTime.Now.ToShortDateString() + "', " +
                                       UsersOnline + ")");
 
                 _lastDate = DateTime.Now.ToShortDateString();

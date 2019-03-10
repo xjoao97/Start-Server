@@ -32,7 +32,7 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.Furni.Stickys
                 Room.GetRoomItemHandler().RemoveFurniture(Session, Item.Id);
                 using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                 {
-                    dbClient.runFastQuery("DELETE FROM `items` WHERE `id` = '" + Item.Id + "' LIMIT 1");
+                    dbClient.RunFastQuery("DELETE FROM `items` WHERE `id` = '" + Item.Id + "' LIMIT 1");
                 }
             }
         }

@@ -118,8 +118,14 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>dll\AStar.dll</HintPath>
     </Reference>
-    <Reference Include="log4net">
-      <HintPath>dll\log4net.dll</HintPath>
+    <Reference Include="dotMemory.Unit, Version=111.0.0.0, Culture=neutral, PublicKeyToken=1010a0d8d6380325, processorArchitecture=MSIL">
+      <HintPath>packages\JetBrains.dotMemoryUnit.3.0.20171219.105559\lib\net35\dotMemory.Unit.dll</HintPath>
+    </Reference>
+    <Reference Include="Enyim.Caching, Version=2.16.0.0, Culture=neutral, PublicKeyToken=cec98615db04012e, processorArchitecture=MSIL">
+      <HintPath>packages\EnyimMemcached.2.16.0\lib\net35\Enyim.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="MySql.Data">

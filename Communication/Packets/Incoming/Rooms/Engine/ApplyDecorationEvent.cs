@@ -90,7 +90,7 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.Engine
                 dbClient.AddParameter("extradata", Item.ExtraData);
                 dbClient.RunQuery();
 
-                dbClient.runFastQuery("DELETE FROM items WHERE id=" + Item.Id + " LIMIT 1");
+                dbClient.RunFastQuery("DELETE FROM items WHERE id=" + Item.Id + " LIMIT 1");
             }
 
             Session.GetHabbo().GetInventoryComponent().RemoveItem(Item.Id);

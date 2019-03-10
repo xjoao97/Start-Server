@@ -75,8 +75,7 @@ namespace Oblivion.HabboHotel.Catalog
                         var BaseId = Convert.ToInt32(Row["item_id"]);
                         var OfferId = Convert.ToInt32(Row["offer_id"]);
 
-                        ItemData Data;
-                        if (!ItemDataManager.TryGetItem(BaseId, out Data))
+                        if (!ItemDataManager.TryGetItem(BaseId, out ItemData Data))
                         {
                             log.Error("Couldn't load Catalog Item " + ItemId + ", no furniture record found.");
                             continue;
@@ -165,19 +164,7 @@ namespace Oblivion.HabboHotel.Catalog
 
         public bool TryGetPage(int pageId, out CatalogPage page) => _CatalogPages.TryGetValue(pageId, out page);
 
-        public ICollection<CatalogPage> GetPages(GameClient session, int pageId)
-        {
-            List<CatalogPage> pages = new List<CatalogPage>();
-            foreach (CatalogPage page in this._CatalogPages.Values)
-            {
-                if (page.ParentId != pageId || page.MinimumRank > session.GetHabbo().Rank || (session.GetHabbo().Rank == 1))
-                {
-                    continue;
-                }
-                pages.Add(page);
-            }
-            return pages;
-        }
+        public ICollection<CatalogPage> GetPages() => _CatalogPages.Values;
 
         public MarketplaceManager GetMarketplace() => _marketplace;
 

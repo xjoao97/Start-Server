@@ -19,7 +19,7 @@ namespace Oblivion.Communication.Packets.Incoming.Catalog
                 var itemId = Packet.PopInt();
                 using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                 {
-                    dbClient.runFastQuery("DELETE FROM `items` WHERE `id` = '" + itemId + "' AND `user_id` = '" +
+                    dbClient.RunFastQuery("DELETE FROM `items` WHERE `id` = '" + itemId + "' AND `user_id` = '" +
                                       Session.GetHabbo().Id + "' LIMIT 1");
                 }
                 Session.GetHabbo().GetInventoryComponent().RemoveItem(itemId);
@@ -39,9 +39,9 @@ namespace Oblivion.Communication.Packets.Incoming.Catalog
                                   "', '" + Session.GetHabbo().Id + "', @extra_data)");
                 dbClient.AddParameter("extra_data", maticData);
                 rewardId = Convert.ToInt32(dbClient.InsertQuery());
-                dbClient.runFastQuery("INSERT INTO `user_presents` (`item_id`,`base_id`,`extra_data`) VALUES ('" +
+                dbClient.RunFastQuery("INSERT INTO `user_presents` (`item_id`,`base_id`,`extra_data`) VALUES ('" +
                                   rewardId + "', '" + reward.BaseId + "', '')");
-                dbClient.runFastQuery("DELETE FROM `items` WHERE `id` = " + rewardId + " LIMIT 1;");
+                dbClient.RunFastQuery("DELETE FROM `items` WHERE `id` = " + rewardId + " LIMIT 1;");
             }
 
             var GiveItem = ItemFactory.CreateGiftItem(data, Session.GetHabbo(), maticData, maticData, rewardId, 0, 0);

@@ -47,10 +47,9 @@ namespace Oblivion.Communication.Packets.Incoming.Inventory.Badges
 
             OblivionServer.GetGame().GetQuestManager().ProgressUserQuest(Session, QuestType.PROFILE_BADGE);
 
-            Room Room;
 
             if (Session.GetHabbo().InRoom &&
-                OblivionServer.GetGame().GetRoomManager().TryGetRoom(Session.GetHabbo().CurrentRoomId, out Room))
+                OblivionServer.GetGame().GetRoomManager().TryGetRoom(Session.GetHabbo().CurrentRoomId, out Room Room))
                 Session.GetHabbo().CurrentRoom.SendMessage(new HabboUserBadgesComposer(Session.GetHabbo()));
             else
                 Session.SendMessage(new HabboUserBadgesComposer(Session.GetHabbo()));

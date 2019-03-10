@@ -10,16 +10,13 @@ using Oblivion.Communication.Packets.Outgoing.Inventory.Furni;
 using Oblivion.Communication.Packets.Outgoing.Inventory.Pets;
 using Oblivion.Communication.Packets.Outgoing.Inventory.Purse;
 using Oblivion.Communication.Packets.Outgoing.Moderation;
-using Oblivion.Communication.Packets.Outgoing.Rooms.Notifications;
 using Oblivion.Core;
 using Oblivion.HabboHotel.Catalog;
 using Oblivion.HabboHotel.Catalog.Utilities;
 using Oblivion.HabboHotel.GameClients;
-using Oblivion.HabboHotel.Groups;
 using Oblivion.Communication.Packets.Outgoing.Users;
 using Oblivion.HabboHotel.Items;
 using Oblivion.HabboHotel.Users.Effects;
-using Oblivion.Database.Interfaces;
 
 #endregion
 
@@ -35,8 +32,7 @@ namespace Oblivion.Communication.Packets.Incoming.Catalog
             var Amount = Packet.PopInt();
 
 
-            CatalogPage Page;
-            if (!OblivionServer.GetGame().GetCatalog().TryGetPage(PageId, out Page))
+            if (!OblivionServer.GetGame().GetCatalog().TryGetPage(PageId, out CatalogPage Page))
                 return;
 
             if (!Page.Enabled || !Page.Visible || Page.MinimumRank > Session.GetHabbo().Rank)
@@ -71,7 +67,7 @@ namespace Oblivion.Communication.Packets.Incoming.Catalog
 
                     using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                     {
-                        dbClient.runFastQuery("UPDATE users SET name_color = '" + Item.Name + "' WHERE id = '" + Session.GetHabbo().Id + "'");
+                        dbClient.RunFastQuery("UPDATE users SET name_color = '" + Item.Name + "' WHERE id = '" + Session.GetHabbo().Id + "'");
                     }
 
                     Session.GetHabbo().NameColor = Item.Name;
@@ -95,7 +91,7 @@ namespace Oblivion.Communication.Packets.Incoming.Catalog
 
                     using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                     {
-                        dbClient.runFastQuery("UPDATE users SET prefix_color = '" + Item.Name + "' WHERE id = '" + Session.GetHabbo().Id + "'");
+                        dbClient.RunFastQuery("UPDATE users SET prefix_color = '" + Item.Name + "' WHERE id = '" + Session.GetHabbo().Id + "'");
                     }
 
                     Session.GetHabbo().PrefixColor = Item.Name;
@@ -119,7 +115,7 @@ namespace Oblivion.Communication.Packets.Incoming.Catalog
 
                     using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                     {
-                        dbClient.runFastQuery("UPDATE users SET prefix_name = '" + ExtraData + "' WHERE id = '" + Session.GetHabbo().Id + "'");
+                        dbClient.RunFastQuery("UPDATE users SET prefix_name = '" + ExtraData + "' WHERE id = '" + Session.GetHabbo().Id + "'");
                     }
 
                     Session.GetHabbo().PrefixName = ExtraData;
@@ -291,7 +287,7 @@ namespace Oblivion.Communication.Packets.Incoming.Catalog
                 Item.LimitedEditionSells++;
                 using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                 {
-                    dbClient.runFastQuery("UPDATE `catalog_items` SET `limited_sells` = '" + Item.LimitedEditionSells +
+                    dbClient.RunFastQuery("UPDATE `catalog_items` SET `limited_sells` = '" + Item.LimitedEditionSells +
                                       "' WHERE `id` = '" + Item.Id + "' LIMIT 1");
                     LimitedEditionSells = Item.LimitedEditionSells;
                     LimitedEditionStack = Item.LimitedEditionStack;

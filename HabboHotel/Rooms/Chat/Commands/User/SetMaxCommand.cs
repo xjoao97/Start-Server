@@ -48,7 +48,7 @@ namespace Oblivion.HabboHotel.Rooms.Chat.Commands.User
                 room.RoomData.UsersMax = maxAmount;
                 using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                 {
-                    dbClient.runFastQuery("UPDATE `rooms` SET `users_max` = " + maxAmount + " WHERE `id` = '" + room.Id +
+                    dbClient.RunFastQuery("UPDATE `rooms` SET `users_max` = " + maxAmount + " WHERE `id` = '" + room.Id +
                                       "' LIMIT 1");
                 }
             }

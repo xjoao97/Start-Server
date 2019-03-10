@@ -110,7 +110,7 @@ namespace Oblivion.HabboHotel.Users.Process
                     _player.GetStats().RespectsTimestamp = DateTime.Today.ToString("MM/dd");
                     using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                     {
-                        dbClient.runFastQuery(
+                        dbClient.RunFastQuery(
                             "UPDATE `user_stats` SET `dailyRespectPoints` = '3', `dailyPetRespectPoints` = '3', `respectsTimestamp` = '" +
                             DateTime.Today.ToString("MM/dd") + "' WHERE `id` = '" + _player.Id +
                             "' LIMIT 1");

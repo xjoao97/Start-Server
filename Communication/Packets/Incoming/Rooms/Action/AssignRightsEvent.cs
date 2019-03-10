@@ -36,7 +36,7 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.Action
 
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.runFastQuery("INSERT INTO `room_rights` (`room_id`,`user_id`) VALUES ('" + Room.RoomId + "','" +
+                dbClient.RunFastQuery("INSERT INTO `room_rights` (`room_id`,`user_id`) VALUES ('" + Room.RoomId + "','" +
                                   UserId + "')");
             }
 

@@ -150,11 +150,11 @@ namespace Oblivion.HabboHotel.Quests
 
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.runFastQuery("UPDATE `user_quests` SET `progress` = '" + NewProgress + "' WHERE `user_id` = '" +
+                dbClient.RunFastQuery("UPDATE `user_quests` SET `progress` = '" + NewProgress + "' WHERE `user_id` = '" +
                                   Session.GetHabbo().Id + "' AND `quest_id` = '" + UserQuest.Id + "' LIMIT 1");
 
                 if (PassQuest)
-                    dbClient.runFastQuery("UPDATE `user_stats` SET `quest_id` = '0' WHERE `id` = '" + Session.GetHabbo().Id +
+                    dbClient.RunFastQuery("UPDATE `user_stats` SET `quest_id` = '0' WHERE `id` = '" + Session.GetHabbo().Id +
                                       "' LIMIT 1");
             }
 
@@ -223,9 +223,9 @@ namespace Oblivion.HabboHotel.Quests
 
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.runFastQuery("REPLACE INTO `user_quests` (`user_id`,`quest_id`) VALUES ('" + Session.GetHabbo().Id +
+                dbClient.RunFastQuery("REPLACE INTO `user_quests` (`user_id`,`quest_id`) VALUES ('" + Session.GetHabbo().Id +
                                   "', '" + Quest.Id + "')");
-                dbClient.runFastQuery("UPDATE `user_stats` SET `quest_id` = '" + Quest.Id + "' WHERE `id` = '" +
+                dbClient.RunFastQuery("UPDATE `user_stats` SET `quest_id` = '" + Quest.Id + "' WHERE `id` = '" +
                                   Session.GetHabbo().Id + "' LIMIT 1");
             }
 
@@ -256,9 +256,9 @@ namespace Oblivion.HabboHotel.Quests
 
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.runFastQuery("REPLACE INTO `user_quests`(`user_id`,`quest_id`) VALUES (" + Session.GetHabbo().Id +
+                dbClient.RunFastQuery("REPLACE INTO `user_quests`(`user_id`,`quest_id`) VALUES (" + Session.GetHabbo().Id +
                                   ", " + NextQuest.Id + ")");
-                dbClient.runFastQuery("UPDATE `user_stats` SET `quest_id` = '" + NextQuest.Id + "' WHERE `id` = '" +
+                dbClient.RunFastQuery("UPDATE `user_stats` SET `quest_id` = '" + NextQuest.Id + "' WHERE `id` = '" +
                                   Session.GetHabbo().Id + "' LIMIT 1");
             }
 
@@ -275,7 +275,7 @@ namespace Oblivion.HabboHotel.Quests
 
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.runFastQuery("DELETE FROM `user_quests` WHERE `user_id` = '" + Session.GetHabbo().Id +
+                dbClient.RunFastQuery("DELETE FROM `user_quests` WHERE `user_id` = '" + Session.GetHabbo().Id +
                                   "' AND `quest_id` = '" + Quest.Id + "';" +
                                   "UPDATE `user_stats` SET `quest_id` = '0' WHERE `id` = '" + Session.GetHabbo().Id +
                                   "' LIMIT 1");

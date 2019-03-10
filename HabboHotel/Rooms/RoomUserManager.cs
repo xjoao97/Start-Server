@@ -351,11 +351,11 @@ namespace Oblivion.HabboHotel.Rooms
 
                     using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                     {
-                        dbClient.runFastQuery("UPDATE user_roomvisits SET exit_timestamp = '" +
+                        dbClient.RunFastQuery("UPDATE user_roomvisits SET exit_timestamp = '" +
                                           OblivionServer.GetUnixTimestamp() + "' WHERE room_id = '" + _room.RoomId +
                                           "' AND user_id = '" + Session.GetHabbo().Id +
                                           "' ORDER BY exit_timestamp DESC LIMIT 1");
-                        dbClient.runFastQuery("UPDATE `rooms` SET `users_now` = '" + _room.UsersNow + "' WHERE `id` = '" +
+                        dbClient.RunFastQuery("UPDATE `rooms` SET `users_now` = '" + _room.UsersNow + "' WHERE `id` = '" +
                                           _room.RoomId + "' LIMIT 1");
                     }
 
@@ -478,7 +478,7 @@ namespace Oblivion.HabboHotel.Rooms
 
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.runFastQuery("UPDATE `rooms` SET `users_now` = '" + count + "' WHERE `id` = '" + _room.RoomId +
+                dbClient.RunFastQuery("UPDATE `rooms` SET `users_now` = '" + count + "' WHERE `id` = '" + _room.RoomId +
                                   "' LIMIT 1");
             }
         }
@@ -557,11 +557,11 @@ namespace Oblivion.HabboHotel.Rooms
                         //Surely this can be *99 better?
                         var User = GetRoomUserByVirtualId(Pet.VirtualId);
 
-                        dbClient.runFastQuery("UPDATE `bots` SET room_id = " + Pet.RoomId + ", x = " +
+                        dbClient.RunFastQuery("UPDATE `bots` SET room_id = " + Pet.RoomId + ", x = " +
                                           (User?.X ?? 0) + ", Y = " + (User?.Y ?? 0) +
                                           ", Z = " + (User?.Z ?? 0) + " WHERE `id` = '" + Pet.PetId +
                                           "' LIMIT 1");
-                        dbClient.runFastQuery("UPDATE `bots_petdata` SET `experience` = '" + Pet.experience +
+                        dbClient.RunFastQuery("UPDATE `bots_petdata` SET `experience` = '" + Pet.experience +
                                           "', `energy` = '" + Pet.Energy + "', `nutrition` = '" + Pet.Nutrition +
                                           "', `respect` = '" + Pet.Respect + "' WHERE `id` = '" + Pet.PetId +
                                           "' LIMIT 1");

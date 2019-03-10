@@ -62,8 +62,7 @@ namespace Oblivion.HabboHotel.Items
         public Item(int Id, int RoomId, int BaseItem, string ExtraData, int X, int Y, double Z, int Rot, int Userid,
             int Group, int limitedNumber, int limitedStack, string wallCoord, Room Room = null)
         {
-            ItemData Data;
-            if (!OblivionServer.GetGame().GetItemManager().TryGetItem(BaseItem, out Data))
+            if (!OblivionServer.GetGame().GetItemManager().TryGetItem(BaseItem, out ItemData Data))
                 return;
 
             this.Id = Id;
@@ -209,10 +208,9 @@ namespace Oblivion.HabboHotel.Items
             get
             {
                 var CurHeight = 0.0;
-                int num2;
 
                 if (GetBaseItem().AdjustableHeights.Count > 1)
-                    if (int.TryParse(ExtraData, out num2) && GetBaseItem().AdjustableHeights.Count - 1 >= num2)
+                    if (int.TryParse(ExtraData, out int num2) && GetBaseItem().AdjustableHeights.Count - 1 >= num2)
                         CurHeight = GetZ + GetBaseItem().AdjustableHeights[num2];
 
                 if (CurHeight <= 0.0)
@@ -1539,8 +1537,7 @@ namespace Oblivion.HabboHotel.Items
             if (_room != null)
                 return _room;
 
-            Room Room;
-            return OblivionServer.GetGame().GetRoomManager().TryGetRoom(RoomId, out Room) ? Room : null;
+            return OblivionServer.GetGame().GetRoomManager().TryGetRoom(RoomId, out Room Room) ? Room : null;
         }
 
         public void UserFurniCollision(RoomUser user)

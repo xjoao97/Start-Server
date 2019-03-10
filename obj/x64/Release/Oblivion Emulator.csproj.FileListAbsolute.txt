@@ -31,3 +31,8 @@ C:\Users\joaopedro\Downloads\Start-Server\bin\x64\Release\AStar.dll
 C:\Users\joaopedro\Downloads\Start-Server\bin\x64\Release\log4net.dll
 C:\Users\joaopedro\Downloads\Start-Server\bin\x64\Release\MySql.Data.dll
 C:\Users\joaopedro\Downloads\Start-Server\obj\x64\Release\Oblivion Emulator.csproj.CopyComplete
+C:\Users\joaopedro\Downloads\Start-Server\bin\x64\Release\dotMemory.Unit.dll
+C:\Users\joaopedro\Downloads\Start-Server\bin\x64\Release\Enyim.Caching.dll
+C:\Users\joaopedro\Downloads\Start-Server\bin\x64\Release\dotMemory.Unit.xml
+C:\Users\joaopedro\Downloads\Start-Server\bin\x64\Release\Enyim.Caching.xml
+C:\Users\joaopedro\Downloads\Start-Server\bin\x64\Release\log4net.xml

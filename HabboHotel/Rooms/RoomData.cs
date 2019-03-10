@@ -166,19 +166,19 @@ namespace Oblivion.HabboHotel.Rooms
                 }
                 if (SuperCheck[0])
                 {
-                    dbClient.runFastQuery(string.Concat("DELETE FROM `wired_scorebord` WHERE `roomid`='", Id,
+                    dbClient.RunFastQuery(string.Concat("DELETE FROM `wired_scorebord` WHERE `roomid`='", Id,
                         "' AND `soort`='day'"));
                     WiredScoreBordDay.Clear();
                 }
                 if (SuperCheck[1])
                 {
-                    dbClient.runFastQuery(string.Concat("DELETE FROM `wired_scorebord` WHERE `roomid`='", Id,
+                    dbClient.RunFastQuery(string.Concat("DELETE FROM `wired_scorebord` WHERE `roomid`='", Id,
                         "' AND `soort`='month'"));
                     WiredScoreBordMonth.Clear();
                 }
                 if (SuperCheck[2])
                 {
-                    dbClient.runFastQuery(string.Concat("DELETE FROM `wired_scorebord` WHERE `roomid`='", Id,
+                    dbClient.RunFastQuery(string.Concat("DELETE FROM `wired_scorebord` WHERE `roomid`='", Id,
                         "' AND `soort`='week'"));
                     WiredScoreBordDay.Clear();
                 }

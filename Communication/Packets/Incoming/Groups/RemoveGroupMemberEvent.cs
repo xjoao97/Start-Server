@@ -66,7 +66,7 @@ namespace Oblivion.Communication.Packets.Incoming.Groups
                     Session.GetHabbo().GetStats().FavouriteGroupId = 0;
                     using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
                     {
-                        dbClient.runFastQuery("UPDATE `user_stats` SET `groupid` = '0' WHERE `id` = '" + UserId +
+                        dbClient.RunFastQuery("UPDATE `user_stats` SET `groupid` = '0' WHERE `id` = '" + UserId +
                                           "' LIMIT 1");
                     }
 

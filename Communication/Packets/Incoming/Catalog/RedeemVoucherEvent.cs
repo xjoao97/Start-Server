@@ -16,8 +16,7 @@ namespace Oblivion.Communication.Packets.Incoming.Catalog
         {
             var VoucherCode = Packet.PopString().Replace("\r", "");
 
-            Voucher Voucher = null;
-            if (!OblivionServer.GetGame().GetCatalog().GetVoucherManager().TryGetVoucher(VoucherCode, out Voucher))
+            if (!OblivionServer.GetGame().GetCatalog().GetVoucherManager().TryGetVoucher(VoucherCode, out Voucher Voucher))
             {
                 Session.SendMessage(new VoucherRedeemErrorComposer(0));
                 return;

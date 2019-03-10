@@ -199,8 +199,7 @@ namespace Oblivion.HabboHotel.GameClients
 
         public void DisposeConnection(int clientID)
         {
-            GameClient Client;
-            if (!TryGetClient(clientID, out Client))
+            if (!TryGetClient(clientID, out GameClient Client))
                 return;
 
             Client?.Dispose();

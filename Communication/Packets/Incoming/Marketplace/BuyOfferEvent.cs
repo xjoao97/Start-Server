@@ -92,7 +92,7 @@ namespace Oblivion.Communication.Packets.Incoming.Marketplace
 
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
-                dbClient.runFastQuery("UPDATE `catalog_marketplace_offers` SET `state` = '2' WHERE `offer_id` = '" + OfferId +
+                dbClient.RunFastQuery("UPDATE `catalog_marketplace_offers` SET `state` = '2' WHERE `offer_id` = '" + OfferId +
                                   "' LIMIT 1");
 
                 dbClient.SetQuery("SELECT `id` FROM catalog_marketplace_data WHERE sprite = " + Item.SpriteId +
@@ -100,11 +100,11 @@ namespace Oblivion.Communication.Packets.Incoming.Marketplace
                 var Id = dbClient.getInteger();
 
                 if (Id > 0)
-                    dbClient.runFastQuery(
+                    dbClient.RunFastQuery(
                         "UPDATE `catalog_marketplace_data` SET `sold` = `sold` + 1, `avgprice` = (avgprice + " +
                         Convert.ToInt32(Row["total_price"]) + ") WHERE `id` = " + Id + " LIMIT 1;");
                 else
-                    dbClient.runFastQuery("INSERT INTO `catalog_marketplace_data` (sprite, sold, avgprice) VALUES ('" +
+                    dbClient.RunFastQuery("INSERT INTO `catalog_marketplace_data` (sprite, sold, avgprice) VALUES ('" +
                                       Item.SpriteId + "', '1', '" + Convert.ToInt32(Row["total_price"]) + "')");
 
 
