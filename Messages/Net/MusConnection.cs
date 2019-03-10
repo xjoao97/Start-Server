@@ -111,7 +111,7 @@ namespace Oblivion.Messages.Net
                     {
                         dbClient.SetQuery("SELECT `credits` FROM `users` WHERE `id` = @id LIMIT 1");
                         dbClient.AddParameter("id", UserId);
-                        Credits = dbClient.getInteger();
+                        Credits = dbClient.GetInteger();
                     }
 
                     Client.GetHabbo().Credits = Credits;
@@ -135,7 +135,7 @@ namespace Oblivion.Messages.Net
                     {
                         dbClient.SetQuery("SELECT `activity_points` FROM `users` WHERE `id` = @id LIMIT 1");
                         dbClient.AddParameter("id", UserId);
-                        Pixels = dbClient.getInteger();
+                        Pixels = dbClient.GetInteger();
                     }
 
                     Client.GetHabbo().Duckets = Pixels;
@@ -159,7 +159,7 @@ namespace Oblivion.Messages.Net
                     {
                         dbClient.SetQuery("SELECT `vip_points` FROM `users` WHERE `id` = @id LIMIT 1");
                         dbClient.AddParameter("id", UserId);
-                        Diamonds = dbClient.getInteger();
+                        Diamonds = dbClient.GetInteger();
                     }
 
                     Client.GetHabbo().Diamonds = Diamonds;
@@ -183,7 +183,7 @@ namespace Oblivion.Messages.Net
                     {
                         dbClient.SetQuery("SELECT `gotw_points` FROM `users` WHERE `id` = @id LIMIT 1");
                         dbClient.AddParameter("id", UserId);
-                        GOTWPoints = dbClient.getInteger();
+                        GOTWPoints = dbClient.GetInteger();
                     }
 
                     Client.GetHabbo().GOTWPoints = GOTWPoints;
@@ -207,7 +207,7 @@ namespace Oblivion.Messages.Net
                     {
                         dbClient.SetQuery("SELECT `rank` FROM `users` WHERE `id` = @userID LIMIT 1");
                         dbClient.AddParameter("userID", UserId);
-                        Client.GetHabbo().Rank = dbClient.getInteger();
+                        Client.GetHabbo().Rank = dbClient.GetInteger();
                     }
                     break;
                 }
@@ -228,7 +228,7 @@ namespace Oblivion.Messages.Net
                     {
                         dbClient.SetQuery("SELECT `motto` FROM `users` WHERE `id` = @userID LIMIT 1");
                         dbClient.AddParameter("userID", UserId);
-                        Client.GetHabbo().Motto = dbClient.getString();
+                        Client.GetHabbo().Motto = dbClient.GetString();
                     }
 
                     if (Client.GetHabbo().InRoom)
@@ -332,7 +332,7 @@ namespace Oblivion.Messages.Net
                     {
                         dbClient.SetQuery("SELECT `last_change` FROM `users` WHERE `id` = @userID LIMIT 1");
                         dbClient.AddParameter("userID", UserId);
-                        Client.GetHabbo().LastNameChange = dbClient.getInteger();
+                        Client.GetHabbo().LastNameChange = dbClient.GetInteger();
                     }
                     break;
                 }

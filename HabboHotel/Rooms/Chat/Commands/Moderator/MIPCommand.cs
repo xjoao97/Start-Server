@@ -47,7 +47,7 @@ namespace Oblivion.HabboHotel.Rooms.Chat.Commands.Moderator
                                   "' LIMIT 1");
 
                 dbClient.SetQuery("SELECT `ip_last` FROM `users` WHERE `id` = '" + habbo.Id + "' LIMIT 1");
-                ipAddress = dbClient.getString();
+                ipAddress = dbClient.GetString();
             }
 
             var reason = Params.Length >= 3 ? CommandManager.MergeParams(Params, 2) : "Razão não especificada.";

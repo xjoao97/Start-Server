@@ -49,7 +49,7 @@ namespace Oblivion.Communication.Packets.Incoming.Users
                     dbClient.SetQuery("SELECT `id` FROM `user_relationships` WHERE `user_id` = '" +
                                       Session.GetHabbo().Id + "' AND `target` = @target LIMIT 1");
                     dbClient.AddParameter("target", User);
-                    var Id = dbClient.getInteger();
+                    var Id = dbClient.GetInteger();
 
                     dbClient.SetQuery("DELETE FROM `user_relationships` WHERE `user_id` = '" + Session.GetHabbo().Id +
                                       "' AND `target` = @target LIMIT 1");
@@ -64,7 +64,7 @@ namespace Oblivion.Communication.Packets.Incoming.Users
                     dbClient.SetQuery("SELECT id FROM `user_relationships` WHERE `user_id` = '" + Session.GetHabbo().Id +
                                       "' AND `target` = @target LIMIT 1");
                     dbClient.AddParameter("target", User);
-                    var Id = dbClient.getInteger();
+                    var Id = dbClient.GetInteger();
 
                     if (Id > 0)
                     {

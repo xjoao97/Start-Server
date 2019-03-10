@@ -34,7 +34,7 @@ namespace Oblivion.HabboHotel.Rooms.Chat.Commands.Moderator
                 dbClient.SetQuery(
                     "SELECT `id`,`username`,`mail`,`rank`,`motto`,`credits`,`activity_points`,`vip_points`,`gotw_points`,`online`,`rank_vip` FROM users WHERE `username` = @Username LIMIT 1");
                 dbClient.AddParameter("Username", username);
-                userData = dbClient.getRow();
+                userData = dbClient.GetRow();
             }
 
             if (userData == null)
@@ -48,7 +48,7 @@ namespace Oblivion.HabboHotel.Rooms.Chat.Commands.Moderator
             {
                 dbClient.SetQuery("SELECT * FROM `user_info` WHERE `user_id` = '" + Convert.ToInt32(userData["id"]) +
                                   "' LIMIT 1");
-                userInfo = dbClient.getRow();
+                userInfo = dbClient.GetRow();
                 if (userInfo == null)
                 {
                     dbClient.RunFastQuery("INSERT INTO `user_info` (`user_id`) VALUES ('" + Convert.ToInt32(userData["id"]) +
@@ -56,7 +56,7 @@ namespace Oblivion.HabboHotel.Rooms.Chat.Commands.Moderator
 
                     dbClient.SetQuery("SELECT * FROM `user_info` WHERE `user_id` = '" + Convert.ToInt32(userData["id"]) +
                                       "' LIMIT 1");
-                    userInfo = dbClient.getRow();
+                    userInfo = dbClient.GetRow();
                 }
             }
 

@@ -49,7 +49,7 @@ namespace Oblivion.HabboHotel.Users.Messenger
             {
                 dbClient.SetQuery("SELECT * FROM `messenger_offline_messages` WHERE `to_id` = @id;");
                 dbClient.AddParameter("id", _userId);
-                var GetMessages = dbClient.getTable();
+                var GetMessages = dbClient.GetTable();
 
                 if (GetMessages == null) return;
                 var Client = OblivionServer.GetGame().GetClientManager().GetClientByUserID(_userId);
@@ -192,7 +192,7 @@ namespace Oblivion.HabboHotel.Users.Messenger
                     dbClient.SetQuery(
                         "SELECT id,username,motto,look,last_online,hide_inroom,hide_online FROM users WHERE `id` = @friendid LIMIT 1");
                     dbClient.AddParameter("friendid", friendID);
-                    dRow = dbClient.getRow();
+                    dRow = dbClient.GetRow();
                 }
 
                 newFriend = new MessengerBuddy(friendID, Convert.ToString(dRow["username"]),
@@ -228,7 +228,7 @@ namespace Oblivion.HabboHotel.Users.Messenger
                     "SELECT user_one_id FROM messenger_friendships WHERE user_one_id = @myID AND user_two_id = @friendID");
                 dbClient.AddParameter("myID", Convert.ToInt32(_userId));
                 dbClient.AddParameter("friendID", Convert.ToInt32(requestID));
-                return dbClient.findsResult();
+                return dbClient.FindsResult();
             }
         }
 
@@ -255,7 +255,7 @@ namespace Oblivion.HabboHotel.Users.Messenger
                 {
                     dbClient.SetQuery("SELECT `id`,`block_newfriends` FROM `users` WHERE `username` = @query LIMIT 1");
                     dbClient.AddParameter("query", UserQuery.ToLower());
-                    Row = dbClient.getRow();
+                    Row = dbClient.GetRow();
                 }
 
                 if (Row == null)

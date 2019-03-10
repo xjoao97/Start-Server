@@ -75,7 +75,7 @@ namespace Oblivion.HabboHotel.Rooms
             {
                 dbClient.SetQuery("SELECT `username` FROM `users` WHERE `id` = @owner LIMIT 1");
                 dbClient.AddParameter("owner", OwnerId);
-                var result = dbClient.getString();
+                var result = dbClient.GetString();
                 if (!string.IsNullOrEmpty(result))
                     OwnerName = result;
             }
@@ -140,7 +140,7 @@ namespace Oblivion.HabboHotel.Rooms
 
                 dbClient.SetQuery("SELECT * FROM wired_scorebord WHERE roomid = @id ORDER BY `punten` DESC ");
                 dbClient.AddParameter("id", Id);
-                foreach (DataRow nrow in dbClient.getTable().Rows)
+                foreach (DataRow nrow in dbClient.GetTable().Rows)
                 {
                     var userid = Convert.ToInt32(nrow["userid"]);
                     var username = Convert.ToString(nrow["username"]);
@@ -185,7 +185,7 @@ namespace Oblivion.HabboHotel.Rooms
 
                 dbClient.SetQuery(
                     $"SELECT command_name FROM room_blockcmd WHERE room_id = '{Id}'");
-                var table = dbClient.getTable();
+                var table = dbClient.GetTable();
                 foreach (DataRow data in table.Rows)
                     BlockedCommands.Add(data["command_name"].ToString());
             }

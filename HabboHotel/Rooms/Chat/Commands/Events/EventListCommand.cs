@@ -24,7 +24,7 @@ namespace Oblivion.HabboHotel.Rooms.Chat.Commands.Events
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.SetQuery("SELECT `id`,`name` FROM `eventlist`");
-                events = dbClient.getTable();
+                events = dbClient.GetTable();
             }
             var builder = new StringBuilder();
             foreach (DataRow row in events.Rows) //pega cada valor da sql

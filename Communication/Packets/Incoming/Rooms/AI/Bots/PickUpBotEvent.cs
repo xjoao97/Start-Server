@@ -26,8 +26,7 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.AI.Bots
             if (Room == null)
                 return;
 
-            RoomUser BotUser = null;
-            if (!Room.GetRoomUserManager().TryGetBot(BotId, out BotUser))
+            if (!Room.GetRoomUserManager().TryGetBot(BotId, out RoomUser BotUser))
                 return;
 
             if (Session.GetHabbo().Id != BotUser.BotData.ownerID &&

@@ -217,7 +217,7 @@ namespace Oblivion.HabboHotel.Rooms
                 dbClient.SetQuery(
                     "SELECT `id`,`room_id`,`name`,`motto`,`look`,`x`,`y`,`z`,`rotation`,`gender`,`user_id`,`ai_type`,`walk_mode`,`automatic_chat`,`speaking_interval`,`mix_sentences`,`chat_bubble` FROM `bots` WHERE `room_id` = '" +
                     RoomId + "' AND `ai_type` != 'pet'");
-                var Data = dbClient.getTable();
+                var Data = dbClient.GetTable();
                 if (Data == null)
                     return;
 
@@ -225,7 +225,7 @@ namespace Oblivion.HabboHotel.Rooms
                 {
                     dbClient.SetQuery("SELECT `text` FROM `bots_speech` WHERE `bot_id` = '" + Convert.ToInt32(Bot["id"]) +
                                       "'");
-                    var BotSpeech = dbClient.getTable();
+                    var BotSpeech = dbClient.GetTable();
 
                     var Speeches = (from DataRow Speech in BotSpeech.Rows
                         select new RandomSpeech(Convert.ToString(Speech["text"]), Convert.ToInt32(Bot["id"]))).ToList();
@@ -251,7 +251,7 @@ namespace Oblivion.HabboHotel.Rooms
             {
                 dbClient.SetQuery("SELECT `id`,`user_id`,`room_id`,`name`,`x`,`y`,`z` FROM `bots` WHERE `room_id` = '" +
                                   RoomId + "' AND `ai_type` = 'pet'");
-                var Data = dbClient.getTable();
+                var Data = dbClient.GetTable();
 
                 if (Data == null)
                     return;
@@ -261,7 +261,7 @@ namespace Oblivion.HabboHotel.Rooms
                     dbClient.SetQuery(
                         "SELECT `type`,`race`,`color`,`experience`,`energy`,`nutrition`,`respect`,`createstamp`,`have_saddle`,`anyone_ride`,`hairdye`,`pethair`,`gnome_clothing` FROM `bots_petdata` WHERE `id` = '" +
                         Row[0] + "' LIMIT 1");
-                    var mRow = dbClient.getRow();
+                    var mRow = dbClient.GetRow();
                     if (mRow == null)
                         continue;
 
@@ -296,7 +296,7 @@ namespace Oblivion.HabboHotel.Rooms
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.SetQuery("SELECT * FROM `room_promotions` WHERE `room_id` = " + Id + " LIMIT 1;");
-                var GetPromotion = dbClient.getRow();
+                var GetPromotion = dbClient.GetRow();
 
                 if (GetPromotion == null) return;
                 if (Convert.ToDouble(GetPromotion["timestamp_expire"]) > OblivionServer.GetUnixTimestamp())
@@ -320,7 +320,7 @@ namespace Oblivion.HabboHotel.Rooms
             {
                 dbClient.SetQuery("SELECT room_rights.user_id FROM room_rights WHERE room_id = @roomid");
                 dbClient.AddParameter("roomid", Id);
-                Data = dbClient.getTable();
+                Data = dbClient.GetTable();
             }
 
             if (Data == null) return;
@@ -337,7 +337,7 @@ namespace Oblivion.HabboHotel.Rooms
             {
                 dbClient.SetQuery("SELECT * FROM `room_filter` WHERE `room_id` = @roomid;");
                 dbClient.AddParameter("roomid", Id);
-                Data = dbClient.getTable();
+                Data = dbClient.GetTable();
             }
 
             if (Data == null)
@@ -356,7 +356,7 @@ namespace Oblivion.HabboHotel.Rooms
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.SetQuery("SELECT user_id, expire FROM room_bans WHERE room_id = " + Id);
-                Bans = dbClient.getTable();
+                Bans = dbClient.GetTable();
             }
 
             if (Bans == null)
@@ -756,7 +756,7 @@ namespace Oblivion.HabboHotel.Rooms
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.SetQuery("SELECT user_id FROM room_bans WHERE expire > UNIX_TIMESTAMP() AND room_id=" + Id);
-                var Table = dbClient.getTable();
+                var Table = dbClient.GetTable();
 
                 Bans.AddRange(from DataRow Row in Table.Rows select Convert.ToInt32(Row[0]));
             }

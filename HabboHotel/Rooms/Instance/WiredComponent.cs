@@ -65,7 +65,7 @@ namespace Oblivion.HabboHotel.Rooms.Instance
             {
                 dbClient.SetQuery("SELECT * FROM wired_items WHERE id=@id LIMIT 1");
                 dbClient.AddParameter("id", Item.Id);
-                var Row = dbClient.getRow();
+                var Row = dbClient.GetRow();
 
                 if (Row != null)
                 {
@@ -101,13 +101,12 @@ namespace Oblivion.HabboHotel.Rooms.Instance
 
                     foreach (var str in Convert.ToString(Row["items"]).Split(';'))
                     {
-                        int Id;
                         var sId = "0";
 
                         if (str.Contains(':'))
                             sId = str.Split(':')[0];
 
-                        if (int.TryParse(str, out Id) || int.TryParse(sId, out Id))
+                        if (int.TryParse(str, out int Id) || int.TryParse(sId, out Id))
                         {
                             var SelectedItem = _room.GetRoomItemHandler().GetItem(Convert.ToInt32(Id));
                             if (SelectedItem == null)

@@ -135,9 +135,8 @@ namespace Oblivion.Communication.Packets
             if (Session == null || Packet == null)
                 return;
 
-            IPacketEvent Pak;
 
-            if (!_incomingPackets.TryGetValue(Packet.Id, out Pak))
+            if (!_incomingPackets.TryGetValue(Packet.Id, out IPacketEvent Pak))
             {
                 if (OblivionServer.GetConfig().data["debug"] == "1")
                     log.Debug("PAQUETE DESCONOCIDO: " + Packet);

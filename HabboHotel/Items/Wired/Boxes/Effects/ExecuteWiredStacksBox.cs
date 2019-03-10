@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿#region
+using System.Linq;
 using System.Collections.Generic;
 using System.Collections.Concurrent;
 
@@ -6,6 +7,7 @@ using Oblivion.Communication.Packets.Incoming;
 using Oblivion.HabboHotel.Rooms;
 using Oblivion.HabboHotel.Users;
 using System.Collections;
+#endregion
 
 namespace Oblivion.HabboHotel.Items.Wired.Boxes.Conditions
 {
@@ -92,8 +94,7 @@ namespace Oblivion.HabboHotel.Items.Wired.Boxes.Conditions
                 if (Item == null || !Instance.GetRoomItemHandler().GetFloor.Contains(Item) || !Item.IsWired)
                     continue;
 
-                IWiredItem WiredItem;
-                if (Instance.GetWired().TryGet(Item.Id, out WiredItem))
+                if (Instance.GetWired().TryGet(Item.Id, out IWiredItem WiredItem))
                 {
                     if (WiredItem.Type == WiredBoxType.EffectExecuteWiredStacks)
                         continue;

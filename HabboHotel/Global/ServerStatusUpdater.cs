@@ -24,11 +24,11 @@ namespace Oblivion.HabboHotel.Global
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.SetQuery("SELECT userpeak FROM server_status");
-                _userPeak = dbClient.getInteger();
+                _userPeak = dbClient.GetInteger();
 
                 _lastDate = DateTime.Now.ToShortDateString();
                 dbClient.SetQuery("SELECT count FROM server_peaks WHERE date = '" + _lastDate + "'");
-                _lastDatePeak = dbClient.getInteger();
+                _lastDatePeak = dbClient.GetInteger();
             }
         }
 

@@ -96,8 +96,7 @@ namespace Oblivion.HabboHotel.Rooms.Chat.Commands
                 return false;
             }
 
-            IChatCommand Cmd;
-            if (Commands.TryGetValue(Split[0].ToLower(), out Cmd))
+            if (Commands.TryGetValue(Split[0].ToLower(), out IChatCommand Cmd))
             {
                 if (Session.GetHabbo().GetPermissions().HasRight("mod_tool"))
                     LogCommand(Session.GetHabbo().Id, Message, Session.GetHabbo().MachineId);

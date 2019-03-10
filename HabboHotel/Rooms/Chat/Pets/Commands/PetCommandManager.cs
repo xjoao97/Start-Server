@@ -32,7 +32,7 @@ namespace Oblivion.HabboHotel.Rooms.Chat.Pets.Commands
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.SetQuery("SELECT * FROM `bots_pet_commands`");
-                var Table = dbClient.getTable();
+                var Table = dbClient.GetTable();
 
                 if (Table != null)
                     foreach (DataRow row in Table.Rows)

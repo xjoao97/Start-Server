@@ -29,11 +29,11 @@ namespace Oblivion.HabboHotel.Catalog.Marketplace
             {
                 dbClient.SetQuery("SELECT `avgprice` FROM `catalog_marketplace_data` WHERE `sprite` = '" + SpriteID +
                                   "' LIMIT 1");
-                num = dbClient.getInteger();
+                num = dbClient.GetInteger();
 
                 dbClient.SetQuery("SELECT `sold` FROM `catalog_marketplace_data` WHERE `sprite` = '" + SpriteID +
                                   "' LIMIT 1");
-                num2 = dbClient.getInteger();
+                num2 = dbClient.GetInteger();
             }
 
             MarketAverages.Add(SpriteID, num);

@@ -69,7 +69,7 @@ namespace Oblivion.HabboHotel.Rooms.TraxMachine
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.RunFastQuery("SELECT extradata FROM catalog_items WHERE item_id = '" + baseItem + "' LIMIT 1");
-                extradata = dbClient.getInteger();
+                extradata = dbClient.GetInteger();
                 item.ExtraData = extradata.ToString();
             }
 
@@ -101,7 +101,7 @@ namespace Oblivion.HabboHotel.Rooms.TraxMachine
             {
                 adap.RunQuery("SELECT item_id FROM room_jukebox_songs WHERE user_id = '" + session.GetHabbo().Id +
                               "'");
-                _dataTable = adap.getTable();
+                _dataTable = adap.GetTable();
             }
             foreach (var useritem in (from DataRow row in _dataTable.Rows
                 select Convert.ToInt32(row["item_id"].ToString())

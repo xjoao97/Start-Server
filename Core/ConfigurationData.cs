@@ -67,7 +67,7 @@ namespace Oblivion.Core
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.SetQuery("SELECT * FROM `server_settings`");
-                var ConfigData = dbClient.getTable();
+                var ConfigData = dbClient.GetTable();
 
                 if (ConfigData == null) return;
                 foreach (DataRow Data in ConfigData.Rows)

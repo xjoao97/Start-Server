@@ -24,7 +24,7 @@ namespace Oblivion.HabboHotel.Subscriptions
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.SetQuery("SELECT * FROM `subscriptions`;");
-                var GetSubscriptions = dbClient.getTable();
+                var GetSubscriptions = dbClient.GetTable();
 
                 if (GetSubscriptions != null)
                     foreach (

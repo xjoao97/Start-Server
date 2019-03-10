@@ -19,7 +19,7 @@ namespace Oblivion.HabboHotel.Users.Inventory.Pets
             {
                 dbClient.SetQuery("SELECT `id`,`user_id`,`room_id`,`name`,`x`,`y`,`z` FROM `bots` WHERE `user_id` = '" +
                                   UserId + "' AND `room_id` = '0' AND `ai_type` = 'pet'");
-                var dPets = dbClient.getTable();
+                var dPets = dbClient.GetTable();
 
                 if (dPets == null)
                     foreach (DataRow dRow in dPets.Rows)
@@ -27,7 +27,7 @@ namespace Oblivion.HabboHotel.Users.Inventory.Pets
                         dbClient.SetQuery(
                             "SELECT `type`,`race`,`color`,`experience`,`energy`,`nutrition`,`respect`,`createstamp`,`have_saddle`,`anyone_ride`,`hairdye`,`pethair`,`gnome_clothing` FROM `bots_petdata` WHERE `id` = '" +
                             Convert.ToInt32(dRow["id"]) + "' LIMIT 1");
-                        var mRow = dbClient.getRow();
+                        var mRow = dbClient.GetRow();
 
                         if (mRow != null)
                             P.Add(new Pet(Convert.ToInt32(dRow["id"]), Convert.ToInt32(dRow["user_id"]),

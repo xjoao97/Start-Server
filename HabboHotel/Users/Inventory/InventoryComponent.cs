@@ -55,7 +55,7 @@ namespace Oblivion.HabboHotel.Users.Inventory
                 dbClient.SetQuery(
                     "SELECT `items`.*, COALESCE(`items_groups`.`group_id`, 0) AS `group_id` FROM `items` LEFT OUTER JOIN `items_groups` ON `items`.`id` = `items_groups`.`id` WHERE `items`.`room_id` = 0 AND `items`.`user_id` = @uid;");
                 dbClient.AddParameter("uid", _userId);
-                Items = dbClient.getTable();
+                Items = dbClient.GetTable();
             }
             if (Items == null) return;
             foreach (var item in from DataRow Row in Items.Rows

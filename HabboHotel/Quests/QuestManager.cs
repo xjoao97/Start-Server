@@ -39,7 +39,7 @@ namespace Oblivion.HabboHotel.Quests
             {
                 dbClient.SetQuery(
                     "SELECT `id`,`type`,`level_num`,`goal_type`,`goal_data`,`action`,`pixel_reward`,`data_bit`,`reward_type`,`timestamp_unlock`,`timestamp_lock` FROM `quests`");
-                var dTable = dbClient.getTable();
+                var dTable = dbClient.GetTable();
 
                 if (dTable != null)
                     foreach (DataRow dRow in dTable.Rows)

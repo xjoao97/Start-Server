@@ -311,7 +311,7 @@ namespace Oblivion
             {
                 dbClient.SetQuery("SELECT `username` FROM `users` WHERE id = @id LIMIT 1");
                 dbClient.AddParameter("id", userId);
-                name = dbClient.getString();
+                name = dbClient.GetString();
             }
 
             if (string.IsNullOrEmpty(name))
@@ -358,7 +358,7 @@ namespace Oblivion
                 {
                     dbClient.SetQuery("SELECT `id` FROM `users` WHERE `username` = @user LIMIT 1");
                     dbClient.AddParameter("user", userName);
-                    var id = dbClient.getInteger();
+                    var id = dbClient.GetInteger();
                     if (id > 0)
                         return GetHabboById(Convert.ToInt32(id));
                 }

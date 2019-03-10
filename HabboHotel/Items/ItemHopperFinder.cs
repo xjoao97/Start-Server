@@ -14,7 +14,7 @@ namespace Oblivion.HabboHotel.Items
             {
                 dbClient.SetQuery("SELECT room_id FROM items_hopper WHERE room_id <> @room ORDER BY room_id ASC LIMIT 1");
                 dbClient.AddParameter("room", CurRoom);
-                var RoomId = dbClient.getInteger();
+                var RoomId = dbClient.GetInteger();
                 return RoomId;
             }
         }
@@ -25,7 +25,7 @@ namespace Oblivion.HabboHotel.Items
             {
                 dbClient.SetQuery("SELECT hopper_id FROM items_hopper WHERE room_id = @room LIMIT 1");
                 dbClient.AddParameter("room", NextRoom);
-                var Row = dbClient.getString();
+                var Row = dbClient.GetString();
 
                 return Row == null ? 0 : Convert.ToInt32(Row);
             }

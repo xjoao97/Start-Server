@@ -17,12 +17,12 @@ namespace Oblivion.Communication.Packets.Outgoing.Marketplace
                 dbClient.SetQuery(
                     "SELECT timestamp, state, offer_id, item_type, sprite_id, total_price, limited_number, limited_stack FROM catalog_marketplace_offers WHERE user_id = '" +
                     UserId + "'");
-                var table = dbClient.getTable();
+                var table = dbClient.GetTable();
 
                 dbClient.SetQuery(
                     "SELECT SUM(asking_price) FROM catalog_marketplace_offers WHERE state = '2' AND user_id = '" +
                     UserId + "'");
-                var i = dbClient.getInteger();
+                var i = dbClient.GetInteger();
 
                 WriteInteger(i);
                 if (table != null)

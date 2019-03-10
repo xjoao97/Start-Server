@@ -45,7 +45,7 @@ namespace Oblivion.HabboHotel.Rooms.Polls
             {
                 adap.SetQuery("SELECT * FROM server_polls_questions_answers WHERE question_id = '" + Quest.Id + "'");
 
-                Table1 = adap.getTable();
+                Table1 = adap.GetTable();
             }
 
             return (from DataRow Row in Table1.Rows select new PollAnswerItem(Row, Quest)).ToList();

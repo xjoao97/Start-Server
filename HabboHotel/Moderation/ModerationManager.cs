@@ -70,7 +70,7 @@ namespace Oblivion.HabboHotel.Moderation
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.SetQuery("SELECT * FROM `moderation_presets`;");
-                var presetsTable = dbClient.getTable();
+                var presetsTable = dbClient.GetTable();
 
                 if (presetsTable != null)
                     foreach (DataRow row in presetsTable.Rows)
@@ -92,7 +92,7 @@ namespace Oblivion.HabboHotel.Moderation
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.SetQuery("SELECT * FROM `moderation_preset_action_categories`;");
-                var presetsActionCats = dbClient.getTable();
+                var presetsActionCats = dbClient.GetTable();
 
                 if (presetsActionCats != null)
                     foreach (DataRow row in presetsActionCats.Rows)
@@ -102,7 +102,7 @@ namespace Oblivion.HabboHotel.Moderation
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.SetQuery("SELECT * FROM `moderation_preset_action_messages`;");
-                var presetsActionMessages = dbClient.getTable();
+                var presetsActionMessages = dbClient.GetTable();
 
                 if (presetsActionMessages != null)
                     foreach (DataRow row in presetsActionMessages.Rows)
@@ -126,7 +126,7 @@ namespace Oblivion.HabboHotel.Moderation
             {
                 dbClient.SetQuery(
                     "SELECT `bantype`,`value`,`reason`,`expire` FROM `bans` WHERE `bantype` = 'machine' OR `bantype` = 'user'");
-                var getBans = dbClient.getTable();
+                var getBans = dbClient.GetTable();
 
                 if (getBans != null)
                     foreach (DataRow dRow in getBans.Rows)
@@ -168,7 +168,7 @@ namespace Oblivion.HabboHotel.Moderation
             {
                 dbClient.SetQuery(
                     "SELECT `bantype`,`value`,`reason`,`expire` FROM `bans` WHERE `bantype` = 'machine' OR `bantype` = 'user'");
-                var getBans = dbClient.getTable();
+                var getBans = dbClient.GetTable();
 
                 if (getBans != null)
                     foreach (DataRow dRow in getBans.Rows)
@@ -257,7 +257,7 @@ namespace Oblivion.HabboHotel.Moderation
             {
                 dbClient.SetQuery("SELECT * FROM `bans` WHERE `bantype` = 'machine' AND `value` = @value LIMIT 1");
                 dbClient.AddParameter("value", machineId);
-                var banRow = dbClient.getRow();
+                var banRow = dbClient.GetRow();
 
                 //If there is no more ban record, then we can simply remove it from our cache!
                 if (banRow != null) return true;
@@ -279,7 +279,7 @@ namespace Oblivion.HabboHotel.Moderation
             {
                 dbClient.SetQuery("SELECT * FROM `bans` WHERE `bantype` = 'user' AND `value` = @value LIMIT 1");
                 dbClient.AddParameter("value", username);
-                var banRow = dbClient.getRow();
+                var banRow = dbClient.GetRow();
 
                 //If there is no more ban record, then we can simply remove it from our cache!
                 if (banRow != null) return true;

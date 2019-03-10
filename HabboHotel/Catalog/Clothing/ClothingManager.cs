@@ -28,7 +28,7 @@ namespace Oblivion.HabboHotel.Catalog.Clothing
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.SetQuery("SELECT `id`,`clothing_name`,`clothing_parts` FROM `catalog_clothing`");
-                GetClothing = dbClient.getTable();
+                GetClothing = dbClient.GetTable();
             }
 
             if (GetClothing != null)

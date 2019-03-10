@@ -73,11 +73,11 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.AI.Bots
                 dbClient.SetQuery(
                     "SELECT `ai_type`,`rotation`,`walk_mode`,`automatic_chat`,`speaking_interval`,`mix_sentences`,`chat_bubble` FROM `bots` WHERE `id` = @BotId LIMIT 1");
                 dbClient.AddParameter("BotId", Bot.Id);
-                GetData = dbClient.getRow();
+                GetData = dbClient.GetRow();
 
                 dbClient.SetQuery("SELECT `text` FROM `bots_speech` WHERE `bot_id` = @BotId");
                 dbClient.AddParameter("BotId", Bot.Id);
-                var BotSpeech = dbClient.getTable();
+                var BotSpeech = dbClient.GetTable();
 
                 BotSpeechList.AddRange(from DataRow Speech in BotSpeech.Rows
                     select new RandomSpeech(Convert.ToString(Speech["text"]), Bot.Id));

@@ -45,7 +45,7 @@ namespace Oblivion.HabboHotel.Cache
                 dbClient.SetQuery("SELECT `username`, `motto`, `look` FROM users WHERE id = @id LIMIT 1");
                 dbClient.AddParameter("id", Id);
 
-                var dRow = dbClient.getRow();
+                var dRow = dbClient.GetRow();
 
                 if (dRow != null)
                 {

@@ -20,7 +20,7 @@ namespace Oblivion.HabboHotel.Users.Inventory.Bots
                 dbClient.SetQuery(
                     "SELECT `id`,`user_id`,`name`,`motto`,`look`,`gender`FROM `bots` WHERE `user_id` = '" + UserId +
                     "' AND `room_id` = '0' AND `ai_type` != 'pet'");
-                var dBots = dbClient.getTable();
+                var dBots = dbClient.GetTable();
 
                 if (dBots != null)
                     B.AddRange(from DataRow dRow in dBots.Rows

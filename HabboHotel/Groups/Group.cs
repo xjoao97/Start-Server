@@ -98,7 +98,7 @@ namespace Oblivion.HabboHotel.Groups
                 DataTable GetMembers;
                 dbClient.SetQuery("SELECT `user_id`, `rank`, `has_chat` FROM `group_memberships` WHERE `group_id` = @id");
                 dbClient.AddParameter("id", Id);
-                GetMembers = dbClient.getTable();
+                GetMembers = dbClient.GetTable();
 
                 if (GetMembers != null)
                     foreach (DataRow Row in GetMembers.Rows)
@@ -124,7 +124,7 @@ namespace Oblivion.HabboHotel.Groups
                 DataTable GetRequests;
                 dbClient.SetQuery("SELECT `user_id` FROM `group_requests` WHERE `group_id` = @id");
                 dbClient.AddParameter("id", Id);
-                GetRequests = dbClient.getTable();
+                GetRequests = dbClient.GetTable();
 
                 if (GetRequests == null) return;
                 foreach (var UserId in from DataRow Row in GetRequests.Rows select Convert.ToInt32(Row["user_id"]))

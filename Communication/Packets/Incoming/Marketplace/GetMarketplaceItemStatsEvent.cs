@@ -21,7 +21,7 @@ namespace Oblivion.Communication.Packets.Incoming.Marketplace
             {
                 dbClient.SetQuery("SELECT `avgprice` FROM `catalog_marketplace_data` WHERE `sprite` = @SpriteId LIMIT 1");
                 dbClient.AddParameter("SpriteId", SpriteId);
-                Row = dbClient.getRow();
+                Row = dbClient.GetRow();
             }
 
             Session.SendMessage(new MarketplaceItemStatsComposer(ItemId, SpriteId,

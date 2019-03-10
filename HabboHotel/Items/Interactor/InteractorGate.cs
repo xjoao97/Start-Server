@@ -27,13 +27,12 @@ namespace Oblivion.HabboHotel.Items.Interactor
                 Item.UpdateState(false, true);
             }
 
-            int CurrentMode = 0;
-            int NewMode = 0;
-
-            if (!int.TryParse(Item.ExtraData, out CurrentMode))
+            if (!int.TryParse(Item.ExtraData, out int CurrentMode))
             {
             }
 
+
+            int NewMode = 0;
             if (CurrentMode <= 0)
             {
                 NewMode = 1;
@@ -77,13 +76,12 @@ namespace Oblivion.HabboHotel.Items.Interactor
                 Item.UpdateState(false, true);
             }
 
-            int CurrentMode = 0;
-            int NewMode = 0;
-
-            if (!int.TryParse(Item.ExtraData, out CurrentMode))
+            if (!int.TryParse(Item.ExtraData, out int CurrentMode))
             {
             }
 
+
+            int NewMode = 0;
             if (CurrentMode <= 0)
             {
                 NewMode = 1;

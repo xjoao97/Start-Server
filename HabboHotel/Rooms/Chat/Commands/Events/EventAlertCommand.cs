@@ -35,7 +35,7 @@ namespace Oblivion.HabboHotel.Rooms.Chat.Commands.Events
             {
                 dbClient.SetQuery("SELECT name FROM eventlist WHERE id = @id LIMIT 1");
                 dbClient.AddParameter("id", id);
-                row = dbClient.getRow();
+                row = dbClient.GetRow();
             }
             if (row == null)
             {

@@ -28,7 +28,7 @@ namespace Oblivion.HabboHotel.Items.Data.Moodlight
                 dbClient.SetQuery(
                     "SELECT enabled,current_preset,preset_one,preset_two,preset_three FROM room_items_moodlight WHERE item_id = '" +
                     ItemId + "' LIMIT 1");
-                Row = dbClient.getRow();
+                Row = dbClient.GetRow();
             }
 
             if (Row == null)
@@ -40,7 +40,7 @@ namespace Oblivion.HabboHotel.Items.Data.Moodlight
                     dbClient.SetQuery(
                         "SELECT enabled,current_preset,preset_one,preset_two,preset_three FROM room_items_moodlight WHERE item_id=" +
                         ItemId + " LIMIT 1");
-                    Row = dbClient.getRow();
+                    Row = dbClient.GetRow();
                 }
 
             Enabled = OblivionServer.EnumToBool(Row["enabled"].ToString());

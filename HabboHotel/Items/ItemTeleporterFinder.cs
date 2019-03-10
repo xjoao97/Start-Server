@@ -15,7 +15,7 @@ namespace Oblivion.HabboHotel.Items
             {
                 dbClient.SetQuery("SELECT `tele_two_id` FROM `room_items_tele_links` WHERE `tele_one_id` = '" + TeleId +
                                   "' LIMIT 1");
-                var Row = dbClient.getRow();
+                var Row = dbClient.GetRow();
 
                 if (Row == null)
                     return 0;
@@ -32,7 +32,7 @@ namespace Oblivion.HabboHotel.Items
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.SetQuery("SELECT `room_id` FROM `items` WHERE `id` = " + TeleId + " LIMIT 1");
-                var Row = dbClient.getRow();
+                var Row = dbClient.GetRow();
 
                 if (Row == null)
                     return 0;

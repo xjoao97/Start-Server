@@ -33,7 +33,7 @@ namespace Oblivion.HabboHotel.Catalog.FurniMatic
         {
             Rewards = new List<FurniMaticRewards>();
             dbClient.SetQuery("SELECT display_id, item_id, reward_level FROM ecotron_rewards");
-            var table = dbClient.getTable();
+            var table = dbClient.GetTable();
             if (table == null) return;
             foreach (DataRow row in table.Rows)
                 Rewards.Add(new FurniMaticRewards(Convert.ToInt32(row["display_id"]), Convert.ToInt32(row["item_id"]),

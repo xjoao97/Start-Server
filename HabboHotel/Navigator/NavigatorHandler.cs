@@ -41,7 +41,7 @@ namespace Oblivion.HabboHotel.Navigator
                                     dbClient.SetQuery(
                                         "SELECT r.* FROM rooms r, users u WHERE u.username = @username AND r.owner = u.id AND r.state != 'invisible' ORDER BY r.users_now DESC LIMIT 50;");
                                     dbClient.AddParameter("username", SearchData.Remove(0, 6));
-                                    GetRooms = dbClient.getTable();
+                                    GetRooms = dbClient.GetTable();
                                 }
                             }
 
@@ -92,7 +92,7 @@ namespace Oblivion.HabboHotel.Navigator
                                     dbClient.AddParameter("query", "%" + SearchData.Split(new[] {':'}, 2)[1] + "%");
                                 else
                                     dbClient.AddParameter("query", "%" + SearchData + "%");
-                                Table = dbClient.getTable();
+                                Table = dbClient.GetTable();
                             }
 
                             var Results = new List<RoomData>();
@@ -245,7 +245,7 @@ namespace Oblivion.HabboHotel.Navigator
                             "SELECT `room_id` FROM `room_rights` WHERE `user_id` = @UserId LIMIT @FetchLimit");
                         dbClient.AddParameter("UserId", Session.GetHabbo().Id);
                         dbClient.AddParameter("FetchLimit", FetchLimit);
-                        var GetRights = dbClient.getTable();
+                        var GetRights = dbClient.GetTable();
 
                         foreach (var Data in from DataRow Row in GetRights.Rows
                             select

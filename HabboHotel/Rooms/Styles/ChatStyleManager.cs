@@ -27,7 +27,7 @@ namespace Oblivion.HabboHotel.Rooms.Chat.Styles
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.SetQuery("SELECT * FROM `room_chat_styles`;");
-                var Table = dbClient.getTable();
+                var Table = dbClient.GetTable();
 
                 if (Table != null)
                     foreach (DataRow Row in Table.Rows)

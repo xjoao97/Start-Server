@@ -19,7 +19,7 @@ namespace Oblivion.Communication.Packets.Outgoing.Moderation
                 dbClient.SetQuery(
                     "SELECT room_id,entry_timestamp,exit_timestamp FROM user_roomvisits WHERE `user_id` = " + UserId +
                     " ORDER BY entry_timestamp DESC LIMIT 5");
-                var Visits = dbClient.getTable();
+                var Visits = dbClient.GetTable();
 
                 if (Visits != null)
                 {
@@ -50,7 +50,7 @@ namespace Oblivion.Communication.Packets.Outgoing.Moderation
                         dbClient.SetQuery(
                             "SELECT user_id,DATE_FORMAT(from_unixtime(timestamp),'%k:%i'),message FROM `chatlogs` WHERE room_id = " +
                             Convert.ToInt32(Visit["room_id"]) + "  ORDER BY id DESC LIMIT 150");
-                        Chatlogs = dbClient.getTable();
+                        Chatlogs = dbClient.GetTable();
 
                         if (Chatlogs != null)
                         {

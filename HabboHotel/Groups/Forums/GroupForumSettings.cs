@@ -27,7 +27,7 @@ namespace Oblivion.HabboHotel.Groups.Forums
                     adap.SetQuery(
                         "SELECT who_can_read,who_can_post,who_can_init_discussions,who_can_mod FROM group_forums_settings WHERE group_id = @id");
                     adap.AddParameter("id", Forum.Id);
-                    Row = adap.getRow();
+                    Row = adap.GetRow();
                 }
 
                 if (Row == null)
@@ -36,7 +36,7 @@ namespace Oblivion.HabboHotel.Groups.Forums
                         adap.SetQuery(
                             "REPLACE INTO group_forums_settings (group_id) VALUES (@id);SELECT * FROM group_forums_settings WHERE group_id = @id");
                         adap.AddParameter("id", Forum.Id);
-                        Row = adap.getRow();
+                        Row = adap.GetRow();
                     }
 
                 WhoCanRead = Convert.ToInt32(Row["who_can_read"]);

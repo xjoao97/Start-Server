@@ -25,7 +25,7 @@ namespace Oblivion.HabboHotel.Items.Data.Toner
             {
                 dbClient.SetQuery("SELECT enabled,data1,data2,data3 FROM room_items_toner WHERE id=" + ItemId +
                                   " LIMIT 1");
-                Row = dbClient.getRow();
+                Row = dbClient.GetRow();
             }
 
             if (Row == null)
@@ -34,7 +34,7 @@ namespace Oblivion.HabboHotel.Items.Data.Toner
                     dbClient.RunFastQuery("INSERT INTO `room_items_toner` VALUES (" + ItemId + ",'0',0,0,0)");
                     dbClient.SetQuery("SELECT enabled,data1,data2,data3 FROM room_items_toner WHERE id=" + ItemId +
                                       " LIMIT 1");
-                    Row = dbClient.getRow();
+                    Row = dbClient.GetRow();
                 }
 
             Enabled = int.Parse(Row[0].ToString());

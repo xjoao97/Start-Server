@@ -34,7 +34,7 @@ namespace Oblivion.Communication.Packets.Incoming.Catalog
                 dbClient.SetQuery("SELECT * FROM `user_vouchers` WHERE `user_id` = '" + Session.GetHabbo().Id +
                                   "' AND `voucher` = @Voucher LIMIT 1");
                 dbClient.AddParameter("Voucher", VoucherCode);
-                GetRow = dbClient.getRow();
+                GetRow = dbClient.GetRow();
             }
 
             if (GetRow != null)

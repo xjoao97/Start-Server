@@ -95,7 +95,7 @@ namespace Oblivion.HabboHotel.Rooms.Polls
             using (var adap = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 adap.SetQuery("SELECT * FROM server_polls_questions WHERE poll_id = '" + Poll.Id + "'");
-                Table1 = adap.getTable();
+                Table1 = adap.GetTable();
             }
 
             var list = new List<PollQuestion>();

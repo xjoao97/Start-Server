@@ -21,14 +21,13 @@ namespace Oblivion.Communication.Packets.Incoming.GameCenter
 
             var gameId = packet.PopInt();
 
-            GameData gameData;
-            if (!OblivionServer.GetGame().GetGameDataManager().TryGetGame(gameId, out gameData)) return;
+            if (!OblivionServer.GetGame().GetGameDataManager().TryGetGame(gameId, out GameData gameData)) return;
             session.SendMessage(new JoinQueueComposer(gameData.GameId));
             var habboId = session.GetHabbo().Id;
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.SetQuery("SELECT user_id FROM user_auth_food WHERE user_id = '" + habboId + "'");
-                var data = dbClient.getTable();
+                var data = dbClient.GetTable();
                 var count = data.Rows.Cast<DataRow>().Count(row => Convert.ToInt32(row["user_id"]) == habboId);
                 if (count == 0)
                 {
@@ -41,7 +40,7 @@ namespace Oblivion.Communication.Packets.Incoming.GameCenter
                 else
                 {
                     dbClient.SetQuery("SELECT user_id,auth_ticket FROM user_auth_food WHERE user_id = " + habboId);
-                    data = dbClient.getTable();
+                    data = dbClient.GetTable();
                     foreach (var ssoTicket in from DataRow dRow in data.Rows select dRow["auth_ticket"])
                         session.SendMessage(new LoadGameComposer(gameData, (string) ssoTicket));
                 }

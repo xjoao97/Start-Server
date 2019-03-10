@@ -62,7 +62,7 @@ namespace Oblivion.HabboHotel.Catalog
 
                 dbClient.SetQuery(
                     "SELECT `id`,`item_id`,`catalog_name`,`cost_credits`,`cost_pixels`,`cost_diamonds`, `cost_gotw`,`amount`,`page_id`,`limited_sells`,`limited_stack`,`offer_active`,`extradata`,`badge`,`offer_id` FROM `catalog_items`");
-                var CatalogueItems = dbClient.getTable();
+                var CatalogueItems = dbClient.GetTable();
 
                 if (CatalogueItems != null)
                     foreach (DataRow Row in CatalogueItems.Rows)
@@ -102,7 +102,7 @@ namespace Oblivion.HabboHotel.Catalog
                     }
 
                 dbClient.SetQuery("SELECT id,page_id,items,name,cost_credits,cost_pixels FROM `catalog_deals`");
-                var GetDeals = dbClient.getTable();
+                var GetDeals = dbClient.GetTable();
 
                 if (GetDeals != null)
                     foreach (DataRow Row in GetDeals.Rows)
@@ -124,7 +124,7 @@ namespace Oblivion.HabboHotel.Catalog
 
                 dbClient.SetQuery(
                     "SELECT `id`,`parent_id`,`caption`,`page_link`,`visible`,`enabled`,`min_rank`,`min_vip`,`icon_image`,`page_layout`,`page_strings_1`,`page_strings_2` FROM `catalog_pages` ORDER BY `order_num`");
-                var CatalogOblivionServer = dbClient.getTable();
+                var CatalogOblivionServer = dbClient.GetTable();
 
                 if (CatalogOblivionServer != null)
                     foreach (DataRow Row in CatalogOblivionServer.Rows)
@@ -144,7 +144,7 @@ namespace Oblivion.HabboHotel.Catalog
 
                 dbClient.SetQuery(
                     "SELECT `id`,`name`,`figure`,`motto`,`gender`,`ai_type` FROM `catalog_bot_presets`");
-                var bots = dbClient.getTable();
+                var bots = dbClient.GetTable();
 
                 if (bots != null)
                     foreach (DataRow Row in bots.Rows)

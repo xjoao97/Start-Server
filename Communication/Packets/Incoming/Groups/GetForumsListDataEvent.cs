@@ -51,7 +51,7 @@ namespace Oblivion.Communication.Packets.Incoming.Groups
                         adap.AddParameter("index", int2);
                         adap.AddParameter("now", (int) OblivionServer.GetUnixTimestamp());
                         adap.AddParameter("sdays", 60 * 60 * 24 * 7);
-                        table = adap.getTable();
+                        table = adap.GetTable();
                     }
 
 
@@ -75,7 +75,7 @@ namespace Oblivion.Communication.Packets.Incoming.Groups
                         adap.AddParameter("now", (int) OblivionServer.GetUnixTimestamp());
                         adap.AddParameter("sdays", 60 * 60 * 24 * 7);
 
-                        table = adap.getTable();
+                        table = adap.GetTable();
                     }
 
 

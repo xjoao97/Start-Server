@@ -137,15 +137,13 @@ namespace Oblivion.HabboHotel.Rooms
 
             if (User.IsPet)
             {
-                RoomUser PetRemoval;
-                _pets.TryRemove(User.PetData.PetId, out PetRemoval);
+                _pets.TryRemove(User.PetData.PetId, out RoomUser PetRemoval);
                 PetCount--;
             }
             else
             {
-                RoomUser BotRemoval;
 
-                _bots.TryRemove(User.BotData.Id, out BotRemoval);
+                _bots.TryRemove(User.BotData.Id, out RoomUser BotRemoval);
             }
 
 
@@ -153,10 +151,9 @@ namespace Oblivion.HabboHotel.Rooms
 
             _room.SendMessage(new UserRemoveComposer(User.VirtualId));
 
-            RoomUser toRemove;
 
             if (_users != null)
-                _users.TryRemove(User.InternalRoomID, out toRemove);
+                _users.TryRemove(User.InternalRoomID, out RoomUser toRemove);
             onRemove(User);
         }
 
@@ -431,8 +428,7 @@ namespace Oblivion.HabboHotel.Rooms
                 _room.GetGameMap().GameMap[user.X, user.Y] = user.SqState;
 
 
-            RoomUser toRemove;
-            if (_users.TryRemove(user.InternalRoomID, out toRemove))
+            if (_users.TryRemove(user.InternalRoomID, out RoomUser toRemove))
             {
                 _room.GetGameMap().RemoveUserFromMap(user, new Point(user.X, user.Y));
                 _room.SendMessage(new UserRemoveComposer(user.VirtualId));
@@ -485,8 +481,7 @@ namespace Oblivion.HabboHotel.Rooms
 
         public RoomUser GetRoomUserByVirtualId(int VirtualId)
         {
-            RoomUser User;
-            return !_users.TryGetValue(VirtualId, out User) ? null : User;
+            return !_users.TryGetValue(VirtualId, out RoomUser User) ? null : User;
         }
 
         public ConcurrentDictionary<int, RoomUser> GetUsers() => _users;
@@ -731,11 +726,10 @@ namespace Oblivion.HabboHotel.Rooms
                                 continue;
                             }
 
-//                            var Items = _room.GetGameMap().GetCoordinatedItems(new Point(User.X, User.Y));
-//                            foreach (var Item in Items.ToList())
-//                                Item.UserWalksOnFurni(User);
-                            Item iitem;
-                            if (_room.GetGameMap().GetHighestItemForSquare(new Point(User.X, User.Y), out iitem))
+                            //                            var Items = _room.GetGameMap().GetCoordinatedItems(new Point(User.X, User.Y));
+                            //                            foreach (var Item in Items.ToList())
+                            //                                Item.UserWalksOnFurni(User);
+                            if (_room.GetGameMap().GetHighestItemForSquare(new Point(User.X, User.Y), out Item iitem))
                                 iitem.UserWalksOnFurni(User);
                             UpdateUserStatus(User, true);
                         }
@@ -1260,15 +1254,14 @@ namespace Oblivion.HabboHotel.Rooms
                                 if (User?.GetClient() == null || User.GetClient().GetHabbo() == null)
                                     continue;
 
-                                Room Room;
 
-                                if (
-                                    !OblivionServer.GetGame()
-                                        .GetRoomManager()
-                                        .TryGetRoom(User.GetClient().GetHabbo().CurrentRoomId, out Room))
-                                    return;
+                                    if (
+                                        !OblivionServer.GetGame()
+                                            .GetRoomManager()
+                                            .TryGetRoom(User.GetClient().GetHabbo().CurrentRoomId, out Room Room))
+                                        return;
 
-                                if (!ItemTeleporterFinder.IsTeleLinked(Item.Id, Room))
+                                    if (!ItemTeleporterFinder.IsTeleLinked(Item.Id, Room))
                                 {
                                     User.UnlockWalking();
                                 }

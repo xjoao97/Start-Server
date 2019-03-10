@@ -39,7 +39,7 @@ namespace Oblivion.HabboHotel.Rooms.Chat.Commands.Moderator
                 {
                     adapter.SetQuery("SELECT id,username FROM users WHERE ip_last = @ip OR ip_reg = @ip");
                     adapter.AddParameter("ip", str2);
-                    table = adapter.getTable();
+                    table = adapter.GetTable();
                     builder.AppendLine("Clones encontrados: " + table.Rows.Count);
                     foreach (DataRow row in table.Rows)
                         builder.AppendLine(string.Concat("Id : ", row["id"], " - Username: ", row["username"]));
@@ -52,11 +52,11 @@ namespace Oblivion.HabboHotel.Rooms.Chat.Commands.Moderator
                 {
                     adapter.SetQuery("SELECT ip_last FROM users WHERE username = @username");
                     adapter.AddParameter("username", username);
-                    str2 = adapter.getString();
+                    str2 = adapter.GetString();
                     builder.AppendLine("Username :  " + username + " - Ip : " + str2);
                     adapter.SetQuery("SELECT id,username FROM users WHERE ip_last = @ip OR ip_reg = @ip");
                     adapter.AddParameter("ip", str2);
-                    table = adapter.getTable();
+                    table = adapter.GetTable();
                     builder.AppendLine("Clones encontrados: " + table.Rows.Count);
                     foreach (DataRow row in table.Rows)
                         builder.AppendLine(string.Concat("Id : ", row["id"], " - Username: ", row["username"]));

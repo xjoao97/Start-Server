@@ -43,7 +43,7 @@ namespace Oblivion.HabboHotel.Groups.Forums
             {
                 adap.SetQuery("SELECT * FROM group_forums_threads WHERE forum_id = @id ORDER BY id DESC");
                 adap.AddParameter("id", Id);
-                table = adap.getTable();
+                table = adap.GetTable();
             }
 
             foreach (DataRow Row in table.Rows)

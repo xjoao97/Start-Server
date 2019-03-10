@@ -24,7 +24,7 @@ namespace Oblivion.HabboHotel.Rooms.Chat.Pets.Locale
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.SetQuery("SELECT * FROM `bots_pet_responses`");
-                var Pets = dbClient.getTable();
+                var Pets = dbClient.GetTable();
 
                 if (Pets != null)
                     foreach (DataRow Row in Pets.Rows)

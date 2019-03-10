@@ -29,7 +29,7 @@ namespace Oblivion.HabboHotel.Catalog.Utilities
                 dbClient.SetQuery(
                     "SELECT `id`,`user_id`,`name`,`motto`,`look`,`gender` FROM `bots` WHERE `user_id` = '" + OwnerId +
                     "' AND `id` = '" + Id + "' LIMIT 1");
-                botData = dbClient.getRow();
+                botData = dbClient.GetRow();
             }
 
             return new Bot(Convert.ToInt32(botData["id"]), Convert.ToInt32(botData["user_id"]),

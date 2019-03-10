@@ -32,7 +32,7 @@ namespace Oblivion.HabboHotel.Items
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.SetQuery("SELECT * FROM `furniture`");
-                var ItemData = dbClient.getTable();
+                var ItemData = dbClient.GetTable();
                 if (ItemData == null)
                     return;
 

@@ -28,7 +28,7 @@ namespace Oblivion.HabboHotel.Rooms.Chat.Commands.User
                 {
                     dbClient.SetQuery("SELECT `id` FROM `items` WHERE `user_id` = '" + session.GetHabbo().Id +
                                       "' AND (`room_id`=  '0' OR `room_id` = '')");
-                    table = dbClient.getTable();
+                    table = dbClient.GetTable();
                 }
 
                 if (table == null)

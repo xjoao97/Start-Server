@@ -48,7 +48,7 @@ namespace Oblivion.Communication.Packets.Incoming.Users
             {
                 dbClient.SetQuery("SELECT COUNT(0) FROM `users` WHERE `username` = @name LIMIT 1");
                 dbClient.AddParameter("name", NewName);
-                InUse = dbClient.getInteger() == 1;
+                InUse = dbClient.GetInteger() == 1;
             }
 
             var Letters = NewName.ToLower().ToCharArray();

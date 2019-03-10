@@ -38,7 +38,7 @@ namespace Oblivion.HabboHotel.LandingView
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.SetQuery("SELECT id,epoints FROM `users` WHERE rank < 3 ORDER BY `epoints` DESC LIMIT 5");
-                var GetData = dbClient.getTable();
+                var GetData = dbClient.GetTable();
 
                 if (GetData != null)
                     foreach (DataRow Row in GetData.Rows)
@@ -59,7 +59,7 @@ namespace Oblivion.HabboHotel.LandingView
                 dbClient.AddParameter("eventName", eventName);
                 dbClient.AddParameter("dayId", eventDate);
 
-                var row = dbClient.getRow();
+                var row = dbClient.GetRow();
                 ItemData itemData = OblivionServer.GetGame().GetItemManager().GetItembyName((string)row?["item_id"]);
 
                 if (row?["item_id"] != null && itemData != null)
@@ -78,7 +78,7 @@ namespace Oblivion.HabboHotel.LandingView
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.SetQuery("SELECT * FROM `server_landing` ORDER BY `id` DESC");
-                var GetData = dbClient.getTable();
+                var GetData = dbClient.GetTable();
 
                 if (GetData != null)
                     foreach (DataRow Row in GetData.Rows)

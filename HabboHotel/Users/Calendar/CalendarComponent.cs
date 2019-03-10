@@ -40,7 +40,7 @@ namespace Oblivion.HabboHotel.Users.Calendar
             {
                 dbClient.SetQuery("SELECT status,day FROM `user_xmas15_calendar` WHERE `user_id` = @id;");
                 dbClient.AddParameter("id", Player.Id);
-                var GetData = dbClient.getTable();
+                var GetData = dbClient.GetTable();
 
                 if (GetData != null)
                     foreach (DataRow Row in GetData.Rows)

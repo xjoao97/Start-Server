@@ -19,7 +19,7 @@ namespace Oblivion.HabboHotel.Achievements
             {
                 dbClient.SetQuery(
                     "SELECT `id`,`category`,`group_name`,`level`,`reward_pixels`,`reward_points`,`progress_needed`,`game_id` FROM `achievements`");
-                var dTable = dbClient.getTable();
+                var dTable = dbClient.GetTable();
 
                 if (dTable != null)
                     foreach (DataRow dRow in dTable.Rows)

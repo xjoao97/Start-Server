@@ -39,7 +39,7 @@ namespace Oblivion.HabboHotel.Rooms.AI.Types
                 {
                     query.SetQuery("SELECT username FROM room_visits WHERE roomid = @id");
                     query.AddParameter("id", User.RoomId);
-                    getUsername = query.getTable();
+                    getUsername = query.GetTable();
                 }
 
                 foreach (DataRow Row in getUsername.Rows)
@@ -82,7 +82,7 @@ namespace Oblivion.HabboHotel.Rooms.AI.Types
                 {
                     query.SetQuery("DELETE FROM room_visits WHERE roomid = @id");
                     query.AddParameter("id", Client.GetHabbo().CurrentRoom.RoomId);
-                    getRoom = query.getTable();
+                    getRoom = query.GetTable();
                 }
             }
             DataTable getUpdate;
@@ -93,7 +93,7 @@ namespace Oblivion.HabboHotel.Rooms.AI.Types
                 query.AddParameter("gone", "se ha ido");
                 query.AddParameter("id", Client.GetHabbo().CurrentRoom.RoomId);
                 query.AddParameter("username", Client.GetHabbo().Username);
-                getUpdate = query.getTable();
+                getUpdate = query.GetTable();
             }
         }
 
@@ -120,7 +120,7 @@ namespace Oblivion.HabboHotel.Rooms.AI.Types
                         {
                             query.SetQuery("SELECT username, gone FROM room_visits WHERE roomid = @id");
                             query.AddParameter("id", User.RoomId);
-                            getRoomVisit = query.getTable();
+                            getRoomVisit = query.GetTable();
                         }
 
                         foreach (DataRow Row in getRoomVisit.Rows)
@@ -134,7 +134,7 @@ namespace Oblivion.HabboHotel.Rooms.AI.Types
                         {
                             query.SetQuery("DELETE FROM room_visits WHERE roomid = @id");
                             query.AddParameter("id", User.RoomId);
-                            getRoomVisit = query.getTable();
+                            getRoomVisit = query.GetTable();
                         }
                     }
                     break;

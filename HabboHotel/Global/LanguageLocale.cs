@@ -29,7 +29,7 @@ namespace Oblivion.HabboHotel.Global
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.SetQuery("SELECT * FROM `server_locale`");
-                var Table = dbClient.getTable();
+                var Table = dbClient.GetTable();
 
                 if (Table != null)
                     foreach (DataRow Row in Table.Rows)

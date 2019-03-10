@@ -36,7 +36,7 @@ namespace Oblivion.HabboHotel.Users.Clothing
             {
                 dbClient.SetQuery("SELECT `id`,`part_id`,`part` FROM `user_clothing` WHERE `user_id` = @id;");
                 dbClient.AddParameter("id", Habbo.Id);
-                var GetClothing = dbClient.getTable();
+                var GetClothing = dbClient.GetTable();
 
                 if (GetClothing != null)
                     foreach (DataRow Row in GetClothing.Rows)

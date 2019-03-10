@@ -54,7 +54,7 @@ namespace Oblivion.Communication.Packets.Incoming.Marketplace
                 dbClient.AddParameter("search_query", "%" + SearchQuery + "%");
                 if (SearchQuery.Length >= 1)
                     builder.Append(" AND public_name LIKE @search_query");
-                table = dbClient.getTable();
+                table = dbClient.GetTable();
             }
 
             OblivionServer.GetGame().GetCatalog().GetMarketplace().MarketItems.Clear();

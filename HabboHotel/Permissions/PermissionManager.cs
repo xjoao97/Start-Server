@@ -34,7 +34,7 @@ namespace Oblivion.HabboHotel.Permissions
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.SetQuery("SELECT * FROM `permissions`");
-                var GetPermissions = dbClient.getTable();
+                var GetPermissions = dbClient.GetTable();
 
                 if (GetPermissions != null)
                     foreach (DataRow Row in GetPermissions.Rows)
@@ -46,7 +46,7 @@ namespace Oblivion.HabboHotel.Permissions
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.SetQuery("SELECT * FROM `permissions_commands`");
-                var GetCommands = dbClient.getTable();
+                var GetCommands = dbClient.GetTable();
 
                 if (GetCommands != null)
                     foreach (DataRow Row in GetCommands.Rows)
@@ -57,7 +57,7 @@ namespace Oblivion.HabboHotel.Permissions
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.SetQuery("SELECT * FROM `permissions_groups`");
-                var GetPermissionGroups = dbClient.getTable();
+                var GetPermissionGroups = dbClient.GetTable();
 
                 if (GetPermissionGroups != null)
                     foreach (DataRow Row in GetPermissionGroups.Rows)
@@ -69,7 +69,7 @@ namespace Oblivion.HabboHotel.Permissions
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.SetQuery("SELECT * FROM `permissions_rights`");
-                var GetPermissionRights = dbClient.getTable();
+                var GetPermissionRights = dbClient.GetTable();
 
                 if (GetPermissionRights != null)
                     foreach (DataRow Row in GetPermissionRights.Rows)

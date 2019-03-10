@@ -55,7 +55,7 @@ namespace Oblivion.HabboHotel.Groups.Forums
             {
                 adap.SetQuery("SELECT * FROM group_forums_thread_posts WHERE thread_id = @id");
                 adap.AddParameter("id", Id);
-                table = adap.getTable();
+                table = adap.GetTable();
             }
 
             foreach (DataRow Row in table.Rows)
@@ -67,7 +67,7 @@ namespace Oblivion.HabboHotel.Groups.Forums
             {
                 Adap.SetQuery("SELECT * FROM group_forums_thread_views WHERE thread_id = @id");
                 Adap.AddParameter("id", Id);
-                table = Adap.getTable();
+                table = Adap.GetTable();
             }
 
 

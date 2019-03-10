@@ -39,7 +39,7 @@ namespace Oblivion.HabboHotel.Groups
             {
                 dbClient.SetQuery("SELECT * FROM `groups` WHERE `id` = @id LIMIT 1");
                 dbClient.AddParameter("id", Id);
-                var Row = dbClient.getRow();
+                var Row = dbClient.GetRow();
 
                 if (Row == null) return null;
                var Group = new Group(
@@ -68,7 +68,7 @@ namespace Oblivion.HabboHotel.Groups
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.SetQuery("SELECT * FROM groups_items WHERE enabled='1'");
-                var dItems = dbClient.getTable();
+                var dItems = dbClient.GetTable();
 
                 foreach (DataRow dRow in dItems.Rows)
                     switch (dRow[0].ToString())
@@ -207,7 +207,7 @@ namespace Oblivion.HabboHotel.Groups
                 dbClient.SetQuery(
                     "SELECT g.id FROM `group_memberships` AS m RIGHT JOIN `groups` AS g ON m.group_id = g.id WHERE m.user_id = @user");
                 dbClient.AddParameter("user", UserId);
-                var GetGroups = dbClient.getTable();
+                var GetGroups = dbClient.GetTable();
 
                 if (GetGroups != null)
                     foreach (DataRow Row in GetGroups.Rows)

@@ -18,7 +18,7 @@ namespace Oblivion.Communication.Packets.Outgoing.Avatar
             {
                 dbClient.SetQuery("SELECT `slot_id`,`look`,`gender` FROM `user_wardrobe` WHERE `user_id` = '" +
                                   Session.GetHabbo().Id + "'");
-                var WardrobeData = dbClient.getTable();
+                var WardrobeData = dbClient.GetTable();
 
                 if (WardrobeData == null)
                 {

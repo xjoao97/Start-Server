@@ -126,7 +126,7 @@ namespace Oblivion.HabboHotel.Rooms.Chat.Commands.User
                     Adapter.SetQuery("SELECT id FROM groups WHERE room_id = @roomid");
                     Adapter.AddParameter("roomid", RoomForSale.RoomData.Id);
 
-                    var GroupId = Adapter.getInteger();
+                    var GroupId = Adapter.GetInteger();
 
                     if (GroupId > 0)
                     {

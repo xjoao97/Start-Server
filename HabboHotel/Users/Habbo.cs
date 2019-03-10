@@ -227,7 +227,7 @@ namespace Oblivion.HabboHotel.Users
                 dbClient.SetQuery(
                     "SELECT `id`,`roomvisits`,`onlinetime`,`respect`,`respectgiven`,`giftsgiven`,`giftsreceived`,`dailyrespectpoints`,`dailypetrespectpoints`,`achievementscore`,`quest_id`,`quest_progress`,`groupid`,`tickets_answered`,`respectstimestamp`,`forum_posts`, `calendar_gifts` FROM `user_stats` WHERE `id` = @user_id LIMIT 1");
                 dbClient.AddParameter("user_id", Id);
-                var StatRow = dbClient.getRow();
+                var StatRow = dbClient.GetRow();
 
                 if (StatRow == null) //No row, add it yo
                 {
@@ -235,7 +235,7 @@ namespace Oblivion.HabboHotel.Users
                     dbClient.SetQuery(
                         "SELECT `id`,`roomvisits`,`onlinetime`,`respect`,`respectgiven`,`giftsgiven`,`giftsreceived`,`dailyrespectpoints`,`dailypetrespectpoints`,`achievementscore`,`quest_id`,`quest_progress`,`groupid`,`tickets_answered`,`respectstimestamp`,`forum_posts`, `calendar_gifts` FROM `user_stats` WHERE `id` = @user_id LIMIT 1");
                     dbClient.AddParameter("user_id", Id);
-                    StatRow = dbClient.getRow();
+                    StatRow = dbClient.GetRow();
                 }
 
                 try

@@ -143,7 +143,7 @@ namespace Oblivion.Communication.Packets.Incoming.Rooms.AI.Bots
                         dbClient.SetQuery("SELECT `text` FROM `bots_speech` WHERE `bot_id` = @id");
                         dbClient.AddParameter("id", BotId);
 
-                        var BotSpeech = dbClient.getTable();
+                        var BotSpeech = dbClient.GetTable();
 
                         var Speeches = new List<RandomSpeech>();
                         foreach (DataRow Speech in BotSpeech.Rows)

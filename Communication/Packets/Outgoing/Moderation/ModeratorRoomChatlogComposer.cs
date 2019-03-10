@@ -28,7 +28,7 @@ namespace Oblivion.Communication.Packets.Outgoing.Moderation
                 dbClient.SetQuery(
                     "SELECT id,user_id,room_id, message,DATE_FORMAT(from_unixtime(timestamp),'%k:%i') FROM `chatlogs` WHERE `room_id` = @rid ORDER BY `id` DESC LIMIT 250");
                 dbClient.AddParameter("rid", Room.Id);
-                Table = dbClient.getTable();
+                Table = dbClient.GetTable();
             }
 
             WriteShort(Table.Rows.Count);

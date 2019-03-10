@@ -1218,11 +1218,10 @@ namespace Oblivion.HabboHotel.Rooms
             var Coord = new Point(pX, pY);
 
             var Items = new List<Item>();
-            List<int> Ids;
 
             // CHANGED THIS ~  IF FAILED CHANGE BACK
 
-            Items = mCoordinatedItems.TryGetValue(Coord, out Ids) ? GetItemsFromIds(Ids) : new List<Item>();
+            Items = mCoordinatedItems.TryGetValue(Coord, out List<int> Ids) ? GetItemsFromIds(Ids) : new List<Item>();
 
             return Items;
         }

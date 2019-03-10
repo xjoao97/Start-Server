@@ -43,7 +43,7 @@ namespace Oblivion.HabboHotel.Users.UserDataManagement
                     "SELECT users.id,users.username,users.auth_ticket,users.rank,users.motto,users.look,users.gender,users.last_online,users.credits,users.activity_points,users.home_room,users.block_newfriends,users.hide_online,users.hide_inroom,users.vip,users.account_created,users.vip_points,users.epoints,users.machine_id,users.nux_user,users.volume,users.chat_preference,users.focus_preference,users.pets_muted,users.bots_muted,users.advertising_report_blocked,users.last_change,users.gotw_points,users.ignore_invites,users.time_muted,users.allow_gifts,users.friend_bar_state,users.disable_forced_effects,users.allow_mimic,users.disabled_alert,users.prefix_name,users.prefix_color,users.name_color  " +
                     "FROM users WHERE auth_ticket = @sso LIMIT 1");
                 dbClient.AddParameter("sso", SessionTicket);
-                dUserInfo = dbClient.getRow();
+                dUserInfo = dbClient.GetRow();
 
                 if (dUserInfo == null || string.IsNullOrEmpty(SessionTicket))
                 {
@@ -62,16 +62,16 @@ namespace Oblivion.HabboHotel.Users.UserDataManagement
 
                 dbClient.SetQuery("SELECT `group`,`level`,`progress` FROM `user_achievements` WHERE `userid` = '" +
                                   UserId + "'");
-                dAchievements = dbClient.getTable();
+                dAchievements = dbClient.GetTable();
 
                 dbClient.SetQuery("SELECT room_id FROM user_favorites WHERE `user_id` = '" + UserId + "'");
-                dFavouriteRooms = dbClient.getTable();
+                dFavouriteRooms = dbClient.GetTable();
 
                 dbClient.SetQuery("SELECT ignore_id FROM user_ignores WHERE `user_id` = '" + UserId + "'");
-                dIgnores = dbClient.getTable();
+                dIgnores = dbClient.GetTable();
 
                 dbClient.SetQuery("SELECT `badge_id`,`badge_slot` FROM user_badges WHERE `user_id` = '" + UserId + "'");
-                dBadges = dbClient.getTable();
+                dBadges = dbClient.GetTable();
 
                 //    dbClient.SetQuery(
                 //       "SELECT `effect_id`,`total_duration`,`is_activated`,`activated_stamp` FROM user_effects WHERE `user_id` = '" +
@@ -90,39 +90,39 @@ namespace Oblivion.HabboHotel.Users.UserDataManagement
                     "JOIN messenger_friendships " +
                     "ON users.id = messenger_friendships.user_two_id " +
                     "WHERE messenger_friendships.user_one_id = " + UserId);
-                dFriends = dbClient.getTable();
+                dFriends = dbClient.GetTable();
 
                 dbClient.SetQuery(
                     "SELECT messenger_requests.from_id,messenger_requests.to_id,users.username FROM users JOIN messenger_requests ON users.id = messenger_requests.from_id WHERE messenger_requests.to_id = " +
                     UserId);
-                dRequests = dbClient.getTable();
+                dRequests = dbClient.GetTable();
 
                 dbClient.SetQuery("SELECT * FROM rooms WHERE `owner` = '" + UserId + "' LIMIT 150");
-                dRooms = dbClient.getTable();
+                dRooms = dbClient.GetTable();
 
                 dbClient.SetQuery("SELECT `quest_id`,`progress` FROM user_quests WHERE `user_id` = '" + UserId + "'");
-                dQuests = dbClient.getTable();
+                dQuests = dbClient.GetTable();
 
                 dbClient.SetQuery(string.Format("SELECT `tag` FROM `user_tags` WHERE `user_id` = {0}", UserId));
-                tagsTable = dbClient.getTable();
+                tagsTable = dbClient.GetTable();
 
                 dbClient.SetQuery(
                     "SELECT `id`,`user_id`,`target`,`type` FROM `user_relationships` WHERE `user_id` = '" + UserId + "'");
-                dRelations = dbClient.getTable();
+                dRelations = dbClient.GetTable();
 
                 dbClient.SetQuery("SELECT * FROM `user_info` WHERE `user_id` = '" + UserId + "' LIMIT 1");
-                userInfo = dbClient.getRow();
+                userInfo = dbClient.GetRow();
                 if (userInfo == null)
                 {
                     dbClient.RunFastQuery("INSERT INTO `user_info` (`user_id`) VALUES ('" + UserId + "')");
 
                     dbClient.SetQuery("SELECT * FROM `user_info` WHERE `user_id` = '" + UserId + "' LIMIT 1");
-                    userInfo = dbClient.getRow();
+                    userInfo = dbClient.GetRow();
                 }
 
 
                 dbClient.SetQuery("SELECT command_name FROM user_blockcmd WHERE user_id = '" + UserId + "'");
-                dBlockedCommands = dbClient.getTable();
+                dBlockedCommands = dbClient.GetTable();
 
                 dbClient.RunFastQuery("UPDATE `users` SET `online` = '1', `auth_ticket` = '' WHERE `id` = '" + UserId + "' LIMIT 1");
                 //                dbClient.RunQuery("DELETE FROM `user_auth_ticket` WHERE `user_id` = '" + UserId + "'");
@@ -244,7 +244,7 @@ namespace Oblivion.HabboHotel.Users.UserDataManagement
                 dbClient.SetQuery(
                      "SELECT `id`,`username`,`rank`,`motto`,`look`,`gender`,`last_online`,`credits`,`activity_points`,`home_room`,`block_newfriends`,`hide_online`,`hide_inroom`,`vip`,`account_created`,`vip_points`,`epoints`,`machine_id`,`volume`,`chat_preference`, `focus_preference`, `pets_muted`,`bots_muted`,`advertising_report_blocked`,`last_change`,`gotw_points`,`ignore_invites`,`time_muted`,`allow_gifts`,`friend_bar_state`,`disable_forced_effects`,`allow_mimic`,`disabled_alert`,`nux_user`,`prefix_name`,`prefix_color`,`name_color` FROM `users` WHERE `id` = @id LIMIT 1");
                 dbClient.AddParameter("id", UserId);
-                dUserInfo = dbClient.getRow();
+                dUserInfo = dbClient.GetRow();
 
                 OblivionServer.GetGame().GetClientManager().LogClonesOut(Convert.ToInt32(UserId));
 
@@ -258,19 +258,19 @@ namespace Oblivion.HabboHotel.Users.UserDataManagement
 
 
                 dbClient.SetQuery("SELECT * FROM `user_info` WHERE `user_id` = '" + UserId + "' LIMIT 1");
-                UserInfo = dbClient.getRow();
+                UserInfo = dbClient.GetRow();
                 if (UserInfo == null)
                 {
                     dbClient.RunFastQuery("INSERT INTO `user_info` (`user_id`) VALUES ('" + UserId + "')");
 
                     dbClient.SetQuery("SELECT * FROM `user_info` WHERE `user_id` = '" + UserId + "' LIMIT 1");
-                    UserInfo = dbClient.getRow();
+                    UserInfo = dbClient.GetRow();
                 }
 
 
                 dbClient.SetQuery("SELECT command_name FROM user_blockcmd WHERE user_id=@id");
                 dbClient.AddParameter("id", UserId);
-                dBlockedCommands = dbClient.getTable();
+                dBlockedCommands = dbClient.GetTable();
 
                 // dbClient.SetQuery("SELECT group_id,rank FROM group_memberships WHERE user_id=@id");
                 // dbClient.AddParameter("id", UserId);
@@ -278,7 +278,7 @@ namespace Oblivion.HabboHotel.Users.UserDataManagement
 
                 dbClient.SetQuery("SELECT `id`,`target`,`type` FROM user_relationships WHERE user_id=@id");
                 dbClient.AddParameter("id", UserId);
-                dRelations = dbClient.getTable();
+                dRelations = dbClient.GetTable();
             }
 
             var achievements = new ConcurrentDictionary<string, UserAchievement>();

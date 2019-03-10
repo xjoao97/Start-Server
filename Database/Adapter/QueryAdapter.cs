@@ -32,7 +32,7 @@ namespace Oblivion.Database.Adapter
         public void AddParameter(string parameterName, object val)
             => command.Parameters.AddWithValue(parameterName, val);
 
-        public bool findsResult()
+        public bool FindsResult()
         {
             var hasRows = false;
             try
@@ -50,7 +50,7 @@ namespace Oblivion.Database.Adapter
             return hasRows;
         }
 
-        public int getInteger()
+        public int GetInteger()
         {
             var result = 0;
             try
@@ -91,7 +91,7 @@ namespace Oblivion.Database.Adapter
             }
         }
 
-        public DataRow getRow()
+        public DataRow GetRow()
         {
             DataRow row = null;
             try
@@ -113,7 +113,7 @@ namespace Oblivion.Database.Adapter
             return row;
         }
 
-        public string getString()
+        public string GetString()
         {
             var str = string.Empty;
             try
@@ -130,7 +130,7 @@ namespace Oblivion.Database.Adapter
             return str;
         }
 
-        public DataTable getTable()
+        public DataTable GetTable()
         {
             var dataTable = new DataTable();
             if (!dbEnabled)

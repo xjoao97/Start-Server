@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿#region
+using System.Collections.Generic;
 using System.Linq;
+#endregion
 
 namespace Oblivion.HabboHotel.Users
 {

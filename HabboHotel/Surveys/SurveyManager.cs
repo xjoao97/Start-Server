@@ -26,7 +26,7 @@ namespace Oblivion.HabboHotel.Surveys
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.SetQuery("SELECT * FROM `questions`");
-                Table = dbClient.getTable();
+                Table = dbClient.GetTable();
             }
 
             if (Table != null)

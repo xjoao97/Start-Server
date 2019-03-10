@@ -88,7 +88,7 @@ namespace Oblivion.HabboHotel.GameClients
             {
                 dbClient.SetQuery("SELECT username FROM users WHERE id = @id LIMIT 1");
                 dbClient.AddParameter("id", Id);
-                username = dbClient.getString();
+                username = dbClient.GetString();
             }
 
             return username;
@@ -152,7 +152,7 @@ namespace Oblivion.HabboHotel.GameClients
             {
                 dbClient.SetQuery("SELECT `message` FROM `chatlogs` WHERE `user_id` = '" + Target.GetHabbo().Id +
                                   "' ORDER BY `id` DESC LIMIT 10");
-                var GetLogs = dbClient.getTable();
+                var GetLogs = dbClient.GetTable();
 
                 if (GetLogs != null)
                 {

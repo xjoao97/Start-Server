@@ -30,7 +30,7 @@ namespace Oblivion.HabboHotel.Rooms.TraxMachine
             using (var adap = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 adap.RunQuery("SELECT * FROM jukebox_songs_data");
-                table = adap.getTable();
+                table = adap.GetTable();
             }
 
             foreach (DataRow row in table.Rows)

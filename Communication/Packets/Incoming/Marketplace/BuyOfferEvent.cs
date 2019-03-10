@@ -28,7 +28,7 @@ namespace Oblivion.Communication.Packets.Incoming.Marketplace
                 dbClient.SetQuery(
                     "SELECT `state`,`timestamp`,`total_price`,`extra_data`,`item_id`,`furni_id`,`user_id`,`limited_number`,`limited_stack` FROM `catalog_marketplace_offers` WHERE `offer_id` = @OfferId LIMIT 1");
                 dbClient.AddParameter("OfferId", OfferId);
-                Row = dbClient.getRow();
+                Row = dbClient.GetRow();
             }
 
             if (Row == null)
@@ -97,7 +97,7 @@ namespace Oblivion.Communication.Packets.Incoming.Marketplace
 
                 dbClient.SetQuery("SELECT `id` FROM catalog_marketplace_data WHERE sprite = " + Item.SpriteId +
                                   " LIMIT 1;");
-                var Id = dbClient.getInteger();
+                var Id = dbClient.GetInteger();
 
                 if (Id > 0)
                     dbClient.RunFastQuery(
@@ -175,7 +175,7 @@ namespace Oblivion.Communication.Packets.Incoming.Marketplace
                 dbClient.AddParameter("search_query", "%" + SearchQuery + "%");
                 if (SearchQuery.Length >= 1)
                     builder.Append(" AND `public_name` LIKE @search_query");
-                table = dbClient.getTable();
+                table = dbClient.GetTable();
             }
 
             OblivionServer.GetGame().GetCatalog().GetMarketplace().MarketItems.Clear();

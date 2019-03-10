@@ -121,7 +121,7 @@ namespace Oblivion.HabboHotel.Rooms
             {
                 dbClient.SetQuery(
                     "SELECT id,door_x,door_y,door_z,door_dir,heightmap,public_items,club_only,poolmap,`wall_height` FROM `room_models` WHERE `custom` = '0'");
-                var Data = dbClient.getTable();
+                var Data = dbClient.GetTable();
 
                 if (Data == null)
                     return;
@@ -148,7 +148,7 @@ namespace Oblivion.HabboHotel.Rooms
                 dbClient.SetQuery(
                     "SELECT id,door_x,door_y,door_z,door_dir,heightmap,public_items,club_only,poolmap,`wall_height` FROM `room_models` WHERE `custom` = '1' AND `id` = '" +
                     Id + "' LIMIT 1");
-                var Row = dbClient.getRow();
+                var Row = dbClient.GetRow();
 
                 if (Row == null)
                     return;
@@ -353,7 +353,7 @@ namespace Oblivion.HabboHotel.Rooms
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.SetQuery("SELECT * FROM rooms WHERE id = " + RoomId + " LIMIT 1");
-                Row = dbClient.getRow();
+                Row = dbClient.GetRow();
             }
 
             if (Row == null)
@@ -374,7 +374,7 @@ namespace Oblivion.HabboHotel.Rooms
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.SetQuery("SELECT id FROM rooms WHERE id = " + RoomId + " LIMIT 1");
-                Row = dbClient.getRow();
+                Row = dbClient.GetRow();
             }
 
             if (Row == null)

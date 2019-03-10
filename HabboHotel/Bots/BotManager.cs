@@ -31,7 +31,7 @@ namespace Oblivion.HabboHotel.Bots
             {
                 dbClient.SetQuery(
                     "SELECT `bot_ai`,`chat_keywords`,`response_text`,`response_mode`,`response_beverage` FROM `bots_responses`");
-                var BotResponses = dbClient.getTable();
+                var BotResponses = dbClient.GetTable();
 
                 if (BotResponses != null)
                     foreach (DataRow Response in BotResponses.Rows)

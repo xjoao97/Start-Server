@@ -29,7 +29,7 @@ namespace Oblivion.HabboHotel.Rewards
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.SetQuery("SELECT * FROM `server_rewards` WHERE enabled = '1'");
-                var dTable = dbClient.getTable();
+                var dTable = dbClient.GetTable();
                 if (dTable != null)
                     foreach (DataRow dRow in dTable.Rows)
                         _rewards.TryAdd((int) dRow["id"],
@@ -38,7 +38,7 @@ namespace Oblivion.HabboHotel.Rewards
                                 Convert.ToString(dRow["message"])));
 
                 dbClient.SetQuery("SELECT * FROM `server_reward_logs`");
-                dTable = dbClient.getTable();
+                dTable = dbClient.GetTable();
                 if (dTable != null)
                     foreach (DataRow dRow in dTable.Rows)
                     {

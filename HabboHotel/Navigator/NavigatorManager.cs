@@ -46,7 +46,7 @@ namespace Oblivion.HabboHotel.Navigator
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.SetQuery("SELECT * FROM `navigator_categories` ORDER BY `id` ASC");
-                var Table = dbClient.getTable();
+                var Table = dbClient.GetTable();
 
                 if (Table != null)
                     foreach (var Row in from DataRow Row in Table.Rows
@@ -64,7 +64,7 @@ namespace Oblivion.HabboHotel.Navigator
 
                 dbClient.SetQuery(
                     "SELECT `room_id`,`caption`,`description`,`image_url`,`enabled` FROM `navigator_publics` ORDER BY `order_num` ASC");
-                var GetPublics = dbClient.getTable();
+                var GetPublics = dbClient.GetTable();
 
                 if (GetPublics != null)
                     foreach (var Row in from DataRow Row in GetPublics.Rows

@@ -35,7 +35,7 @@ namespace Oblivion.HabboHotel.Games
                 DataTable GetData = null;
                 dbClient.SetQuery(
                     "SELECT `id`,`name`,`colour_one`,`colour_two`,`resource_path`,`string_three`,`game_swf`,`game_assets`,`game_server_host`,`game_server_port`,`socket_policy_port`,`game_enabled` FROM `games_config`");
-                GetData = dbClient.getTable();
+                GetData = dbClient.GetTable();
 
                 if (GetData != null)
                     foreach (DataRow Row in GetData.Rows)

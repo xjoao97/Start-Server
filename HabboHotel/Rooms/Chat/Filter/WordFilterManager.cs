@@ -30,7 +30,7 @@ namespace Oblivion.HabboHotel.Rooms.Chat.Filter
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.SetQuery("SELECT * FROM `wordfilter`");
-                var Data = dbClient.getTable();
+                var Data = dbClient.GetTable();
 
                 if (Data == null) return;
                 foreach (DataRow Row in Data.Rows)

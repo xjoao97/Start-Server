@@ -21,7 +21,7 @@ namespace Oblivion.HabboHotel.Catalog.Pets
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.SetQuery("SELECT * FROM `catalog_pet_races`");
-                var Table = dbClient.getTable();
+                var Table = dbClient.GetTable();
 
                 if (Table == null) return;
                 foreach (

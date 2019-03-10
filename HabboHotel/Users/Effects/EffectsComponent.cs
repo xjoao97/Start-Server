@@ -38,7 +38,7 @@ namespace Oblivion.HabboHotel.Users.Effects
             {
                 dbClient.SetQuery("SELECT * FROM `user_effects` WHERE `user_id` = @id;");
                 dbClient.AddParameter("id", Habbo.Id);
-                var GetEffects = dbClient.getTable();
+                var GetEffects = dbClient.GetTable();
 
                 if (GetEffects != null)
                     foreach (DataRow Row in GetEffects.Rows)

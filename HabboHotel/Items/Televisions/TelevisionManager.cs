@@ -34,7 +34,7 @@ namespace Oblivion.HabboHotel.Items.Televisions
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.SetQuery("SELECT * FROM `items_youtube` ORDER BY `id` DESC");
-                var getData = dbClient.getTable();
+                var getData = dbClient.GetTable();
 
                 if (getData != null)
                     foreach (DataRow Row in getData.Rows)

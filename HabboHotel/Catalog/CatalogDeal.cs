@@ -21,10 +21,10 @@ namespace Oblivion.HabboHotel.Catalog
             var SplitItems = Items.Split(';');
             foreach (var Item in SplitItems.Select(Split => Split.Split('*')))
             {
-                int ItemId;
-                int Amount;
-                if (!int.TryParse(Item[0], out ItemId) || !int.TryParse(Item[1], out Amount))
+                if (!int.TryParse(Item[0], out int ItemId) || !int.TryParse(Item[1], out int Amount))
+                {
                     continue;
+                }
 
                 ItemData Data = OblivionServer.GetGame().GetItemManager().GetItem(ItemId);
                 if (Data == null)
