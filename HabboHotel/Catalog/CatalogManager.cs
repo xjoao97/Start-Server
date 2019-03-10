@@ -9,6 +9,7 @@ using Oblivion.HabboHotel.Catalog.Clothing;
 using Oblivion.HabboHotel.Catalog.Marketplace;
 using Oblivion.HabboHotel.Catalog.Pets;
 using Oblivion.HabboHotel.Catalog.Vouchers;
+using Oblivion.HabboHotel.GameClients;
 using Oblivion.HabboHotel.Items;
 
 #endregion
@@ -164,7 +165,19 @@ namespace Oblivion.HabboHotel.Catalog
 
         public bool TryGetPage(int pageId, out CatalogPage page) => _CatalogPages.TryGetValue(pageId, out page);
 
-        public ICollection<CatalogPage> GetPages() => _CatalogPages.Values;
+        public ICollection<CatalogPage> GetPages(GameClient session, int pageId)
+        {
+            List<CatalogPage> pages = new List<CatalogPage>();
+            foreach (CatalogPage page in this._CatalogPages.Values)
+            {
+                if (page.ParentId != pageId || page.MinimumRank > session.GetHabbo().Rank || (session.GetHabbo().Rank == 1))
+                {
+                    continue;
+                }
+                pages.Add(page);
+            }
+            return pages;
+        }
 
         public MarketplaceManager GetMarketplace() => _marketplace;
 

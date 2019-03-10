@@ -297,7 +297,6 @@ namespace Oblivion.Communication.Packets
         public void RegisterNux()
         {
             _incomingPackets.Add(ClientPacketHeader.CustomAction, new CustomAction());
-            _incomingPackets.Add(ClientPacketHeader.RoomNucsAlerta, new RoomNucsAlerta());
         }
 
         public void RegisterNewNavigator()

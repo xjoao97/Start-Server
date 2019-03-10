@@ -173,6 +173,12 @@ namespace Oblivion.HabboHotel.Items.Wired.Boxes.Effects
 
             Item.ExtraData = Extradata;
             Item.UpdateState(false, true);
+
+            if (Item.GetBaseItem().InteractionType == InteractionType.Gate)
+            {
+                Item.RegenerateBlock(Extradata.ToString(), Item.GetRoom().GetGameMap());
+                Item.GetRoom().GetGameMap().updateMapForItem(Item);
+            }
         }
 
         private static void SetRotation(Item Item, int Rotation)

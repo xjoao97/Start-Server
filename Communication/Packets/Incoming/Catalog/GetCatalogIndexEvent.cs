@@ -19,7 +19,7 @@ namespace Oblivion.Communication.Packets.Incoming.Catalog
                 Sub = Session.GetHabbo().GetSubscriptionManager().GetSubscription().SubscriptionId;
             }*/
 
-            Session.SendMessage(new CatalogIndexComposer(Session, OblivionServer.GetGame().GetCatalog().GetPages()));
+            Session.SendMessage(new CatalogIndexComposer(Session, OblivionServer.GetGame().GetCatalog().GetPages(Session, -1)));
             //, Sub));
             Session.SendMessage(new CatalogItemDiscountComposer());
             Session.SendMessage(new BCBorrowedItemsComposer());

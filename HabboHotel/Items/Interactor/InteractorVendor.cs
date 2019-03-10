@@ -55,9 +55,13 @@ namespace Oblivion.HabboHotel.Items.Interactor
 
                 Item.InteractingUser = Session.GetHabbo().Id;
 
-                User.CanWalk = false;
-                User.ClearMovement(true);
-                User.SetRot(Rotation.Calculate(User.X, User.Y, Item.GetX, Item.GetY), false);
+                if (!User.SetStep)
+                {
+                    User.CanWalk = false;
+                    User.ClearMovement(true);
+                    User.SetRot(Rotation.Calculate(User.X, User.Y, Item.GetX, Item.GetY), false);
+                }
+
 
                 Item.RequestUpdate(2, true);
 

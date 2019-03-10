@@ -376,7 +376,7 @@ namespace Oblivion.HabboHotel.Rooms.Instance
                 if (Type == WiredBoxType.TriggerUserSays)
                 {
                     var RanBoxes = new List<IWiredItem>();
-                    foreach (IWiredItem Box in _wiredItems.Values.ToList())
+                    foreach (var Box in _wiredItems.Values.ToList())
                     {
                         if (Box == null)
                             continue;
@@ -402,7 +402,7 @@ namespace Oblivion.HabboHotel.Rooms.Instance
                         return true;
                     }
                 }
-                foreach (IWiredItem Box in _wiredItems.Values.ToList())
+                foreach (var Box in _wiredItems.Values.ToList())
                 {
                     if (Box == null)
                         continue;
@@ -423,7 +423,7 @@ namespace Oblivion.HabboHotel.Rooms.Instance
 
         public bool TriggerEvent(WiredBoxType Type, params object[] Params)
         {
-            bool Finished = false;
+            var Finished = false;
             try
             {
                 if (Type == WiredBoxType.TriggerUserSays)
@@ -531,7 +531,7 @@ namespace Oblivion.HabboHotel.Rooms.Instance
         {
             var Items = new List<IWiredItem>();
 
-            foreach (IWiredItem I in _wiredItems.Values)
+            foreach (var I in _wiredItems.Values)
             {
                 if (IsCondition(I.Item) && I.Item.GetX == Item.Item.GetX && I.Item.GetY == Item.Item.GetY)
                 {

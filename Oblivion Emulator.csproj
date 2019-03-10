@@ -160,7 +160,6 @@
     <Compile Include="Communication\Packets\Incoming\LandingView\OpenCalendarBoxEvent.cs" />
     <Compile Include="Communication\Packets\Incoming\Moderation\ReportCameraEvent.cs" />
     <Compile Include="Communication\Packets\Incoming\Nucs\CustomAction.cs" />
-    <Compile Include="Communication\Packets\Incoming\Nucs\RoomNucsAlerta.cs" />
     <Compile Include="Communication\Packets\Incoming\Rooms\Action\ChangeToSpectatorMode.cs" />
     <Compile Include="Communication\Packets\Incoming\Rooms\Camera\CustomRenderRoomEvent.cs" />
     <Compile Include="Communication\Packets\Incoming\Catalog\CheckGnomeNameEvent.cs" />

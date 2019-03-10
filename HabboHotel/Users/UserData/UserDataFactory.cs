@@ -139,6 +139,7 @@ namespace Oblivion.HabboHotel.Users.UserDataManagement
 
             var ignores = (from DataRow dRow in dIgnores.Rows select Convert.ToInt32(dRow["ignore_id"])).ToList();
 
+
             var badges = (from DataRow dRow in dBadges.Rows
                           select new Badge(Convert.ToString(dRow["badge_id"]), Convert.ToInt32(dRow["badge_slot"]))).ToList();
 

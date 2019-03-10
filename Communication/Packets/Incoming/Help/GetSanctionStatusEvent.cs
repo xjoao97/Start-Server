@@ -1,16 +1,16 @@
-﻿#region
+﻿
 
 using Oblivion.HabboHotel.GameClients;
-
-#endregion
+using Oblivion.Communication.Packets.Outgoing.Help;
 
 namespace Oblivion.Communication.Packets.Incoming.Help
 {
     internal class GetSanctionStatusEvent : IPacketEvent
+
     {
         public void Parse(GameClient Session, ClientPacket Packet)
         {
-            //Session.SendMessage(new SanctionStatusComposer());
+            Session.SendMessage(new SanctionStatusComposer());
         }
     }
 }

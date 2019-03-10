@@ -32,7 +32,16 @@ namespace Oblivion.Communication.Packets.Incoming.Users
                 friendCount = dbClient.getInteger();
             }
 
+            /*
+             *  dbClient.SetQuery("SELECT `badge_id`,`badge_slot` FROM user_badges WHERE `user_id` = '" + UserId + "'");
+            dBadges = dbClient.getTable();
+            var badges = (from DataRow dRow in dBadges.Rows
+                          select new Badge(Convert.ToString(dRow["badge_id"]), Convert.ToInt32(dRow["badge_slot"]))).ToList();
+
+    */
+
             Session.SendMessage(new ProfileInformationComposer(targetData, Session, Groups, friendCount));
         }
     }
 }
+ 
