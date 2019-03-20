@@ -1,13 +1,12 @@
 ﻿#region
-
 using System.Linq;
 using Oblivion.HabboHotel.Users;
-
+using Oblivion.HabboHotel.Users.Badges;
 #endregion
 
 namespace Oblivion.Communication.Packets.Outgoing.Users
 {
-    internal class HabboUserBadgesComposer : ServerPacket
+    class HabboUserBadgesComposer : ServerPacket
     {
         public HabboUserBadgesComposer(Habbo Habbo)
             : base(ServerPacketHeader.HabboUserBadgesMessageComposer)
@@ -15,8 +14,11 @@ namespace Oblivion.Communication.Packets.Outgoing.Users
             WriteInteger(Habbo.Id);
             WriteInteger(Habbo.GetBadgeComponent().EquippedCount);
 
-            foreach (var Badge in Habbo.GetBadgeComponent().GetBadges().ToList().Where(Badge => Badge.Slot > 0))
+            foreach (var Badge in Habbo.GetBadgeComponent().GetBadges().ToList())
             {
+                if (Badge.Slot <= 0)
+                    continue;
+
                 WriteInteger(Badge.Slot);
                 WriteString(Badge.Code);
             }

@@ -51,10 +51,6 @@ namespace Oblivion.HabboHotel.Users
         public bool _NUX;
         public bool AnswredPoll = false;
         private ProcessComponent _process;
-        private string _prefixName;
-        private string _prefixColor;
-        private string _NameColor;
-
         public ConcurrentDictionary<string, UserAchievement> Achievements;
         private BadgeComponent BadgeComponent;
         internal List<string> BlockedCommands;
@@ -91,9 +87,9 @@ namespace Oblivion.HabboHotel.Users
             int GOTWPoints, bool IgnoreInvites, double TimeMuted, double TradingLock, bool AllowGifts,
             int FriendBarState, bool DisableForcedEffects, bool AllowMimic, string PrefixName, string PrefixColor, string NameColor)
         {
-            this._prefixName = PrefixName;
-            this._prefixColor = PrefixColor;
-            this._NameColor = NameColor;
+            this.PrefixName = PrefixName;
+            this.PrefixColor = PrefixColor;
+            this.NameColor = NameColor;
             this.Id = Id;
             this.Username = Username;
             this.Rank = Rank;
@@ -113,8 +109,7 @@ namespace Oblivion.HabboHotel.Users
             ClientVolume = new List<int>();
             foreach (var Str in clientVolume.Split(','))
             {
-                int Val;
-                ClientVolume.Add(int.TryParse(Str, out Val) ? int.Parse(Str) : 100);
+                ClientVolume.Add(int.TryParse(Str, out int Val) ? int.Parse(Str) : 100);
             }
 
             this.LastNameChange = LastNameChange;
@@ -284,21 +279,9 @@ namespace Oblivion.HabboHotel.Users
         public string sexWith { get; set; }
         public string fuckWith { get; set; }
 
-        public string PrefixName
-        {
-            get { return this._prefixName; }
-            set { this._prefixName = value; }
-        }
-        public string PrefixColor
-        {
-            get { return this._prefixColor; }
-            set { this._prefixColor = value; }
-        }
-        public string NameColor
-        {
-            get { return this._NameColor; }
-            set { this._NameColor = value; }
-        }
+        public string PrefixName { get; set; }
+        public string PrefixColor { get; set; }
+        public string NameColor { get; set; }
 
         public int Id { get; set; }
 
@@ -477,8 +460,7 @@ namespace Oblivion.HabboHotel.Users
                 if (CurrentRoomId <= 0)
                     return null;
 
-                Room _room;
-                return OblivionServer.GetGame().GetRoomManager().TryGetRoom(CurrentRoomId, out _room) ? _room : null;
+                return OblivionServer.GetGame().GetRoomManager().TryGetRoom(CurrentRoomId, out Room _room) ? _room : null;
             }
         }
 
@@ -709,15 +691,13 @@ namespace Oblivion.HabboHotel.Users
 
         public int GetQuestProgress(int p)
         {
-            int progress;
-            quests.TryGetValue(p, out progress);
+            quests.TryGetValue(p, out int progress);
             return progress;
         }
 
         public UserAchievement GetAchievementData(string p)
         {
-            UserAchievement achievement;
-            Achievements.TryGetValue(p, out achievement);
+            Achievements.TryGetValue(p, out UserAchievement achievement);
             return achievement;
         }
 
@@ -747,11 +727,10 @@ namespace Oblivion.HabboHotel.Users
 
             if (GetClient().GetHabbo().InRoom)
             {
-                Room OldRoom;
                 if (
                     !OblivionServer.GetGame()
                         .GetRoomManager()
-                        .TryGetRoom(GetClient().GetHabbo().CurrentRoomId, out OldRoom))
+                        .TryGetRoom(GetClient().GetHabbo().CurrentRoomId, out Room OldRoom))
                     return;
 
                 if (OldRoom.GetRoomUserManager() != null)

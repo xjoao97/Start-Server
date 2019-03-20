@@ -1,6 +1,7 @@
 ﻿#region
 
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -26,6 +27,8 @@ namespace Oblivion.HabboHotel.Moderation
             new Dictionary<int, List<ModerationPresetActionMessages>>();
 
         private readonly List<string> _userPresets = new List<string>();
+
+        private readonly ConcurrentDictionary<int, ModerationTicket> _modTickets = new ConcurrentDictionary<int, ModerationTicket>();
 
         public ModerationManager()
         {
@@ -118,7 +121,8 @@ namespace Oblivion.HabboHotel.Moderation
                                 Convert.ToString(row["message_text"]),
                                 Convert.ToInt32(row["mute_hours"]), Convert.ToInt32(row["ban_hours"]),
                                 Convert.ToInt32(row["ip_ban_hours"]), Convert.ToInt32(row["trade_lock_days"]),
-                                Convert.ToString(row["notice"])));
+                                Convert.ToString(row["notice"]),
+                                Convert.ToString(row["default_sanction"])));
                     }
             }
 
@@ -157,6 +161,16 @@ namespace Oblivion.HabboHotel.Moderation
             Log.Info("Loaded " + _userActionPresetCategories.Count + " moderation categories.");
             Log.Info("Loaded " + _userActionPresetMessages.Count + " moderation action preset messages.");
             Log.Info("Cached " + _bans.Count + " username and machine bans.");
+        }
+
+        public ICollection<ModerationTicket> GetTickets
+        {
+            get { return this._modTickets.Values; }
+        }
+
+        public bool TryGetTicket(int TicketId, out ModerationTicket Ticket)
+        {
+            return this._modTickets.TryGetValue(TicketId, out Ticket);
         }
 
         public void ReCacheBans()
@@ -251,8 +265,7 @@ namespace Oblivion.HabboHotel.Moderation
         /// <returns></returns>
         public bool MachineBanCheck(string machineId)
         {
-            ModerationBan machineBanRecord;
-            if (!OblivionServer.GetGame().GetModerationManager().IsBanned(machineId, out machineBanRecord)) return true;
+            if (!OblivionServer.GetGame().GetModerationManager().IsBanned(machineId, out ModerationBan machineBanRecord)) return true;
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.SetQuery("SELECT * FROM `bans` WHERE `bantype` = 'machine' AND `value` = @value LIMIT 1");
@@ -273,8 +286,7 @@ namespace Oblivion.HabboHotel.Moderation
         /// <returns></returns>
         public bool UsernameBanCheck(string username)
         {
-            ModerationBan usernameBanRecord;
-            if (!OblivionServer.GetGame().GetModerationManager().IsBanned(username, out usernameBanRecord)) return true;
+            if (!OblivionServer.GetGame().GetModerationManager().IsBanned(username, out ModerationBan usernameBanRecord)) return true;
             using (var dbClient = OblivionServer.GetDatabaseManager().GetQueryReactor())
             {
                 dbClient.SetQuery("SELECT * FROM `bans` WHERE `bantype` = 'user' AND `value` = @value LIMIT 1");

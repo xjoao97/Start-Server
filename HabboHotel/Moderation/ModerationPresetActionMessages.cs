@@ -3,7 +3,7 @@
     public class ModerationPresetActionMessages
     {
         public ModerationPresetActionMessages(int Id, int ParentId, string Caption, string MessageText, int MuteTime,
-            int BanTime, int IPBanTime, int TradeLockTime, string Notice)
+            int BanTime, int IPBanTime, int TradeLockTime, string Notice, string defaultSanction)
         {
             this.Id = Id;
             this.ParentId = ParentId;
@@ -14,6 +14,7 @@
             this.IPBanTime = IPBanTime;
             this.TradeLockTime = TradeLockTime;
             this.Notice = Notice;
+            this.DefaultSanction = defaultSanction;
         }
 
         public int Id { get; set; }
@@ -25,5 +26,6 @@
         public int IPBanTime { get; set; }
         public int TradeLockTime { get; set; }
         public string Notice { get; set; }
+        public string DefaultSanction { get; set; }
     }
 }
